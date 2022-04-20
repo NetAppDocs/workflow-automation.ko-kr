@@ -1,0 +1,40 @@
+---
+permalink: workflows/concept-how-you-define-constants.html 
+sidebar: sidebar 
+keywords: create, use, constants, define, value, across, single, window, workflow, level 
+summary: 상수를 만들고 사용하여 값을 정의할 수 있으며, 이 값은 단일 워크플로에서 사용할 수 있습니다. 상수는 워크플로 수준에서 정의됩니다. 
+---
+= 상수를 정의하는 방법
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+상수를 만들고 사용하여 값을 정의할 수 있으며, 이 값은 단일 워크플로에서 사용할 수 있습니다. 상수는 워크플로 수준에서 정의됩니다.
+
+워크플로와 해당 값에 사용되는 상수는 계획 및 실행 중에 워크플로의 모니터링 창에 표시됩니다. 상수에는 고유한 이름을 사용해야 합니다.
+
+다음 명명 규칙을 사용하여 상수를 정의할 수 있습니다.
+
+* 각 단어의 첫 글자의 대문자이며, 단어 사이에 밑줄이나 공백이 없어야 합니다
++
+모든 용어와 약어는 대문자(예: ActualVolumeSizeInMB)를 사용해야 합니다.
+
+* 모두 대문자로 표시합니다
++
+밑줄을 사용하여 단어를 구분할 수 있습니다. 예를 들어, 'aggregate_used_space_threshold'를 사용할 수 있습니다.
+
+
+
+워크플로 상수에 대한 값으로 다음을 포함할 수 있습니다.
+
+* 번호
+* 문자열
+* MVEL 식
++
+식은 워크플로의 계획 및 실행 단계에서 평가됩니다. 식에서 루프에 정의된 변수를 참조해서는 안 됩니다.
+
+* 사용자 입력
+* 변수
+

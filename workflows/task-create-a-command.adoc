@@ -1,0 +1,138 @@
+---
+permalink: workflows/task-create-a-command.html 
+sidebar: sidebar 
+keywords: create, wfa command, complete, specific, task, workflow, predefined, suitable 
+summary: 작업에 적합한 사전 정의된 WFA 명령이 없는 경우 WFA 명령을 생성하여 워크플로우에서 특정 작업을 완료할 수 있습니다. 
+---
+= 명령을 생성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+작업에 적합한 사전 정의된 WFA 명령이 없는 경우 WFA 명령을 생성하여 워크플로우에서 특정 작업을 완료할 수 있습니다.
+
+PowerShell 또는 Perl을 사용하여 명령에 필요한 코드를 작성하는 방법을 알아야 합니다.
+
+.단계
+. 워크플로 디자인 * > * 명령 * 을 클릭합니다.
+. 을 클릭합니다 image:../media/new_wfa_icon.gif["새 아이콘"] 를 클릭합니다.
+. 새 명령 정의 * 대화 상자의 * 속성 * 탭에서 * 이름 *, * 설명 * 및 * 시간 초과 * 필드에 필요한 세부 정보를 입력하거나 선택합니다.
++
+.. 문자열 표현 * 필드에 MVEL 구문을 사용하여 명령의 문자열 표현을 입력합니다.
++
+"+VolumeName+"=>"+SnapshotName+"
+
++
+명령의 문자열 표현은 계획 및 실행 중에 워크플로 디자인에 표시할 정보를 표시하는 데 사용됩니다. 명령의 문자열 표현에는 명령의 매개 변수만 사용해야 합니다.
+
+.. * 선택 사항: * 대기 명령을 작성하는 경우 * 명령 유형 * 섹션에서 * 조건 대기 * 를 선택하고 * 대기 간격 * 필드에서 필수 값을 설정합니다.
+
+
+. Code * (코드 *) 탭에서 다음 단계를 수행합니다.
++
+.. 스크립트 언어 * 목록에서 명령에 필요한 스크립트 언어를 선택합니다.
++
+를 클릭하고 명령에 사용할 언어를 추가로 선택할 수 있습니다.
+
+.. 선택한 언어 탭에 명령에 대한 적절한 코드를 입력합니다.
++
+PowerShell 스크립트에서 사용자 입력에 암호 유형을 사용하려면 매개 변수의 별칭을 만들고 속성에 '_Password'를 포함해야 합니다. Perl 스크립트의 경우 * Parameters Definition * 탭에서 유형을 * Password * 로 지정할 수 있습니다.
+
++
+
+NOTE: 명령 편집기에서는 "<", "&amp" 및 XML 태그 "<>"와 같은 특수 문자가 지원되지 않습니다.
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="Specify an AD administrator password.")]
+  [Alias("ADAdminPassword_Password")]  [string]$ADAdminPassword
+)
+----
+
+
+. 매개 변수 정의 * 탭에서 다음 단계를 수행하십시오.
++
+.. 매개변수 정의 테이블을 채우려면 * 매개변수 검색 * 을 클릭합니다.
++
+매개 변수 및 해당 특성은 코드에서 추출되어 테이블에 표시됩니다. 예를 들어, Array 및 VolumeName 매개 변수는 다음 코드에서 추출됩니다.
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$true, HelpMessage="Array name or IP address")]
+  [string]$Array,
+
+  [parameter(Mandatory=$true, HelpMessage="Volume name")]
+  [string]$VolumeName,
+)
+----
+.. 매개 변수의 설명 열을 클릭하여 설명을 편집합니다.
++
+이 탭의 다른 필드는 편집할 수 없습니다.
+
+
+
+. 매개 변수 매핑 * 탭에서 각 매개 변수에 대해 다음 단계를 수행합니다.
++
+.. Type * 열에서 적절한 사전 개체를 선택합니다.
+.. Attribute * 열의 목록에서 사전 개체에 적절한 속성을 입력하거나 선택합니다.
++
+특성을 입력한 후 마침표(.)를 입력하고 해당 개체의 다른 특성을 포함할 수 있습니다.
+
++
+type 으로 cm_storage.volume 을 입력하고, gregateName 매개 변수의 attribute 로 aggregate.name 를 입력합니다.
+
+.. 개체 이름 * 열에 개체 이름을 입력합니다.
++
+개체 이름은 워크플로에서 명령 세부 정보를 지정할 때 <command> 매개 변수 대화 상자의 탭에서 매개 변수를 그룹화하는 데 사용됩니다.
+
+
+
++
+워크플로우에서 명령 세부 정보를 지정할 때 매핑되지 않은 매개 변수는 <command> 매개 변수 대화 상자의 * 기타 매개 변수 * 탭에 표시됩니다.
+
+. 예약 * 탭에서 SQL 쿼리를 사용하여 예약 스크립트를 입력하여 예약된 워크플로우 실행 중에 명령에 필요한 리소스를 예약합니다.
++
+.. * 선택 사항: * 예약 표시 * 필드에 MVEL 구문을 사용하여 예약에 대한 문자열 표현을 입력합니다.
++
+""SnapMirror 레이블에 규칙 추가"
+
++
+"+ SnapMirrorLabel+"[.code]"를 SnapMirror 정책에 적용합니다
+
++
+"+ PolicyName+"""
+
++
+문자열 표현은 예약 창에 예약된 리소스의 세부 정보를 표시하는 데 사용됩니다.
+
+
+
++
+
+NOTE: 예약 스크립트는 cm_storage, cm_performance, storage, performance, vc, 사용자 정의 스키마를 선택합니다.
+
+. * 선택 사항: * * 검증 * 탭에서 SQL 쿼리를 입력하여 명령이 데이터 소스와 WFA 캐시에 예상대로 영향을 미치는지 여부를 확인하고, 예약 사항을 제거할 수 있도록 합니다.
++
+입력하는 SQL 쿼리는 SQL SELECT 문으로만 구성할 수 있습니다.
+
++
+.. 검증 스크립트를 테스트하려면 * 테스트 검증 * 을 클릭하십시오.
+.. Verification * (검증 *) 대화 상자에서 필요한 테스트 매개변수를 입력합니다.
+.. 예약 데이터를 사용하여 검증 스크립트를 테스트하지 않으려면 * test * 필드에 * 예약 데이터 사용 필드의 선택을 취소합니다.
+.. Test * 를 클릭합니다.
+.. 테스트 결과를 검토한 후 대화 상자를 닫습니다.
+
+
+. Test * 를 클릭하여 명령을 테스트합니다.
+. 테스트 명령 <명령 이름> * 대화 상자에서 * 테스트 * 를 클릭합니다.
++
+테스트 결과는 대화 상자의 로그 메시지 섹션에 표시됩니다.
+
+. 저장 * 을 클릭합니다.
+

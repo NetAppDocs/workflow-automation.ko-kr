@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-upgrade-from-wfa-4-2.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later 
+summary: 'WFA(OnCommand Workflow Automation) 3.1 이상에서 최신 WFA 버전으로 데이터 이동 없이 업그레이드하여 새로운 기능과 향상된 기능을 사용할 수 있습니다.' 
+---
+= OnCommand Workflow Automation 3.1 이상에서 업그레이드합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 3.1 이상에서 최신 WFA 버전으로 데이터 이동 없이 업그레이드하여 새로운 기능과 향상된 기능을 사용할 수 있습니다.
+
+NetApp Support 사이트에서 WFA 호스트 시스템으로 .bin 바이너리 파일을 다운로드해야 합니다.
+
+WFA 5.0 또는 4.2에서만 WFA 5.1로 복원할 수 있습니다. WFA 데이터베이스 백업은 동일한 버전 또는 상위 버전의 WFA를 실행하는 시스템에만 복원할 수 있습니다.
+
+WFA 5.1 클러스터 연결에 SSL 인증서를 승인해야 합니다. 이전 버전의 WFA에서 WFA 5.1로 업데이트하는 경우 클러스터 연결을 인증해야 합니다. 데이터 이동 없이 업그레이드 후 클러스터 인증에 대한 클러스터 연결 세부 정보를 저장합니다.
+
+이전 버전의 WFA에서 업그레이드할 때는 MySQL을 직접 설치할 수 없습니다. 직접 MySQL을 설치할 수 있습니다.
+
+* WFA 4.2에서 상위 버전의 WFA로 업그레이드할 때,
+* 다음 방법 중 하나를 선택하여 WFA 3.1 이상으로 업그레이드합니다.
++
+** 대화형 설치
++
+... WFA 호스트 시스템에서 .bin 바이너리 파일로 이동한 다음 파일을 실행합니다.
+... 화면의 지시에 따라 업그레이드를 완료합니다.
+
+
+** 자동 설치
++
+쉘 프롬프트에서 다음을 수행합니다.
+
++
+'./WFA-version_number-build_number.bin [-y] [-u admin_user_name] [-p admin_user_password]'
+
++
+* 예: *
+
++
+'./WFA-3.1-Z3234343435.bin -y -u admin -p 회사 * 234'
+
++
+자동 업그레이드 중에 다음 명령 옵션 모두에 대한 값을 포함해야 합니다.
+
++
+*** '-y'는 설치 확인을 건너뜁니다.
+*** '-u'는 admin 사용자 이름을 지정합니다.
+*** '-p'는 admin 사용자 암호를 지정합니다.
++
+admin 사용자 암호를 입력하지 않은 경우 메시지가 표시되면 암호를 입력해야 합니다.
+
+
+
+
+
+

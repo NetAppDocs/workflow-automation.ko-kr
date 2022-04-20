@@ -1,0 +1,41 @@
+---
+permalink: windows-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, regular, wfa, database, cli 
+summary: 'WFA CLI(Command-Line Interface)를 사용하여 WFA(OnCommand Workflow Automation) 데이터베이스의 정기적인 백업을 수행할 수 있습니다. 일반 백업에서는 WFA 데이터베이스만 백업됩니다.' 
+---
+= CLI를 사용하여 WFA 데이터베이스를 백업(일반)합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA CLI(Command-Line Interface)를 사용하여 WFA(OnCommand Workflow Automation) 데이터베이스의 정기적인 백업을 수행할 수 있습니다. 일반 백업에서는 WFA 데이터베이스만 백업됩니다.
+
+관리자 사용자 자격 증명, 설계자 자격 증명 또는 백업 사용자 자격 증명이 있어야 합니다.
+
+고가용성 환경에서는 REST API를 사용하여 예약된 백업을 생성해야 합니다. WFA가 페일오버 모드일 때는 CLI를 사용하여 백업을 생성할 수 없습니다.
+
+자세한 내용은 REST 설명서를 참조하십시오.
+
+.단계
+. 쉘 프롬프트에서 WFA 서버의 "WFA_INSTALL_LOCATION\WFA\BIN."으로 이동합니다
++
+WFA_INSTALL_LOCATION은 WFA 설치 디렉토리입니다.
+
+. WFA 데이터베이스 백업:
++
+'.\WFA--backup--user=user[--password=pass][--location=path]'
+
++
+** user 는 백업 사용자의 사용자 이름입니다.
+** password 는 백업 사용자의 암호입니다.
++
+암호를 입력하지 않은 경우 메시지가 표시되면 암호를 입력해야 합니다.
+
+** path 는 백업 파일의 전체 디렉터리 경로입니다.
+
+
+. 백업 파일이 지정된 위치에 생성되었는지 확인합니다.
+

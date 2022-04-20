@@ -1,0 +1,15 @@
+---
+permalink: reference-releasenotes.html 
+sidebar: sidebar 
+keywords: release, notes, new, features, fixed, issues, known, limitations, oncommand, workflow, automation, netapp, 5.1 5.1.1 
+summary: 새로운 기능, 업그레이드 정보, 해결된 문제, 알려진 제한 사항 및 알려진 문제에 대해 설명합니다. 
+---
+= OnCommand Workflow Automation 릴리즈 노트
+:allow-uri-read: 
+
+
+릴리즈 노트에서는 새로운 기능, 업그레이드 노트, 해결된 문제, 알려진 제한 사항 및 알려진 문제에 대해 설명합니다.
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2875021["OnCommand Workflow Automation 5.1.1 릴리스 정보"^]
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2856585["OnCommand Workflow Automation 5.1 릴리스 정보"^]

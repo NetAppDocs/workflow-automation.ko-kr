@@ -1,0 +1,19 @@
+---
+permalink: windows-install/task-set-up-wfa-in-mscs.html 
+sidebar: sidebar 
+keywords: set up, workflow, automation, mscs, high availability 
+summary: 'MSCS(Microsoft Cluster Service) 환경에 WFA(Workflow Automation)를 설치 및 구성하여 고가용성을 설정하고 페일오버를 제공할 수 있습니다. WFA를 설치하기 전에 모든 필수 구성 요소가 올바르게 구성되었는지 확인해야 합니다.' 
+---
+= 고가용성을 위해 MSCS에서 Workflow Automation을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MSCS(Microsoft Cluster Service) 환경에 WFA(Workflow Automation)를 설치 및 구성하여 고가용성을 설정하고 페일오버를 제공할 수 있습니다. WFA를 설치하기 전에 모든 필수 구성 요소가 올바르게 구성되었는지 확인해야 합니다.
+
+고가용성 설정은 애플리케이션 작업을 지속적으로 지원합니다. 구성 요소 중 하나에 장애가 발생하면 설치 프로그램에서 미러링된 구성 요소가 작업을 대신 수행하고 중단 없는 네트워크 리소스를 제공합니다.
+
+
+NOTE: MSCS는 Windows에서 WFA가 지원하는 유일한 클러스터링 솔루션입니다.

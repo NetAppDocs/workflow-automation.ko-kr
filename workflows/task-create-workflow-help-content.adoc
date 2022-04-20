@@ -1,0 +1,47 @@
+---
+permalink: workflows/task-create-workflow-help-content.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, admins, architects, design, workflows, create, help, content, include 
+summary: 'WFA(OnCommand Workflow Automation) 관리자와 설계자로, 워크플로우를 설계할 때는 워크플로우에 대한 도움말 콘텐츠를 생성하고 워크플로우에 포함할 수 있습니다.' 
+---
+= 워크플로 도움말 콘텐츠를 만듭니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 관리자와 설계자로, 워크플로우를 설계할 때는 워크플로우에 대한 도움말 콘텐츠를 생성하고 워크플로우에 포함할 수 있습니다.
+
+HTML을 사용하여 웹 페이지를 만드는 방법을 알고 있어야 합니다.
+
+이 도움말은 워크플로우를 실행하는 스토리지 운영자에게 워크플로우에 대한 워크플로우 및 사용자 입력에 대한 정보를 제공해야 합니다.
+
+.단계
+. workflow-help라는 이름의 폴더를 만듭니다.
+. HTML 편집기나 텍스트 편집기를 사용하여 도움말 콘텐츠를 만든 다음 워크플로 도움말 폴더에 index.htm 파일로 저장합니다.
++
+JavaScript 파일은 도움말 콘텐츠의 일부로 포함해서는 안 됩니다. 지원되는 파일 확장자는 다음과 같습니다.
+
++
+** jpg
+** jpeg
+** gif
+** png입니다
+** XML
+** thmx
+** htm
+** .html을 참조하십시오
+** css
+
+
++
+Windows에서 만든 thumb.db 파일도 포함할 수 있습니다.
+
+. 워크플로 도움말 폴더에서 도움말 콘텐츠와 관련된 색인 .htm 파일과 기타 파일을 사용할 수 있는지 확인합니다.
+. 폴더의 '.zip' 파일을 만들고 '.zip' 파일의 크기가 2MB를 넘지 않도록 합니다.
++
+NFS volume-help.zip을 만듭니다
+
+. 도움말 콘텐츠를 만든 워크플로를 편집한 다음 * 설정 * > * 도움말 콘텐츠 * > * 찾아보기 * 를 클릭하여 '.zip' 파일을 업로드합니다.
+

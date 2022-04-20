@@ -1,0 +1,252 @@
+---
+permalink: windows-install/task-install-workflow-automation-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, windows 
+summary: 'WFA(OnCommand Workflow Automation)를 설치하여 스토리지 워크플로우를 생성한 후 사용자 지정하여 해당 환경에서 수행되는 스토리지 작업을 자동화할 수 있습니다.' 
+---
+= Windows에 OnCommand Workflow Automation를 설치합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)를 설치하여 스토리지 워크플로우를 생성한 후 사용자 지정하여 해당 환경에서 수행되는 스토리지 작업을 자동화할 수 있습니다.
+
+* 설치 필수 구성 요소를 검토해야 합니다.
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[Workflow Automation 설치를 위한 사전 요구사항]
+
+* WFA가 이전에 설치된 후 제거된 시스템에 WFA를 설치하는 경우 해당 시스템에 WFA 서비스가 없는지 확인해야 합니다.
+* NetApp Support 사이트에서 WFA 설치 프로그램을 다운로드해야 합니다.
+* 가상 머신(VM)에 WFA를 설치하는 경우 VM의 이름에 밑줄(_) 문자를 포함할 수 없습니다.
+* WFA를 설치하기 전에 ActiveState ActivePerl이 설치됩니다.
++
+이 설치는 WFA 서버에 설치된 ActivePerl의 다른 인스턴스에 영향을 주지 않습니다.
+
+* WFA 4.2 이상을 다시 설치하기 전에 MySQL을 제거한 경우 MySQL 데이터 디렉터리를 삭제해야 합니다.
+
+
+.단계
+. 관리자 권한이 있는 계정을 사용하여 Windows에 로그인합니다.
+. Windows 탐색기를 열고 설치 파일이 있는 디렉터리로 이동합니다.
+. WFA 설치:
++
+** 대화형 설치
++
+... 관리자 권한으로 WFA 설치 관리자 실행 파일(.exe)을 마우스 오른쪽 버튼으로 클릭하고 실행합니다.
+... 다음 * 을 클릭합니다.
+... 기본 admin 사용자의 자격 증명을 입력한 후 * Next * 를 클릭합니다.
++
+기본 admin 암호는 다음 조건을 충족해야 합니다.
+
++
+**** 최소 8자
+**** 대문자 1개
+**** 소문자 1개
+**** 숫자 1개
+**** 특수 문자 1개
+**** 다음 특수 문자는 암호에 지원되지 않으며 설치에 실패합니다.
++
+"";<>,=&{캐럿}|
+
++
+[NOTE]
+====
+admin 사용자의 자격 증명을 기록해야 합니다.
+
+====
+
+
+... WFA 서비스 로그온에 대한 사용자 이름과 암호를 입력합니다. 도메인 사용자의 경우 domain\user 형식으로 사용자 이름을 제공합니다. 로컬 시스템 사용자의 경우 형식은 사용자 이름일 뿐입니다. 기본 사용자 이름은 "WFA"입니다.
++
+WFA 설치 관리자가 로컬 사용자가 없는 경우 해당 사용자를 생성합니다. 로컬 사용자가 있고 입력한 암호가 기존 암호와 다른 경우 WFA에서 암호를 업데이트합니다.
+
++
+[NOTE]
+====
+암호가 시스템의 로컬 사용자에 대해 구성된 암호 정책을 준수하는지 확인합니다. 암호가 암호 정책을 준수하지 않으면 설치가 실패합니다.
+
+====
+... WFA 구성에 사용할 포트를 선택한 후 * 다음 * 을 클릭합니다.
+... 사이트 이름과 회사 이름을 입력한 후 * 다음 * 을 클릭합니다.
++
+사이트 이름에는 WFA 설치 위치(예: Pittsburgh, PA)가 포함될 수 있습니다.
+
+... 기본 설치 위치를 변경하려면 WFA를 설치할 위치를 선택한 후 * 다음 * 을 클릭합니다.
+... 타사 제품의 기본 설치 위치를 변경하려면 타사 제품을 설치할 위치를 선택한 후 * 다음 * 을 클릭합니다.
+... WFA 데이터베이스의 기본 위치를 변경하지 않으려면 * 다음 * 을 클릭합니다.
+... 설치를 계속하려면 * 설치 * 를 클릭하십시오.
+... 설치를 완료하려면 * 마침 * 을 클릭합니다.
+... 다음 작업 중 하나를 선택하여 WFA가 성공적으로 설치되었는지 확인합니다.
++
+**** 웹 브라우저를 통해 WFA에 액세스합니다.
+**** Windows 서비스 콘솔을 사용하여 NetApp WFA Server 서비스와 NetApp WFA 데이터베이스 서비스가 실행 중인지 확인합니다.
+
+
+
+
+** 자동 설치(명령 프롬프트에서):
++
+ WFA-version_number-build_number.exe /s /v"WFA_ADMIN_USERNAME=wfa_username WFA_ADMIN_PASSWORD=password WFA_ADMIN_CONFIRM_PASSWORD=confirm admin password / WFA_MYSQL_PASS=password CONFIRM_WFA_MYSQL_PASS=confirm MySQL password WFA_INSTALL_SITE=site WFA_INSTALL_ORGANIZATION=organization_name WFA_HTTP_PORT=port WFA_HTTPS_PORT=port INSTALLDIR=install_directory JDKINSTALLDIR=jdk_directory PerlDir=perl_directory MySqlInstallDir=mysql_directory WFA_SERVICE_LOGON_USERNAME=wfa service logon username WFA_SERVICE_LOGON_PASSWORD=wfa service logon user password MYSQL_DATA_DIR= mysql data directory /qr /l*v C:\install.log"
++
+* 예 *
+
++
+WFA-x64-V5.1.0.0.1-B5355278.exe \"/s/v "WFA_admin_username=admin WFA_admin_password=Company * 123 WFA_admin_CONFIRM_PASSWORD=Company * 123 WFA_MySQL_PASS=MySQL * 123 WFA_INCONFIRM_MySQL_PASS=MySQL * 123 WFA_INSTALL_SITE=nb_INDEWFA_INDEUTE_SITE=nb_DIR=nb_INSTOUTR_SITE=NDER_SITE=NDEN.Dir_SITE=INSTC_SITE=INSTOUTR_Dir=INSTC.Dir=INSTOUTR=INSTOUTR=INSTC_SIDR=INSTC_Dir_SIDR=NER=INSTC_Dir=NER=NER=NER=NER=NER=INSTOUTR_MCOR_MCOR_SIDR_SIDGE_MCOR=INSTC_SIDGE_SIDR=NER=NER=NER=
+
++
+[NOTE]
+====
+/qn 옵션은 WFA에서 지원되지 않습니다.
+
+====
++
+명령 매개변수는 다음과 같습니다.
+
++
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+WFA_admin_username입니다
+ a| 
+Admin 사용자 이름 선택적 매개 변수입니다. 값을 지정하지 않으면 기본값은 admin 입니다.
+
+
+
+ a| 
+WFA_admin_password입니다
+ a| 
+관리자 암호 필수 매개 변수입니다. 기본 admin 암호는 다음 조건을 충족해야 합니다.
+
+*** 최소 8자
+*** 대문자 1개
+*** 소문자 1개
+*** 숫자 1개
+*** 특수 문자 1개
+*** 다음 문자는 허용되지 않으며 암호 입력이 실패합니다.
++
+"";<>,=&{캐럿}|
+
+
+
+
+
+ a| 
+WFA_admin_confirm_password입니다
+ a| 
+관리자 암호 필수 매개 변수입니다
+
+
+
+ a| 
+WFA_MySQL_PASS
+ a| 
+MySQL 사용자 암호 필수 매개 변수입니다
+
+
+
+ a| 
+WFA_MySQL_PASS를 확인합니다
+ a| 
+MySQL 사용자 암호 필수 매개 변수입니다
+
+
+
+ a| 
+WFA_INSTALL_SITE입니다
+ a| 
+WFA가 설치되어 있는 조직 구성 단위 필수 매개 변수
+
+
+
+ a| 
+WFA_INSTALL_organization
+ a| 
+WFA가 설치되어 있는 조직 또는 회사 이름입니다. 필수 매개 변수입니다
+
+
+
+ a| 
+WFA_HTTP_PORT
+ a| 
+HTTP port 선택적 매개 변수입니다. 값을 지정하지 않으면 기본값은 80입니다.
+
+
+
+ a| 
+WFA_HTTPS_port입니다
+ a| 
+HTTPS 포트 선택적 매개 변수입니다. 값을 지정하지 않으면 기본값은 443입니다.
+
+
+
+ a| 
+INSTALLDIR
+ a| 
+설치 디렉터리 경로 선택적 매개 변수입니다. 값을 지정하지 않으면 기본적으로 "C:\Program Files\NetApp\WFA\"가 됩니다.
+
+
+
+ a| 
+JDKINSTALLDIR
+ a| 
+JDK 설치 디렉토리 경로 선택적 매개 변수입니다. 값을 지정하지 않으면 기본적으로 "C:\Program Files\NetApp\"이 됩니다.
+
+
+
+ a| 
+PerlDir
+ a| 
+Perl 설치 디렉토리 경로 선택적 매개 변수입니다. 값을 지정하지 않으면 경로 기본값은 "C:\Perl64\"입니다.
+
+
+
+ a| 
+MySqlInstallDir 로 이동합니다
+ a| 
+MySQL 설치 디렉토리 경로 선택적 매개 변수입니다. 값을 지정하지 않으면 경로가 기본적으로 "C:\Program Files\MySQL\"로 설정됩니다.
+
+
+
+ a| 
+WFA_SERVICE_LOGON_USERNAME입니다
+ a| 
+WFA 서비스에 대한 사용자 이름 로그온 선택적 매개 변수입니다. 값을 지정하지 않으면 기본 사용자 이름이 "WFA"입니다.
+
+도메인 사용자의 경우 domain\user 형식으로 사용자 이름을 제공합니다. 로컬 시스템 사용자의 경우 형식은 사용자 이름일 뿐입니다.
+
+WFA 설치 관리자가 로컬 사용자가 없는 경우 해당 사용자를 생성합니다. 로컬 사용자가 있고 입력한 암호가 기존 암호와 다른 경우 WFA에서 암호를 업데이트합니다.
+
+[NOTE]
+====
+암호가 시스템의 로컬 사용자에 대해 구성된 암호 정책을 준수하는지 확인합니다. 암호가 암호 정책을 준수하지 않으면 설치가 실패합니다.
+
+====
+
+
+ a| 
+WFA_SERVICE_LOGON_PASSWORD를 참조하십시오
+ a| 
+WFA 서비스 로그온에 대한 암호 필수 매개 변수입니다
+
+
+
+ a| 
+MySQL_DATA_DIR
+ a| 
+MySQL DATA 디렉터리 선택적 매개 변수입니다. 값을 지정하지 않으면 경로가 기본적으로 "C:\ProgramData\MySQL\MySQLServerData"로 설정됩니다.
+
+새로 설치에만 사용할 수 있습니다.
+
+|===
+
+
+
+
+* 관련 정보 *
+
+https://mysupport.netapp.com/site/["NetApp 지원"^]

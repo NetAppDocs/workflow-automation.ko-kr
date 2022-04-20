@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/task-configure-your-preferred-perl-distribution-linux.html 
+sidebar: sidebar 
+keywords: configure, preferred, perl distribution 
+summary: 시스템에 설치된 Perl 패키지는 OnCommand Workflow Automation에서 사용합니다. 다른 Perl 배포를 사용하려는 경우 WFA에서 사용할 수 있도록 기본 Perl 배포를 구성할 수 있습니다. 
+---
+= 기본 Perl 배포를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+시스템에 설치된 Perl 패키지는 OnCommand Workflow Automation에서 사용합니다. 다른 Perl 배포를 사용하려는 경우 WFA에서 사용할 수 있도록 기본 Perl 배포를 구성할 수 있습니다.
+
+WFA 서버에 필요한 Perl 배포를 설치해야 합니다.
+
+.단계
+. 쉘 프롬프트에서 WFA 서버의 다음 디렉토리로 이동합니다. WFA_INSTALL_LOCATION/WFA/BIN/
+. 다음 명령을 입력합니다.
++
+'/WFA--custom-perl[=PERL_PATH] -- restart=WFA'
+
++
+'/WFA--custom-perl=/usr/local/perl5-11/bin/perl--restart=WFA'
+
+

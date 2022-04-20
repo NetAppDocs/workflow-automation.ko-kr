@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-managing-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, create, part, managing, understand, relevant, concepts 
+summary: 미리 정의된 워크플로를 사용자 지정하거나 워크플로 관리의 일부로 새 워크플로를 만들 수 있습니다. 또한 워크플로 관리를 시작하기 전에 관련 개념을 이해해야 합니다. 
+---
+= 워크플로 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+미리 정의된 워크플로를 사용자 지정하거나 워크플로 관리의 일부로 새 워크플로를 만들 수 있습니다. 또한 워크플로 관리를 시작하기 전에 관련 개념을 이해해야 합니다.

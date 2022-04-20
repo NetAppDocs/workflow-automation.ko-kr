@@ -1,0 +1,84 @@
+---
+permalink: windows-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html 
+sidebar: sidebar 
+keywords: configure, database, user, run, ocsetup, linux 
+summary: DataFabric Manager 5.x 서버에서 ocsetup 파일을 실행하여 OnCommand Workflow Automation에 대한 DataFabric Manager 5.x 데이터베이스의 읽기 전용 액세스를 구성할 수 있습니다. 
+---
+= Linux에서 ocsetup을 실행하여 데이터베이스 사용자를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+DataFabric Manager 5.x 서버에서 ocsetup 파일을 실행하여 OnCommand Workflow Automation에 대한 DataFabric Manager 5.x 데이터베이스의 읽기 전용 액세스를 구성할 수 있습니다.
+
+.단계
+. 터미널에서 다음 명령을 사용하여 DataFabric Manager 5.x 서버의 홈 디렉토리에 wfa_ocsetup.sh 파일을 다운로드합니다.
++
+"+와우와 https://WFA_Server_IP/download/wfa_ocsetup.sh+`[]
+
++
+WFA_Server_IP는 WFA 서버의 IP 주소(IPv4 또는 IPv6 주소)입니다.
+
++
+WFA에 대해 기본값이 아닌 포트를 지정한 경우 다음과 같이 포트 번호를 포함해야 합니다.
+
++
+"+와우와 https://wfa_server_ip:port/download/wfa_ocsetup.sh+`[]
+
++
+port는 설치 중에 WFA 서버에 사용한 TCP 포트 번호입니다.
+
++
+IPv6 주소를 지정하는 경우 대괄호로 묶어야 합니다.
+
+. 터미널에서 다음 명령을 사용하여 wfa_ocsetup.sh 파일을 실행 파일('chmod + x WFA_ocsetup.sh'로 변경합니다
+. 터미널에 다음을 입력하여 스크립트를 실행합니다.
++
+'./wfa_ocsetup.sh OpenJDK_PATH'
+
++
+OpenJDK_PATH는 OpenJDK의 경로입니다.
+
++
+/opt/NTAPdfm/java
+
++
+다음 출력이 단말기에 표시되어 설치가 성공적으로 완료되었음을 나타냅니다.
+
++
+[listing]
+----
+Verifying archive integrity... All good.
+Uncompressing WFA OnCommand Setup.....
+*** Welcome to OnCommand Setup Utility for Linux ***
+    <Help information>
+*** Please override the default credentials below ***
+Override DB Username [wfa] :
+----
+. 사용자 이름과 암호를 입력하여 기본 자격 증명을 재정의합니다.
++
+DataFabric Manager 5.x 데이터베이스에 대한 액세스 권한을 사용하여 새 데이터베이스 사용자 계정이 생성됩니다.
+
++
+
+NOTE: 사용자 계정을 만들지 않으면 기본 자격 증명이 사용됩니다. 보안을 위해 사용자 계정을 만들어야 합니다.
+
++
+다음 출력이 단말기에 표시되어 설치가 성공적으로 완료되었음을 나타냅니다.
+
++
+[listing]
+----
+***** Start of response from the database *****
+>>> Connecting to database
+<<< Connected
+*** Dropped existing 'wfa' user
+=== Created user 'username'
+>>> Granting access
+<<< Granted access
+***** End of response from the database *****
+***** End of Setup *****
+----
+

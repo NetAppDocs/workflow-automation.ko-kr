@@ -1,0 +1,95 @@
+---
+permalink: help/reference-edit-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, active directory, dialog box, enable, view, modify, oncommand, workflow, automation, group 
+summary: Active Directory 그룹 편집 대화 상자에서 OnCommand Workflow Automation Active Directory 그룹 설정을 보고 수정할 수 있습니다. 
+---
+= Active Directory 그룹 편집 대화 상자
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active Directory 그룹 편집 대화 상자에서 OnCommand Workflow Automation Active Directory 그룹 설정을 보고 수정할 수 있습니다.
+
+Active Directory 그룹 권한 및 역할에 따라 Active Directory 그룹 창에 액세스하지 못할 수 있습니다. 그러나 * 설정 * 을 선택하고 * 관리 * 에서 * Active Directory 그룹 * 을 클릭하여 Active Directory 그룹의 설정을 편집할 수 있습니다.
+
+
+NOTE: 편집할 수 있는 필드는 Active Directory 그룹 권한에 따라 다릅니다.
+
+* * 그룹 이름 *
++
+Active Directory 그룹의 그룹 이름을 표시합니다.
+
+* * 역할 *
++
+사용자 계정에 할당된 역할을 표시합니다.
+
++
+Active Directory 그룹에 할당된 다음 그룹 역할 중 하나를 표시합니다.
+
++
+** * 게스트 *
++
+이 그룹은 워크플로 실행의 상태만 보거나 워크플로 실행 상태의 변경 사항에 대한 알림을 받을 수 있습니다.
+
+** * 연산자 *
++
+이 그룹은 그룹에 액세스 권한이 제공되는 워크플로우를 미리 보고 실행할 수 있습니다.
+
+** * 승인자 *
++
+이 그룹은 그룹에 액세스 권한이 제공되는 워크플로우를 미리 보고, 실행하고, 승인하고, 거부할 수 있습니다.
+
++
+
+NOTE: 승인자의 이메일 ID와 승인자에게 통지될 워크플로의 상태를 제공해야 합니다. 승인자가 여러 개인 경우 * 이메일 * 필드에 그룹 이메일 ID를 제공할 수 있습니다.
+
+** * 설계자 *
++
+이 그룹은 워크플로우 생성을 위한 모든 액세스 권한을 가지고 있지만 글로벌 WFA 서버 설정을 수정할 수 없습니다.
+
+** * 관리자 *
++
+이 그룹은 WFA 서버에 대한 모든 액세스 권한을 가지고 있습니다.
+
++
+
+NOTE: 관리자 그룹을 하나 이상 구성해야 합니다.
+
+
+
+* * 이메일 *
++
+알림 켜짐 * 옵션을 선택한 경우 알림을 보낼 Active Directory 그룹의 이메일을 지정합니다.
+
+* * 알림 켜짐 *
++
+해당 Active Directory 그룹에 의해 트리거된 워크플로 실행 중에 Active Directory 그룹에 e-메일을 통해 알림을 보낼 시기를 선택할 수 있습니다. 다음 옵션 중 원하는 조합을 선택할 수 있습니다.
+
++
+** 워크플로 실행 시작됨: 워크플로 실행이 시작될 때 사용자에게 알립니다.
+** 워크플로 실행 실패/부분 성공: 워크플로 실행이 실패하거나 하나 이상의 단계가 실패해도 워크플로가 성공적으로 실행된 경우 사용자에게 알립니다.
++
+실패한 단계가 단계가 실패한 경우에도 워크플로우 실행이 계속되도록 구성되었기 때문에 실행이 완료됩니다.
+
+** 워크플로 실행이 성공적으로 완료됨: 워크플로 실행이 성공적으로 완료되면 사용자에게 알립니다.
+** 워크플로우 실행 승인 대기 중: WFA 구성 설정에 따라 워크플로우 실행이 운영자 또는 설계자의 승인을 대기 중인 경우 사용자에게 알려줍니다.
+
+
+
+
+
+
+== 명령 버튼
+
+* * 저장 *
++
+구성 설정을 저장하고 대화 상자를 닫습니다.
+
+* * 취소 *
++
+변경 사항이 있으면 취소하고 대화 상자를 닫습니다.
+
+

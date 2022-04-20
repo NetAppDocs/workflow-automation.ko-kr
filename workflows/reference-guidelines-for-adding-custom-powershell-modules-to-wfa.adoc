@@ -1,0 +1,24 @@
+---
+permalink: workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html 
+sidebar: sidebar 
+keywords: aware, certain, considerations, adding, custom, powershell, perl, modules, oncommand, workflow, automation, enable, commands, create 
+summary: 'WFA(OnCommand Workflow Automation)에 사용자 지정 PowerShell 및 Perl 모듈을 추가하기 전에 고려해야 할 사항이 있습니다. 사용자 지정 PowerShell 및 Perl 모듈을 사용하면 사용자 지정 명령을 사용하여 워크플로우를 생성할 수 있습니다.' 
+---
+= 사용자 지정 PowerShell 및 Perl 모듈을 추가할 때의 고려 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에 사용자 지정 PowerShell 및 Perl 모듈을 추가하기 전에 고려해야 할 사항이 있습니다. 사용자 지정 PowerShell 및 Perl 모듈을 사용하면 사용자 지정 명령을 사용하여 워크플로우를 생성할 수 있습니다.
+
+* WFA 명령을 실행하는 동안 모든 맞춤형 PowerShell 모듈을 WFA 설치 디렉토리 '/posh/modules'에 자동으로 가져옵니다.
+* 'WFA/perl' 디렉토리에 추가된 모든 사용자 지정 Perl 모듈은 _@INC_Library에 포함되어 있습니다.
+* 사용자 지정 PowerShell 및 Perl 모듈은 WFA 백업 작업의 일부로 백업되지 않습니다.
+* 사용자 지정 PowerShell 및 Perl 모듈은 WFA 복원 작업의 일부로 복원되지 않습니다.
+
+
+새로운 WFA 설치에 복사하려면 사용자 지정 PowerShell 및 Perl 모듈을 수동으로 백업해야 합니다.
+
+모듈 디렉토리의 폴더 이름은 모듈 이름의 폴더 이름과 같아야 합니다.

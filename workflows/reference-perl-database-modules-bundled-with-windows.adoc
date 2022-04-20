@@ -1,0 +1,49 @@
+---
+permalink: workflows/reference-perl-database-modules-bundled-with-windows.html 
+sidebar: sidebar 
+keywords: perl, modules, bundle, windows, active, state, distribution, oncommand, workflow, automation, use, code, writing, commands 
+summary: '일부 Perl 모듈은 Windows WFA(Active State Perl Distribution for OnCommand Workflow Automation)와 함께 번들로 제공됩니다. 이러한 Perl 모듈은 Windows와 함께 번들로 제공되는 경우에만 명령 작성에 Perl 코드에서 사용할 수 있습니다.' 
+---
+= Perl 모듈은 Windows와 함께 번들로 제공됩니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일부 Perl 모듈은 Windows WFA(Active State Perl Distribution for OnCommand Workflow Automation)와 함께 번들로 제공됩니다. 이러한 Perl 모듈은 Windows와 함께 번들로 제공되는 경우에만 명령 작성에 Perl 코드에서 사용할 수 있습니다.
+
+다음 표에는 Windows for WFA에 번들로 제공되는 Perl 데이터베이스 모듈이 나열되어 있습니다.
+
+[cols="2*"]
+|===
+| 데이터베이스 모듈 | 설명 
+
+
+ a| 
+DBD::MySQL
+ a| 
+MySQL 데이터베이스에 연결할 수 있는 Perl5 데이터베이스 인터페이스 드라이버.
+
+
+
+ a| 
+시도:: 아주 작다
+ a| 
+평가 블록으로 일반적인 실수를 최소화합니다.
+
+
+
+ a| 
+XML::LibXML
+ a| 
+DOM, SAX 및 XmlReader 인터페이스를 사용하여 XML 및 HTML 파서 를 제공하는 libxml2 인터페이스입니다.
+
+
+
+ a| 
+DBD::Cassandra
+ a| 
+CQL3 쿼리 언어를 사용하는 Cassandra용 Perl5 데이터베이스 인터페이스 드라이버.
+
+|===

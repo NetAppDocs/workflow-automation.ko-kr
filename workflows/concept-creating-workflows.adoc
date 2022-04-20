@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-workflows.html 
+sidebar: sidebar 
+keywords: predefined, workflows, match, requirements, create, understand, capabilities, available, designer, checklist 
+summary: 사전 정의된 워크플로가 요구사항에 맞지 않으면 필요한 워크플로를 만들 수 있습니다. 워크플로우를 생성하기 전에 WFA 디자이너에서 사용할 수 있는 기능을 이해하고 워크플로우 체크리스트를 만들어야 합니다. 
+---
+= 워크플로우 생성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+사전 정의된 워크플로가 요구사항에 맞지 않으면 필요한 워크플로를 만들 수 있습니다. 워크플로우를 생성하기 전에 WFA 디자이너에서 사용할 수 있는 기능을 이해하고 워크플로우 체크리스트를 만들어야 합니다.

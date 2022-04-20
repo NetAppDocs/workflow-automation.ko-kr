@@ -1,0 +1,46 @@
+---
+permalink: rhel-install/task-configure-an-earlier-version-of-wfa-to-high-availability.html 
+sidebar: sidebar 
+keywords: configure, earlier version, oncommand, workflow, automation, high availability 
+summary: '고가용성을 위해 3.1 이전 버전의 OnCommand Workflow Automation(WFA)를 구성할 수 있습니다.' 
+---
+= 고가용성을 위해 이전 버전의 OnCommand Workflow Automation를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+고가용성을 위해 3.1 이전 버전의 OnCommand Workflow Automation(WFA)를 구성할 수 있습니다.
+
+.단계
+. 기존 WFA 버전을 사용 가능한 최신 WFA 버전으로 업그레이드하십시오.
++
+link:task-upgrade-from-wfa-4-2.html["WFA를 업그레이드합니다"]
+
++
+업그레이드된 이 WFA 버전은 클러스터의 기본 노드입니다.
+
+. WFA 데이터베이스의 백업을 생성합니다.
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["WFA 데이터베이스 백업"]
+
++
+매개 변수를 수동으로 변경한 경우 WFA 데이터베이스의 백업을 생성하고, 기존 WFA 설치를 제거한 다음, 사용 가능한 최신 버전의 WFA를 설치하고, 백업을 복원한 다음 VCS(Veritas Cluster Server) 구성을 진행해야 합니다.
+
+. 기본 노드에 WFA를 설치하도록 VCS를 구성합니다.
++
+link:task-configure-vcs-to-install-wfa.html["WFA를 설치하도록 VCS 구성"]
+
+. 보조 노드에 사용 가능한 최신 버전의 WFA를 설치합니다.
++
+link:task-install-oncommand-workflow-automation.html["WFA를 설치합니다"]
+
+. VCS에서 WFA를 구성합니다.
++
+link:task-configure-wfa-with-vcs-using-configuration-scripts-linux.html["VCS에서 WFA를 구성합니다"]
+
++
+WFA 서버는 고가용성을 지원하도록 구성됩니다.
+
+

@@ -1,0 +1,25 @@
+---
+permalink: workflows/concept-what-continue-on-failure-is.html 
+sidebar: sidebar 
+keywords: continue, failure, feature, help, configure, step, workflow, execution, address, resolve, issue, cause, accessing, wfa.log file, click, icon 
+summary: 실패 시 계속 기능을 사용하면 단계가 실패하더라도 워크플로 실행이 계속될 수 있도록 워크플로의 단계를 구성할 수 있습니다. wfa.log 파일에 액세스하거나 아이콘을 클릭하여 실패한 단계를 해결하고 실패한 단계를 해결할 수 있습니다. 
+---
+= 장애 시 계속 진행 방법
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+실패 시 계속 기능을 사용하면 단계가 실패하더라도 워크플로 실행이 계속될 수 있도록 워크플로의 단계를 구성할 수 있습니다. 실패한 단계를 처리하고 'WFA.log' 파일에 액세스하거나 를 클릭하여 단계에서 실패하는 문제를 해결할 수 있습니다 image:../media/info_icon_execute_wfa.gif[""] 아이콘을 클릭합니다.
+
+실패한 단계가 하나 이상 있는 워크플로는 실행이 완료된 후 부분적으로 성공한 상태입니다. 명령_이름> 매개 변수 대화 상자의 고급 탭에서 필요한 옵션을 선택하여 단계가 실패한 경우에도 워크플로우 실행이 계속되도록 단계를 구성할 수 있습니다.
+
+실패 시 단계를 계속하도록 구성하지 않으면 단계가 실패할 경우 워크플로 실행이 중단됩니다.
+
+실패 시 계속하도록 구성된 단계가 실패하는 경우 다음 옵션 중 하나를 사용하여 워크플로가 실행되도록 설정할 수 있습니다.
+
+* 워크플로 실행 중단(기본 옵션)
+* 다음 단계에서 실행을 계속합니다
+* 다음 행에서 실행을 계속합니다
+

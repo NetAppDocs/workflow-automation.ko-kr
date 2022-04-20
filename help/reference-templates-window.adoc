@@ -1,0 +1,147 @@
+---
+permalink: help/reference-templates-window.html 
+sidebar: sidebar 
+keywords: template, window, display, available, alphabetical, order, collection, settings, workflows, quickly 
+summary: 'Templates(템플릿) 창에는 사용 가능한 템플릿이 사전순으로 표시됩니다. 서식 파일은 워크플로를 만들 때 사용할 수 있는 설정 모음입니다. 템플릿을 사용하여 워크플로우를 빠르게 생성할 수 있습니다.' 
+---
+= 템플릿 창
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Templates(템플릿) 창에는 사용 가능한 템플릿이 사전순으로 표시됩니다. 서식 파일은 워크플로를 만들 때 사용할 수 있는 설정 모음입니다. 템플릿을 사용하여 워크플로우를 빠르게 생성할 수 있습니다.
+
+
+NOTE: 역할 및 계정 권한에 따라 이 창이 표시되지 않을 수 있습니다.
+
+* 템플릿 테이블
+* 도구 모음
+
+
+
+
+== 템플릿 테이블
+
+템플릿 테이블에는 사용 가능한 템플릿이 나열됩니다. 각 항목은 다음 중 하나로 식별됩니다.
+
+* image:../media/community_certification.gif[""] - 사용자가 만든 콘텐츠입니다
+* image:../media/ps_certified_icon_wfa.gif[""] ?PS(Professional Services)에서 개발한 컨텐츠로, PS에서 설치한 사용자 정의 설치에서만 사용할 수 있습니다
+* image:../media/community_certification.gif[""] 사용자가 개발한 팩입니다
+* image:../media/lock_icon_wfa.gif[""] - 잠긴 사용자가 만든 콘텐츠입니다
+* image:../media/netapp_certified.gif[""] 인증받은 NetApp 컨텐츠
+
+
+각 열에 사용할 수 있는 필터링 및 정렬 기능을 사용하거나 열 순서를 다시 정렬하여 표 표시를 사용자 지정할 수 있습니다.
+
+* image:../media/filter_icon_wfa.gif["필터 아이콘"] 전체 테이블에 대한 필터링을 설정하거나 해제합니다. 필터링이 비활성화된 경우 아이콘 위에 빨간색 "x"가 나타납니다.
+* 두 번 클릭합니다 image:../media/filter_icon_wfa.gif["필터 아이콘"] 필터링 선택을 지우고 재설정합니다.
+* image:../media/wfa_filter_icon.gif["필터 아이콘"] 각 열 머리글에서 열의 내용을 기준으로 필터링할 수 있습니다. 를 클릭합니다 image:../media/wfa_filter_icon.gif["필터 아이콘"] 열에서 드롭다운 목록 또는 사용 가능한 모든 항목의 특정 항목을 필터링할 수 있습니다.
+* 열 머리글을 클릭하면 정렬 순서가 오름차순과 내림차순으로 전환됩니다. 적용된 정렬 순서를 정렬 화살표(image:../media/wfa_sortarrow_up_icon.gif["정렬 아이콘"] 오름차순 및 의 경우 image:../media/wfa_sortarrow_down_icon.gif["정렬 아이콘"] 내림차순).
+* 열의 위치를 다시 정렬하려면 열을 끌어서 놓아 원하는 순서대로 배치할 수 있습니다. 그러나 이러한 열은 숨기거나 삭제할 수 없습니다.
+* 검색 * 필터 텍스트 상자를 클릭하면 특정 콘텐츠를 검색할 수 있습니다. 또한 지원되는 연산자를 사용하여 해당 열 유형, 알파벳 또는 숫자를 검색할 수 있습니다.
+
+
+Templates 테이블에는 다음 열이 포함됩니다.
+
+* * 인증 *
++
+템플릿이 사용자 작성(image:../media/community_certification.gif[""]), PS(image:../media/ps_certified_icon_wfa.gif[""]), 커뮤니티(image:../media/community_certification.gif[""]), 사용자 잠금(image:../media/lock_icon_wfa.gif[""]) 또는 NetApp 인증(image:../media/netapp_certified.gif[""])를 클릭합니다.
+
++
+필터 목록에서 필요한 확인란을 선택하여 템플릿을 검색할 수 있습니다.
+
+* * 이름 *
++
+템플릿 이름을 표시합니다.
+
+* * 구성표 *
++
+템플릿과 연결된 구성표를 표시합니다. 스키마는 시스템의 데이터 모델을 나타냅니다. 예를 들어 VC 스키마에는 가상 머신, 호스트 및 데이터 저장소와 같은 가상 환경과 관련된 데이터가 포함됩니다.
+
+* * 유형 *
++
+템플릿의 사전 객체 유형(예: 볼륨 및 Snapshot_Policy)을 표시합니다.
+
+* * 엔터티 버전 *
++
+오브젝트의 버전 번호를 major.minor.revision 형식(예: 1.0.0)으로 표시합니다.
+
+* * 설명 *
++
+템플릿에 대한 설명을 표시합니다.
+
+* * 마지막 업데이트 날짜: *
++
+템플릿이 마지막으로 업데이트된 날짜와 시간을 표시합니다.
+
+* * 업데이트: *
++
+템플릿을 업데이트한 사용자의 이름을 표시합니다.
+
+* * 잠금 기준 *
++
+템플릿을 잠근 사용자의 이름을 표시합니다.
+
+
+
+
+
+== 도구 모음
+
+도구 모음은 열 머리글 위에 있습니다. 도구 모음의 아이콘을 사용하여 다양한 작업을 수행할 수 있습니다. 이러한 작업은 창의 오른쪽 클릭 메뉴에서도 액세스할 수 있습니다.
+
+* *image:../media/new_wfa_icon.gif["새 아이콘"] (신규) *
++
+새 템플릿을 만들 수 있는 새 템플릿 대화 상자를 엽니다.
+
+* *image:../media/edit_wfa_icon.gif["편집 아이콘"] (편집) *
++
+Template <template_name>(템플릿 <템플릿_이름>) 대화 상자를 엽니다. 이 대화 상자에서 선택한 템플릿의 설정을 수정할 수 있습니다. 템플릿을 두 번 클릭하여 템플릿 <template_name> 대화 상자를 열 수도 있습니다.
+
+* *image:../media/clone_wfa_icon.gif["클론 아이콘을 클릭합니다"] (클론) *
++
+선택한 템플릿의 클론 또는 복사본을 생성할 수 있는 새 템플릿 <template_name> - copy 대화 상자를 엽니다.
+
+* *image:../media/lock_wfa_icon.gif["잠금 아이콘"] (잠금) *
++
+선택한 템플릿을 잠글 수 있는 템플릿 잠금 확인 대화 상자를 엽니다. 이 옵션은 사용자가 만든 서식 파일에만 사용할 수 있습니다.
+
+* *image:../media/unlock_wfa_icon.gif["잠금 해제 아이콘"] (잠금 해제) *
++
+선택한 템플릿의 잠금을 해제할 수 있는 템플릿 잠금 해제 확인 대화 상자를 엽니다. 이 옵션은 사용자가 잠근 템플릿에 대해서만 활성화됩니다. 그러나 관리자는 다른 사용자가 잠근 서식 파일의 잠금을 해제할 수 있습니다.
+
+* *image:../media/delete_wfa_icon.gif["삭제 아이콘"] (삭제) *
++
+선택한 사용자 작성 템플릿을 삭제할 수 있는 템플릿 삭제 확인 대화 상자를 엽니다.
+
++
+
+NOTE: 샘플 템플릿은 삭제할 수 없습니다.
+
+* *image:../media/export_wfa_icon.gif["내보내기 아이콘"] (내보내기) *
++
+선택한 사용자 작성 템플릿을 내보낼 수 있습니다.
+
++
+
+NOTE: 샘플 템플릿을 내보낼 수 없습니다.
+
+* *image:../media/add_to_pack.png["팩 아이콘에 추가"] (팩에 추가) *
++
+팩 템플릿에 추가 대화 상자를 엽니다. 이 대화 상자에서 편집 가능한 팩에 템플릿과 신뢰할 수 있는 요소를 추가할 수 있습니다.
+
++
+
+NOTE: 팩에 추가 기능은 인증이 * 없음 * 으로 설정된 템플릿에 대해서만 활성화됩니다
+
+* *image:../media/remove_from_pack.png["팩에서 제거 아이콘"] (팩에서 제거) *
++
+선택한 템플릿에 대한 팩 템플릿에서 제거 대화 상자를 엽니다. 이 대화 상자에서 템플릿을 삭제하거나 제거할 수 있습니다.
+
++
+
+NOTE: 인증에서 제거 기능은 인증이 * 없음 * 으로 설정된 템플릿에 대해서만 활성화됩니다
+
+

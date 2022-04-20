@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-create-a-dictionary-entry.html 
+sidebar: sidebar 
+keywords: create, wfa, dictionary, entry, define, object, type, relationship, storage, environment 
+summary: 스토리지 환경에서 새 개체 유형과 해당 관계를 정의하려는 경우 WFA 사전 항목을 생성할 수 있습니다. 
+---
+= 사전 항목을 만듭니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 환경에서 새 개체 유형과 해당 관계를 정의하려는 경우 WFA 사전 항목을 생성할 수 있습니다.
+
+.단계
+. 데이터 소스 디자인 * > * 사전 * 을 클릭합니다.
+. 을 클릭합니다 image:../media/new_wfa_icon.gif["새 아이콘"] 를 클릭합니다.
+. 새 사전 항목 * 대화 상자의 * 개체 유형 * 이름 및 * 설명 * 필드에 필수 세부 정보를 입력합니다.
+. Scheme * 필드에 대해 다음 작업 중 하나를 수행합니다.
++
+** 목록에서 사용 가능한 구성표 중 하나를 선택합니다.
+** 새 구성표 추가 * 를 클릭하고 새 구성표 대화 상자에 필수 * 구성표 이름 * 을 입력한 다음 * 추가 * 를 클릭합니다.
+
+
+. 행 추가 * 를 클릭하고 다음 단계를 수행하여 속성을 설명합니다.
++
+.. 이름 * 열을 클릭하고 속성 이름을 입력합니다.
+.. Type * 열에서 필요한 유형을 선택합니다.
++
+String Length * 열은 형식으로 문자열을 선택한 경우 채워지고 편집할 수 있습니다. 또한 * enum * 을 유형으로 선택한 경우 * Values * 열을 편집할 수 있습니다.
+
+.. Natural Key, to be Cached, and Can be Null columns에서 해당 특성의 확인란을 선택합니다.
++
+Natural Key * 확인란을 선택한 경우에는 * Null일 수 있음 * 확인란을 선택할 수 없습니다.
+
+.. 사전 개체에 필요한 특성을 추가합니다.
+.. * 선택 사항: * 자연 키 열에 있는 * 값은 대/소문자를 구분하도록 하려면 * 확인란을 선택합니다.
+
+
+. 저장 * 을 클릭합니다.
+

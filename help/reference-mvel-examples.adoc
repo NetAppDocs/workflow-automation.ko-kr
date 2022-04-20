@@ -1,0 +1,141 @@
+---
+permalink: help/reference-mvel-examples.html 
+sidebar: sidebar 
+keywords: expression, language, syntax, several, oncommand, workflows, automation, sample, review, learn, use 
+summary: 'MVFLEX Expression Language(MVEL) 구문세는 여러 WFA(OnCommand Workflow Automation) 샘플 워크플로에서 사용됩니다. 일부 MVEL 합성세를 검토하여 WFA에서 MVEL을 사용하는 방법을 확인해야 합니다.' 
+---
+= MVEL 구문의 예
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MVFLEX Expression Language(MVEL) 구문세는 여러 WFA(OnCommand Workflow Automation) 샘플 워크플로에서 사용됩니다. 일부 MVEL 합성세를 검토하여 WFA에서 MVEL을 사용하는 방법을 확인해야 합니다.
+
+다음 섹션에서는 WFA에 사용되는 MVEL Synt세의 몇 가지 예를 제공합니다.
+
+
+
+== 조건부 실행
+
+다음 MVEL 식은 찾은 볼륨 수가 4보다 적을 때 명령의 조건부 실행에 사용됩니다.
+
+[listing]
+----
+$NoOfVolumes < 4
+----
+
+
+== 증분 이름 지정
+
+다음 MVEL 식은 개체의 증분 이름 지정에 사용됩니다.
+
+[listing]
+----
+last_volume.name+last_volume.state
+----
+이 MVEL 표현식은 마지막으로 생성된 볼륨 이름과 마지막으로 생성된 볼륨의 상태를 사용하여 이름을 지정합니다.
+
+
+
+== 명령의 문자열 표현
+
+다음 MVEL 구문은 문자열 표현으로 사용됩니다.
+
+[listing]
+----
+DestinationCluster + ":" + DestinationVserver + "/" + DestinationVolume
+----
+
+
+== 템플릿
+
+다음 MVEL 구문이 템플릿에서 사용됩니다.
+
+[listing]
+----
+calculateSnapReserveSize(calculateVolumeSizeFromDataSize((int)($fs_size*1.01),$snap_space),$snap_space)
+----
+이 MVEL 구문은 Snapshot 복제본용으로 예약할 볼륨 용량의 백분율을 계산하는 데 사용됩니다.
+
+
+
+== 명령 세부 정보
+
+다음 MVEL 함수는 매개 변수의 특성 섹션에서 사용됩니다.
+
+[listing]
+----
+actualVolumeSize($VolumeSizeInGB * 1024, volume.snapshot_reserved_percent)
+----
+다음 MVEL 구문은 매개 변수의 특성 섹션에서 사용됩니다.
+
+[listing]
+----
+$VolumeName+'test001'
+----
+
+
+== 워크플로 상수
+
+워크플로의 상수에 사용되는 MVEL 합성세금은 다음과 같습니다.
+
+[listing]
+----
+convertNullToZero(infinite_volume.max_namespace_constituent_size_mb)
+----
+[listing]
+----
+$Size_TB*1048576L
+----
+
+
+== 매개 변수를 반환합니다
+
+다음 MVEL 구문은 요청된 크기를 할당할 수 있는지 여부를 확인하는 데 사용됩니다.
+
+[listing]
+----
+size_remaining == 0 ? '' : throwException('Not sufficient space in capacity_class_aggregate or data constituent of size less than 1 TB can not be created: Total size requested='+$Size_TB+'TB'+' ,Size remaining='+size_remaining/TB_TO_MB+'TB'+', Infinite volume name='+infinite_volume.name+', Storage class='+CAPACITY_CLASS_LABEL)
+----
+
+
+== 함수 정의
+
+다음 MVEL 구문은 null을 0으로 변환하는 데 사용되는 함수 정의에 사용됩니다.
+
+[listing]
+----
+def convertNullToZero (data)
+{
+  if(data == null)
+  {
+    return 0;
+  }
+  else
+  {
+    return data;
+  }
+}
+----
+
+
+== 특정 행의 반복
+
+다음 MVEL 식은 사용자 입력을 사용하여 LUN을 생성하기 위해 행을 반복해야 하는 횟수를 나타냅니다.
+
+[listing]
+----
+$NumberOfLunsToBeCreated
+----
+
+
+== 행에 대한 조건식입니다
+
+다음 MVEL 식은 사용자 입력을 사용하여 행이 실행되는지 여부를 나타냅니다.
+
+[listing]
+----
+$SetupSnapMirror
+----

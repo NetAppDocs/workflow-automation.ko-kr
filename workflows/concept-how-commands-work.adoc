@@ -1,0 +1,71 @@
+---
+permalink: workflows/concept-how-commands-work.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, commands, execution, blocks, step 
+summary: OnCommand Workflow Automation 명령은 워크플로우의 실행 블록입니다. 워크플로의 각 단계에 대해 명령을 사용할 수 있습니다. 
+---
+= 명령이 작동하는 방식
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation 명령은 워크플로우의 실행 블록입니다. 워크플로의 각 단계에 대해 명령을 사용할 수 있습니다.
+
+WFA 명령은 PowerShell 및 Perl 스크립트를 사용하여 작성됩니다. 패키지가 설치된 경우 PowerShell 명령은 Data ONTAP PowerShell 툴킷과 VMware PowerCLI를 사용합니다. Perl 명령은 WFA 서버에 설치된 Perl 배포 및 Perl 모듈을 사용합니다. 명령에 PowerShell 및 Perl과 같은 여러 스크립팅 언어를 포함할 경우, 해당 스크립트가 설치된 운영 체제 및 WFA 구성 메뉴에 지정된 기본 언어 순서에 따라 WFA에서 적절한 스크립트를 선택합니다.
+
+WFA 명령에 대한 스크립트에는 여러 매개 변수가 포함됩니다. 이러한 매개 변수는 사전 항목 속성에 매핑될 수 있습니다.
+
+각 WFA 명령에는 여러 Data ONTAP 명령이 포함될 수 있습니다.
+
+일부 WFA 명령은 오래 실행되는 작업을 기다리고 주기적으로 폴링할 수 있기 때문에 대기 명령이라고 합니다. 예를 들어 * 여러 볼륨 이동 대기 * 명령. 폴링 명령이 실행되는 대기 간격은 작업이 완료되었는지 확인하도록 구성할 수 있습니다.
+
+WFA 명령은 워크플로가 실행 단계에 있는 동안 WFA에서 시작됩니다. WFA는 왼쪽에서 오른쪽 및 위에서 아래로 순서대로 명령을 순차적으로 실행합니다. 워크플로를 계획하면 명령에 제공되는 매개 변수의 사용 가능성 및 유효성을 확인할 수 있습니다. WFA 서버는 명령을 실행하기 전에 명령에 필요한 모든 매개 변수를 제공합니다.
+
+명령에 대한 매개 변수는 워크플로 계획 중에 완료됩니다. 그런 다음 워크플로는 실행 시간 동안 이러한 매개 변수를 명령에 전달합니다. 명령은 매개 변수를 워크플로로 다시 전달할 수 없습니다. 하지만 워크플로의 명령 간에 실행 시간 중에 얻은 정보를 교환하려면 지정된 WFA PowerShell cmdlet 또는 Perl 기능을 사용할 수 있습니다.
+
+WFA PowerShell 명령은 PowerShell cmdlet에 대해 -ErrorAction 중지 플래그를 사용하지 않으므로 오류로 인해 cmdlet이 실패할 경우에도 워크플로우 작업이 계속 진행됩니다. 특정 명령에 -ErrorAction 중지 플래그를 포함하려는 경우 명령을 복제하고 PowerShell 스크립트를 수정하여 플래그를 추가할 수 있습니다.
+
+다음은 명령 간 정보 교환을 위해 WFA에 포함된 PowerShell cmdlet 및 Perl 기능입니다.
+
+[cols="2*"]
+|===
+| PowerShell cmdlet | Perl 기능 
+
+
+ a| 
+Add-WfaWorkflowParameter 를 참조하십시오
+ a| 
+addWfaWorkflowParameter 를 참조하십시오
+
+
+
+ a| 
+Get-WfaWorkflowParameter 를 참조하십시오
+ a| 
+getWfaWorkflowParameter를 참조하십시오
+
+|===
+""add"" cmdlet 또는 명령에 추가된 파라미터는 이후에 실행되는 명령으로 검색하여 ""get"" cmdlet 또는 기능을 사용할 수 있습니다. 예를 들어 PowerShell WFA 명령에서 다음 코드를 사용하여 volumeId라는 매개 변수를 추가할 수 있습니다. "Add-WfaWorkflowParameter -Name "VolumeUUID" -Value “12345” - AddAsReturnParameter$ true" 그런 다음 후속 명령에서 다음을 사용하여 volumeId 값('$volumeId=get-WfaWorkflowParameter-Name volumeId')을 검색할 수 있습니다.
+
+WFA 명령은 WFA 데이터베이스를 쿼리하고 필요한 결과를 가져올 수 있습니다. 이렇게 하면 필터와 파인더를 사용하지 않고 명령을 구성할 수 있습니다. 다음 함수를 사용하여 데이터베이스를 쿼리할 수 있습니다.
+
+[cols="2*"]
+|===
+| PowerShell cmdlet | Perl 함수 
+
+
+ a| 
+Invoke - MySqlQuery 예: "Invoke - MySqlQuery - Query" cm_storage.cluster ""에서 cluster.name 를 'Cluster Name'으로 선택합니다
+ a| 
+invokeMySqlQuery 를 선택합니다
+
+|===
+* 관련 정보 *
+
+xref:task-create-a-filter.adoc[필터를 만듭니다]
+
+xref:task-create-a-finder.adoc[파인더를 생성합니다]
+
+xref:task-create-a-command.adoc[명령을 생성합니다]

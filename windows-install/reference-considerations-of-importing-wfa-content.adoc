@@ -1,0 +1,44 @@
+---
+permalink: windows-install/reference-considerations-of-importing-wfa-content.html 
+sidebar: sidebar 
+keywords: considerations, import, oncommand, workflow, automation content 
+summary: '사용자가 생성한 콘텐츠, WFA(OnCommand Workflow Automation) 설치에서 내보낸 콘텐츠 또는 스토리지 자동화 스토어 또는 WFA 커뮤니티에서 다운로드한 콘텐츠를 가져올 때는 주의해야 할 몇 가지 사항이 있습니다.' 
+---
+= OnCommand Workflow Automation 콘텐츠를 가져오는 동안 고려해야 할 사항입니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+사용자가 생성한 콘텐츠, WFA(OnCommand Workflow Automation) 설치에서 내보낸 콘텐츠 또는 스토리지 자동화 스토어 또는 WFA 커뮤니티에서 다운로드한 콘텐츠를 가져올 때는 주의해야 할 몇 가지 사항이 있습니다.
+
+* WFA 콘텐츠는 .DAR 파일로 저장되며 다른 시스템 또는 워크플로우, 찾기, 명령, 사전 용어 등의 특정 항목에서 사용자가 생성한 전체 콘텐츠를 포함할 수 있습니다.
+* 기존 범주를 .DAR 파일에서 가져오면 가져온 콘텐츠가 범주의 기존 콘텐츠와 병합됩니다.
++
+예를 들어, WFA 서버의 범주 A에 WF1 및 WF2의 두 가지 워크플로우가 있다고 가정해 보겠습니다. 범주 A의 워크플로 WF3 및 WF4 를 WFA 서버로 가져오면 범주 A에 가져오기 후 워크플로 WF1, WF2, WF3 및 WF4 가 포함됩니다.
+
+* DAR 파일에 사전 항목이 포함되어 있으면 사전 항목에 해당하는 캐시 테이블이 자동으로 업데이트됩니다.
++
+캐시 테이블이 자동으로 업데이트되지 않으면 wfa.log 파일에 오류 메시지가 기록됩니다.
+
+* WFA 서버에 없는 팩에 종속된 .DAR 파일을 가져올 때 WFA는 엔터티의 모든 종속성이 충족되는지 여부를 확인하려고 시도합니다.
++
+** 하나 이상의 엔터티가 없거나 더 낮은 버전의 엔터티가 발견되면 불러오기에 실패하고 오류 메시지가 표시됩니다.
++
+오류 메시지는 종속성을 충족시키기 위해 설치해야 하는 팩의 세부 정보를 제공합니다.
+
+** 더 높은 버전의 엔터티가 발견되거나 인증이 변경된 경우 버전 불일치에 대한 일반 대화 상자가 표시되고 가져오기가 완료됩니다.
++
+버전 불일치 세부 정보는 wfa.log 파일에 기록됩니다.
+
+
+
+* 다음 사항에 대한 질문 및 지원 요청은 WFA 커뮤니티로 리디렉션해야 합니다.
++
+** WFA 커뮤니티에서 다운로드한 모든 콘텐츠
+** 생성한 맞춤형 WFA 콘텐츠입니다
+** 수정한 WFA 콘텐츠입니다
+
+
+

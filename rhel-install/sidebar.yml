@@ -1,0 +1,173 @@
+---
+section: rhel-install
+title: Linux용 설치 및 설정
+entries:
+- title: OnCommand Workflow Automation 개요
+  url: "/rhel-install/concept-overview-of-oncommand-workflow-automation.html"
+  entries:
+  - title: OnCommand Workflow Automation 구축 아키텍처
+    url: "/rhel-install/concept-oncommand-workflow-automation-deployment-architecture.html"
+  - title: OnCommand Workflow Automation 설치 및 설정 개요
+    url: "/rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html"
+  - title: OnCommand Workflow Automation에 대해 알려진 제한 사항
+    url: "/rhel-install/concept-unsupported-features-for-wfa-on-linux.html"
+- title: OnCommand Workflow Automation 설치를 위한 시스템 요구 사항
+  url: "/rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html"
+  entries:
+  - title: Workflow Automation에 필요한 포트 수
+    url: "/rhel-install/reference-ports-required-for-oncommand-workflow-automation.html"
+- title: Workflow Automation 설치를 위한 사전 요구사항
+  url: "/rhel-install/reference-prerequisites-for-installing-workflow-automation.html"
+  entries:
+  - title: CentOS 및 RHEL에 Perl 모듈을 설치합니다
+    url: "/rhel-install/task-install-perl-module-on-centos-and-rhel.html"
+- title: 고가용성 관리
+  url: "/rhel-install/concept-managing-high-availability.html"
+  entries:
+  - title: 고가용성을 위해 VCS에서 워크플로우 자동화 설정
+    url: "/rhel-install/task-set-up-wfa-in-vcs.html"
+    entries:
+    - title: OnCommand Workflow Automation를 설치하도록 VCS를 구성합니다
+      url: "/rhel-install/task-configure-vcs-to-install-wfa.html"
+    - title: Linux에 OnCommand Workflow Automation를 설치합니다
+      url: "/rhel-install/task-install-oncommand-workflow-automation.html"
+    - title: VCS에서 워크플로우 자동화를 구성합니다
+      url: "/rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html"
+  - title: 고가용성을 위해 이전 버전의 OnCommand Workflow Automation를 구성합니다
+    url: "/rhel-install/task-configure-an-earlier-version-of-wfa-to-high-availability.html"
+  - title: VCS 환경에서 Workflow Automation을 제거합니다
+    url: "/rhel-install/task-uninstall-wfa-in-a-vcs-environment.html"
+  - title: Linux에서 OnCommand Workflow Automation 데이터베이스 및 구성을 백업 및 복구합니다
+    url: "/rhel-install/task-back-up-the-wfa-database-and-configurations-linux.html"
+- title: OnCommand Workflow Automation 설정
+  url: "/rhel-install/concept-setting-up-oncommand-workflow-automation.html"
+  entries:
+  - title: OnCommand Workflow Automation에 액세스합니다
+    url: "/rhel-install/task-access-oncommand-workflow-automation.html"
+  - title: OnCommand Workflow Automation 데이터 소스
+    url: "/rhel-install/concept-wfa-data-sources.html"
+    entries:
+    - title: DataFabric Manager에서 데이터베이스 사용자 구성
+      url: "/rhel-install/reference-configuring-a-database-user-on-datafabric-manager.html"
+      entries:
+      - title: Windows에서 ocsetup을 실행하여 데이터베이스 사용자를 구성합니다
+        url: "/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html"
+      - title: Linux에서 ocsetup을 실행하여 데이터베이스 사용자를 구성합니다
+        url: "/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html"
+    - title: 데이터 원본을 설정합니다
+      url: "/rhel-install/task-set-up-a-data-source.html"
+    - title: 업그레이드된 Unified Manager 서버를 데이터 소스로 추가합니다
+      url: "/rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html"
+  - title: 로컬 사용자를 생성합니다
+    url: "/rhel-install/task-create-local-users.html"
+  - title: 대상 시스템의 자격 증명을 구성합니다
+    url: "/rhel-install/task-configure-the-credentials-of-a-target-system.html"
+  - title: OnCommand Workflow Automation 구성
+    url: "/rhel-install/concept-advanced-configuring-oncommand-workflow-automation.html"
+    entries:
+    - title: AutoSupport를 구성합니다
+      url: "/rhel-install/task-configure-autosupport.html"
+    - title: 인증 설정을 구성합니다
+      url: "/rhel-install/task-configure-authentication-settings.html"
+    - title: Active Directory 그룹을 추가합니다
+      url: "/rhel-install/task-add-active-directory-group-names.html"
+    - title: 이메일 알림을 구성합니다
+      url: "/rhel-install/task-configure-mail.html"
+    - title: SNMP를 구성합니다
+      url: "/rhel-install/task-configure-snmp.html"
+    - title: Syslog를 구성합니다
+      url: "/rhel-install/task-configure-syslog.html"
+    - title: 원격 시스템에 연결하기 위한 프로토콜을 구성합니다
+      url: "/rhel-install/task-configure-protocols-for-connecting-to-remote-systems.html"
+  - title: 기본 암호 정책을 사용하지 않도록 설정합니다
+    url: "/rhel-install/task-disable-the-default-password-policy-linux.html"
+  - title: 기본 암호 정책을 수정합니다
+    url: "/rhel-install/task-modify-the-default-password-policy-linux.html"
+  - title: OnCommand Workflow Automation 데이터베이스에 대한 원격 액세스를 설정하거나 해제합니다
+    url: "/rhel-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database-linux.html"
+  - title: OnCommand Workflow Automation의 트랜잭션 제한 시간 설정을 수정합니다
+    url: "/rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html"
+  - title: Workflow Automation의 시간 초과 값을 구성합니다
+    url: "/rhel-install/task-configure-the-timeout-value-for-linux.html"
+  - title: 암호화 활성화 및 새 암호 추가
+    url: "/rhel-install/concept-enabling-ciphers-and-adding-new-ciphers.html"
+- title: OnCommand Workflow Automation 3.1 이상에서 업그레이드합니다
+  url: "/rhel-install/task-upgrade-from-wfa-4-2.html"
+  entries:
+  - title: 업그레이드 중 팩 식별
+    url: "/rhel-install/reference-pack-identification-during-upgrade.html"
+- title: 타사 제품 업그레이드
+  url: "/rhel-install/concept-upgrading-third-party-products-in-linux.html"
+  entries:
+  - title: OpenJDK를 업그레이드합니다
+    url: "/rhel-install/task-upgrade-openjdk-on-linux-wfa.html"
+  - title: Linux에서 MySQL 업그레이드
+    url: "/rhel-install/task-upgrade-mysql-on-linux.html"
+- title: OnCommand Workflow Automation 데이터베이스를 백업하는 중입니다
+  url: "/rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html"
+  entries:
+  - title: 웹 포털에서 WFA 데이터베이스를 백업합니다
+    url: "/rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html"
+  - title: CLI를 사용하여 WFA 데이터베이스 백업
+    url: "/rhel-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html"
+    entries:
+    - title: CLI를 사용하여 WFA 데이터베이스를 전체 백업(전체)합니다
+      url: "/rhel-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html"
+    - title: CLI를 사용하여 WFA 데이터베이스를 백업(일반)합니다
+      url: "/rhel-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html"
+  - title: REST API를 사용하여 WFA 데이터베이스 백업
+    url: "/rhel-install/concept-backing-up-the-wfa-database-using-rest-apis.html"
+    entries:
+    - title: REST API를 사용하여 WFA 데이터베이스의 전체 백업을 수행합니다
+      url: "/rhel-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html"
+    - title: REST API를 사용하여 WFA 데이터베이스를 정기적으로 백업합니다
+      url: "/rhel-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html"
+- title: OnCommand Workflow Automation 데이터베이스를 복원하는 중입니다
+  url: "/rhel-install/concept-restoring-the-wfa-database.html"
+  entries:
+  - title: WFA 데이터베이스를 복원합니다
+    url: "/rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html"
+  - title: CLI를 사용하여 WFA 데이터베이스를 복원합니다
+    url: "/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html"
+    entries:
+    - title: CLI를 사용하여 WFA 데이터베이스를 전체 상태로 복원합니다
+      url: "/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-and-configurations-linux.html"
+    - title: CLI를 사용하여 WFA 데이터베이스를 복원(일반)합니다
+      url: "/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-and-configurations-linux.html"
+  - title: REST API를 사용하여 WFA 데이터베이스 복원
+    url: "/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html"
+    entries:
+    - title: REST API를 사용하여 WFA 데이터베이스를 전체 상태로 복원합니다
+      url: "/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html"
+    - title: REST API를 사용하여 WFA 데이터베이스를 복원(일반
+      url: "/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html"
+- title: 설치 중에 생성한 admin 암호를 재설정합니다
+  url: "/rhel-install/task-reset-the-admin-password-created-during-installation-linux.html"
+- title: OnCommand Workflow Automation 콘텐츠를 가져옵니다
+  url: "/rhel-install/task-import-oncommand-workflow-automation-content.html"
+  entries:
+  - title: OnCommand Workflow Automation 콘텐츠를 가져오는 동안 고려해야 할 사항입니다
+    url: "/rhel-install/reference-considerations-of-importing-wfa-content.html"
+- title: OnCommand Workflow Automation 설치를 마이그레이션합니다
+  url: "/rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html"
+- title: OnCommand Workflow Automation를 제거합니다
+  url: "/rhel-install/task-uninstall-oncommand-workflow-automation-linux.html"
+- title: OnCommand Workflow Automation SSL 인증서 관리
+  url: "/rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html"
+  entries:
+  - title: 기본 Workflow Automation SSL 인증서를 교체합니다
+    url: "/rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html"
+  - title: Workflow Automation에 대한 인증서 서명 요청을 생성합니다
+    url: "/rhel-install/task-create-a-certificate-signing-request-for-workflow-automation-linux.html"
+- title: Perl 및 Perl 모듈 관리
+  url: "/rhel-install/concept-managing-perl-and-perl-modules.html"
+  entries:
+  - title: 기본 Perl 배포를 구성합니다
+    url: "/rhel-install/task-configure-your-preferred-perl-distribution-linux.html"
+- title: 설치 및 구성 문제 해결
+  url: "/rhel-install/reference-troubleshooting.html"
+  entries:
+  - title: WFA에서 Performance Advisor 데이터를 볼 수 없습니다
+    url: "/rhel-install/reference-cannot-view-performance-advisor-data-in-wfa.html"
+- title: OnCommand Workflow Automation 관련 문서
+  url: "/rhel-install/reference-related-documentation-for-oncommand-workflow-automation.html"

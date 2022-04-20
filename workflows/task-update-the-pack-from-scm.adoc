@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-update-the-pack-from-scm.html 
+sidebar: sidebar 
+keywords: update, pack, source, control, management, server, import, oncommand, workflow, automation 
+summary: 'SCM(소스 제어 관리) 서버에서 팩을 업데이트한 다음 업데이트된 팩을 WFA(OnCommand Workflow Automation)로 가져올 수 있습니다.' 
+---
+= SCM 서버에서 WFA 워크플로우 팩을 업데이트합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SCM(소스 제어 관리) 서버에서 팩을 업데이트한 다음 업데이트된 팩을 WFA(OnCommand Workflow Automation)로 가져올 수 있습니다.
+
+SCM을 설정해야 하며 관리자 또는 설계자 자격 증명이 있어야 합니다
+
+SCM 서버의 팩을 변경하거나 업데이트하는 경우 관리자 또는 설계자는 SCM에서 제공하는 diff 도구를 사용하여 충돌을 해결해야 합니다. WFA는 관련 변경 사항만 표시하도록 XML diff 파일을 조정합니다.
+
+팩을 가져오기 전에 WFA 팩 콘텐츠의 변경 사항에 대한 알림을 받게 됩니다.
+
+.단계
+. 웹 브라우저를 통해 WFA 창에 로그인합니다.
+. 업데이트된 팩을 WFA로 가져옵니다.
++
+link:task-import-an-oncommand-workflow-automation-pack.html["WFA 워크플로우 팩을 가져옵니다"]
+
++
+
+NOTE: WFA 데이터베이스에 이미 동일한 팩이 포함되어 있는 경우 팩 콘텐츠를 덮어씁니다.
+
+

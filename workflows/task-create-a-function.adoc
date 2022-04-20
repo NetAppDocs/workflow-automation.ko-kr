@@ -1,0 +1,63 @@
+---
+permalink: workflows/task-create-a-function.html 
+sidebar: sidebar 
+keywords: create, wfa, function, use, utility, predefined, suitable, task 
+summary: 작업에 적합한 사전 정의된 WFA 기능이 없는 경우, WFA 기능을 유틸리티로 사용할 수 있습니다. 
+---
+= 함수를 만듭니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+작업에 적합한 사전 정의된 WFA 기능이 없는 경우, WFA 기능을 유틸리티로 사용할 수 있습니다.
+
+함수를 만들려면 MVFLEX Expression Language(MVEL) 구문을 알아야 합니다.
+
+함수 정의에 대해 다음을 포함해야 합니다.
+
+* 이름: 함수의 이름입니다
++
+MVEL 구문에서 예약된 단어를 사용해서는 안 됩니다. 각 함수에는 고유한 이름이 있어야 합니다.
+
+* MVEL 정의: 함수 정의의 MVEL 구문을 지정하는 문자열입니다
+
+
+.단계
+. 워크플로 디자인 * > * 함수 * 를 클릭합니다.
+. 을 클릭합니다 image:../media/new_wfa_icon.gif["새 아이콘"] 를 클릭합니다.
+. 새 기능 * 대화 상자에서 * 함수 설명 * 및 * 함수 정의 * 필드에 필요한 세부 정보를 입력하거나 선택합니다.
++
+[listing]
+----
+def actualVolumeSize(data_size, snap_pct)
+{
+   if (snap_pct < 0 ) {
+        snap_pct = 0;
+   } else if (snap_pct > 99) {
+        snap_pct = 99;
+   }
+
+   div = 1 - (snap_pct/100);
+   return (int)(data_size/div);
+}
+----
++
+함수 이름 * 필드는 MVEL 구문에 사용되는 데이터로 채워집니다.
+
+. * 선택 사항: * 기능을 테스트하려면 * Test * 를 클릭합니다.
++
+.. Test * 대화 상자의 * Expression * 섹션에서 필요한 함수 식을 입력합니다.
++
+실제 볼륨 크기(600, 1)
+
+.. Test * 를 클릭합니다.
++
+테스트 결과가 표시됩니다.
+
+.. 대화 상자를 닫습니다.
+
+
+. 저장 * 을 클릭합니다.
+

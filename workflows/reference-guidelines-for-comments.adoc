@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-comments.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, commnents, scripts, oncommand, workflow, automaion 
+summary: 'WFA(OnCommand Workflow Automation)용 스크립트에서 PowerShell 및 Perl 설명에 대한 지침을 반드시 숙지하십시오.' 
+---
+= 코멘트에 대한 지침
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)용 스크립트에서 PowerShell 및 Perl 설명에 대한 지침을 반드시 숙지하십시오.
+
+
+
+== PowerShell 설명
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+한 줄 코멘트에 # 문자를 사용합니다.
+ a| 
+[listing]
+----
+# Single line comment
+$options=$option.trim();
+----
+
+
+ a| 
+줄 끝 코멘트의 경우 # 문자를 사용합니다.
+ a| 
+[listing]
+----
+$options=$option.trim(); # End of line
+comment
+----
+
+
+ a| 
+블록 코멘트에 <# 및 #> 문자를 사용합니다.
+ a| 
+[listing]
+----
+<#
+This is
+a
+block comment
+#>
+$options=$option.trim();
+----
+|===
+
+
+== Perl 설명
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+한 줄 코멘트에 # 문자를 사용합니다.
+ a| 
+[listing]
+----
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+----
+
+
+ a| 
+줄 설명 끝에 # 문자를 사용합니다.
+ a| 
+[listing]
+----
+my $MaxDirectorySizeBytes = $MaxDirect
+orySiZe * 1024 * 1024; # convert to Bytes
+----
+
+
+ a| 
+시작 부분과 끝 부분에 빈 #이 있는 모든 줄의 #문자를 사용하여 여러 줄 메모에 대한 설명 테두리를 만듭니다.
+ a| 
+[listing]
+----
+#
+# This is a multi-line comment. Perl 5, unlike
+# Powershell, does not have direct support for
+# multi-line comments. Please use a '#'in every line
+# with an empty '#' at the beginning and end to create
+# a comment border
+#
+----
+
+
+ a| 
+WFA 명령에 주석 및 비활성 코드를 포함하지 마십시오. 그러나 테스트를 위해 POD(Plain Old Documentation) 메커니즘을 사용하여 코드를 주석 처리할 수 있습니다.
+ a| 
+[listing]
+----
+=begin comment
+	# Set deduplication
+	if(defined $Deduplication && $Deduplication eq "enabled")
+	{
+		$wfaUtil->sendLog("Enabling Deduplication");
+	}
+=end comment
+=cut
+----
+|===

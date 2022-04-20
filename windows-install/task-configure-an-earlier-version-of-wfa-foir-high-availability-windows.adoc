@@ -1,0 +1,46 @@
+---
+permalink: windows-install/task-configure-an-earlier-version-of-wfa-foir-high-availability-windows.html 
+sidebar: sidebar 
+keywords: configure, earlier versions, oncommand, workflow, automation, high availability 
+summary: '고가용성을 위해 3.1 이전 버전의 OnCommand Workflow Automation(WFA)를 구성할 수 있습니다.' 
+---
+= 고가용성을 위해 이전 버전의 OnCommand Workflow Automation를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+고가용성을 위해 3.1 이전 버전의 OnCommand Workflow Automation(WFA)를 구성할 수 있습니다.
+
+.단계
+. 기존 WFA 버전을 사용 가능한 최신 WFA 버전으로 업그레이드하십시오.
++
+xref:task-upgrade-oncommand-workflow-automation.adoc[WFA를 업그레이드합니다]
+
++
+업그레이드된 이 WFA 버전은 클러스터의 기본 노드입니다.
+
+. WFA 데이터베이스의 백업을 생성합니다.
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["WFA 데이터베이스 백업"]
+
++
+매개 변수를 수동으로 변경한 경우 WFA 데이터베이스의 백업을 생성하고, 기존 WFA 설치를 제거하고, 사용 가능한 최신 버전의 WFA를 설치하고, 백업을 복원한 다음 MSCS(Microsoft Cluster Service) 구성을 진행해야 합니다.
+
+. 기본 노드에 WFA를 설치하도록 MSCS 구성
++
+link:task-configure-mscs-to-install-wfa.html["WFA를 설치하도록 MSCS 구성"]
+
+. 보조 노드에 사용 가능한 최신 버전의 WFA를 설치합니다.
++
+link:task-install-workflow-automation-on-windows.html["WFA를 설치합니다"]
+
+. MSCS에서 WFA를 구성합니다.
++
+link:task-configure-mscs-to-install-wfa.html["MSCS에서 WFA를 구성합니다"]
+
++
+WFA 서버는 고가용성을 지원하도록 구성됩니다.
+
+

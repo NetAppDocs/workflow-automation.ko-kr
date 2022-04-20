@@ -1,0 +1,25 @@
+---
+permalink: rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa database, web portal 
+summary: '웹 포털에서 WFA(OnCommand Workflow Automation) 데이터베이스를 백업하고 데이터 복구를 위해 백업 파일을 사용할 수 있습니다. 웹 포털에서 전체 백업을 수행할 수 없습니다.' 
+---
+= 웹 포털에서 WFA 데이터베이스를 백업합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+웹 포털에서 WFA(OnCommand Workflow Automation) 데이터베이스를 백업하고 데이터 복구를 위해 백업 파일을 사용할 수 있습니다. 웹 포털에서 전체 백업을 수행할 수 없습니다.
+
+이 작업을 수행하려면 관리자 또는 설계자 자격 증명이 있어야 합니다.
+
+백업 역할을 가진 WFA 사용자는 웹 포털에 로그인하여 백업을 수행할 수 없습니다. 백업 역할을 가진 WFA 사용자는 원격 또는 스크립트 백업을 수행할 수만 있습니다.
+
+.단계
+. WFA 웹 GUI에 admin으로 로그인합니다.
+. 설정 * 을 클릭하고 * 유지 관리 * 에서 * 백업 및 복원 * 을 클릭합니다.
+. 백업 * 을 클릭합니다.
+. 대화 상자가 열리면 위치를 선택한 다음 파일을 저장합니다.
+

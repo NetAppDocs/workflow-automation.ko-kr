@@ -1,0 +1,151 @@
+---
+permalink: windows-install/reference-prerequisites-for-installing-workflow-automation.html 
+sidebar: sidebar 
+keywords: prerequisites, install, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation)를 설치하기 전에 필요한 정보가 있고 특정 작업을 완료했는지 확인해야 합니다.' 
+---
+= Workflow Automation 설치를 위한 사전 요구사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)를 설치하기 전에 필요한 정보가 있고 특정 작업을 완료했는지 확인해야 합니다.
+
+시스템에 WFA를 설치하기 전에 다음 작업을 완료해야 합니다.
+
+* NetApp Support 사이트에서 WFA 설치 파일을 다운로드하고 WFA를 설치할 서버에 파일을 복사합니다
++
+
+NOTE: NetApp Support 사이트에 로그인하려면 유효한 자격 증명이 있어야 합니다. 유효한 자격 증명이 없는 경우 NetApp Support 사이트에서 등록하여 자격 증명을 얻을 수 있습니다.
+
+* 해당하는 경우 시스템에 다음 항목에 대한 액세스 권한이 있는지 확인합니다.
++
+** 스토리지 컨트롤러
+** Active IQ Unified Manager
+** VMware vCenter를 참조하십시오
+
+
+
+
+[NOTE]
+====
+환경에서 SSH(Secure Shell)에 액세스할 수 있어야 하는 경우 대상 컨트롤러에서 SSH를 사용하도록 설정해야 합니다.
+
+====
+* PowerShell 3.0 이상이 설치되어 있는지 확인합니다
+* VMware Power CLI가 설치되어 있는지 확인하고, WFA를 사용하여 VMware vSphere에서 워크플로우를 실행하도록 합니다
+* 필요한 구성 정보를 수집합니다
+* Invoke-MysqlQuery cmdlet을 사용하는 경우 MySQL .Net 커넥터가 설치되어 있는지 확인합니다
+
+
+
+
+== 필수 구성 정보입니다
+
+[cols="3*"]
+|===
+| 장치 또는 시스템 | 세부 정보 | 목적 
+
+
+ a| 
+선정되었습니다
+ a| 
+* IP 주소입니다
+* 사용자 이름 및 암호
+
+ a| 
+스토리지 시스템에 대한 작업을 수행합니다
+
+[NOTE]
+====
+스토리지(스토리지)에 루트 또는 관리자 계정 자격 증명이 필요합니다.
+
+====
+
+
+ a| 
+vSphere를 참조하십시오
+ a| 
+* IP 주소입니다
+* vCenter Server에 대한 admin의 사용자 이름 및 암호입니다
+
+ a| 
+데이터 확보 VMware API를 사용하여 작업을 수행합니다
+
+
+NOTE: VMware Power CLI를 설치해야 합니다.
+
+
+
+ a| 
+OnCommand Balance 및 맞춤형 데이터베이스와 같은 외부 저장소
+ a| 
+* IP 주소입니다
+* 읽기 전용 사용자 계정의 사용자 이름 및 암호
+
+ a| 
+데이터 취득외부 리포지토리에서 데이터를 가져오려면 외부 리포지토리에 대한 사전 항목 및 캐시 쿼리와 같은 관련 WFA 콘텐츠를 만들어야 합니다.
+
+
+
+ a| 
+메일 서버
+ a| 
+* IP 주소입니다
+* 사용자 이름 및 암호
+
+
+
+NOTE: 메일 서버에 인증이 필요한 경우 사용자 이름과 암호가 필요합니다.
+ a| 
+이메일을 통해 WFA 알림을 받습니다
+
+
+
+ a| 
+AutoSupport 서버
+ a| 
+* 메일 호스트입니다
+
+ a| 
+SMTPIf를 통해 AutoSupport 메시지 보내기 메일 호스트가 구성되어 있지 않은 경우 HTTP 또는 HTTPS를 사용하여 AutoSupport 메시지를 보낼 수 있습니다.
+
+
+
+ a| 
+Microsoft AD(Active Directory) LDAP 서버
+ a| 
+* IP 주소입니다
+* 사용자 이름 및 암호
+* 그룹 이름
+
+ a| 
+AD LDAP 또는 AD LDAPS를 사용하여 인증 및 인증합니다
+
+
+
+ a| 
+SNMP 관리 응용 프로그램입니다
+ a| 
+* IP 주소입니다
+* 포트
+
+ a| 
+WFA SNMP 알림을 받습니다
+
+
+
+ a| 
+Syslog 서버
+ a| 
+* IP 주소입니다
+
+ a| 
+로그 데이터를 보냅니다
+
+|===
+* 관련 정보 *
+
+https://mysupport.netapp.com/site/["NetApp 지원"^]

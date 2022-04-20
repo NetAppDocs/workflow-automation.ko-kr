@@ -1,0 +1,28 @@
+---
+permalink: workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: workflow, automation, consist, several, building, blocks, include, library, predefined, provide, create, requirements, organization 
+summary: 'WFA(Workflow Automation) 워크플로우는 여러 개의 구성 요소로 구성되며 WFA에는 사전 정의된 구성 요소 라이브러리가 포함되어 있습니다. WFA에서 제공하는 구성 요소를 사용하여 조직의 요구사항에 맞는 워크플로우를 생성할 수 있습니다.' 
+---
+= OnCommand Workflow Automation에서 빌딩 블록 작업
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(Workflow Automation) 워크플로우는 여러 개의 구성 요소로 구성되며 WFA에는 사전 정의된 구성 요소 라이브러리가 포함되어 있습니다. WFA에서 제공하는 구성 요소를 사용하여 조직의 요구사항에 맞는 워크플로우를 생성할 수 있습니다.
+
+WFA는 스토리지 자동화 프로세스에 대한 구조를 제공합니다. WFA의 유연성은 워크플로우 구성 요소를 사용하여 워크플로우를 구성하는 방식을 기반으로 합니다.
+
+WFA 구성 요소는 다음과 같습니다.
+
+* 사전 항목
+* 명령
+* 필터
+* 파인더
+* 기능
+* 템플릿
+
+
+WFA에서 구성 요소를 사용하여 워크플로우를 생성하는 방법을 이해해야 합니다.

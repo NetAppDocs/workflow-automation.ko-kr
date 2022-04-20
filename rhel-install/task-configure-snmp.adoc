@@ -1,0 +1,23 @@
+---
+permalink: rhel-install/task-configure-snmp.html 
+sidebar: sidebar 
+keywords: configure, snmp 
+summary: 'WFA(OnCommand Workflow Automation)를 구성하여 워크플로우 작업의 상태에 대한 SNMP(Simple Network Management Protocol) 트랩을 보낼 수 있습니다.' 
+---
+= SNMP를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)를 구성하여 워크플로우 작업의 상태에 대한 SNMP(Simple Network Management Protocol) 트랩을 보낼 수 있습니다.
+
+WFA는 이제 SNMP v1 및 SNMP v3 프로토콜을 지원합니다. SNMP v3은 추가 보안 기능을 제공합니다.
+
+WFA.MIB 파일에는 WFA 서버에서 보낸 트랩에 대한 정보가 들어 있습니다. MIB 파일은 WFA 서버의 <WFA_install_location>\WFA\bin\WFA.mib 디렉토리에 있습니다.
+
+
+NOTE: WFA 서버는 범용 개체 식별자(1.3.6.1.4.1.789.1.1.12.0)가 있는 모든 트랩 알림을 보냅니다.
+
+SNMP 구성에 community_string@snmp_host와 같은 SNMP 커뮤니티 문자열을 사용할 수 없습니다.

@@ -1,0 +1,26 @@
+---
+permalink: workflows/concept-what-remote-system-types-are.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, communicates, remote, system, types, specifies, type, configure, data, ontap 
+summary: 'OnCommand Workflow Automation(WFA)는 원격 시스템 유형과 통신합니다. 원격 시스템 유형은 WFA가 통신할 수 있는 원격 시스템의 유형을 지정합니다. WFA에서 원격 시스템 유형을 구성할 수 있습니다. 예를 들어 Data ONTAP 시스템을 원격 시스템 유형으로 구성할 수 있습니다.' 
+---
+= 어떤 원격 시스템 유형인지 확인하십시오
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation(WFA)는 원격 시스템 유형과 통신합니다. 원격 시스템 유형은 WFA가 통신할 수 있는 원격 시스템의 유형을 지정합니다. WFA에서 원격 시스템 유형을 구성할 수 있습니다. 예를 들어 Data ONTAP 시스템을 원격 시스템 유형으로 구성할 수 있습니다.
+
+원격 시스템 유형에는 다음과 같은 특성이 있습니다.
+
+* 이름
+* 설명
+* 버전
+* 프로토콜
+* 포트
+* 시간 초과
+
+
+각 원격 시스템 유형에 대해 Perl 스크립트를 사용하여 원격 시스템의 자격 증명을 검증할 수 있습니다. WFA에 구성된 원격 시스템에 대한 자격 증명을 저장할 수 있습니다. 새 사용자 지정 원격 시스템 유형을 추가하거나 편집할 수 있습니다. 기존 원격 시스템 유형을 복제할 수도 있습니다. 연결된 시스템이 없는 경우에만 원격 시스템 유형을 삭제할 수 있습니다.

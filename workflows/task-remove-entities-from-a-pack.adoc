@@ -1,0 +1,48 @@
+---
+permalink: workflows/task-remove-entities-from-a-pack.html 
+sidebar: sidebar 
+keywords: remove, pack, entities, oncommand, workflow, automation, check, updated, source, control, management, server 
+summary: 'WFA(OnCommand Workflow Automation)에 있는 엔터티로부터 팩을 제거하고 업데이트된 팩을 SCM(소스 제어 관리) 서버로 체크 인할 수 있습니다.' 
+---
+= 엔터티로부터 WFA 워크플로우 팩을 제거합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에 있는 엔터티로부터 팩을 제거하고 업데이트된 팩을 SCM(소스 제어 관리) 서버로 체크 인할 수 있습니다.
+
+SCM을 설정해야 하며 관리자 또는 설계자 자격 증명이 있어야 합니다.
+
+다음 요소에서 팩을 제거할 수 있습니다.
+
+* 워크플로우
+* 파인더
+* 필터
+* 명령
+* 기능
+* 템플릿
+* 구성표
+* 사전
+* 데이터 소스 형식
+* 원격 시스템 유형
+* 캐시 쿼리
+* 범주
+
+
+.단계
+. 웹 브라우저를 통해 * WFA * 창에 로그인합니다.
+. Workflow 디자인 포털에서 * 제거할 엔터티를 찾아 * <Entity> * 를 클릭합니다.
+. Pack * 에서 제거 아이콘을 클릭합니다.
+. [팩에서 제거] <엔터티> * 대화 상자에서 해당 엔터티로부터 삭제할 팩을 선택합니다.
+. 확인 * 을 클릭합니다.
+. Packs * 탭을 클릭합니다.
+. 서버로 내보내기 * 아이콘을 클릭합니다.
+. 서버 폴더로 내보내기 * 대화 상자의 * 서버 시스템 * 의 폴더 위치 필드에 서버 팩이 저장된 서버 폴더 위치를 입력합니다.
++
+그러면 SCM 클라이언트가 생성되는 파일 시스템에서 팩이 분해된 형태로 내보내집니다.
+
+. SCM 클라이언트 위치에서 SCM 서버로 pack 내용을 체크 인한다.
+. SCM에서 제공하는 diff 도구를 사용하여 팩의 SCM 버전과 비교하여 변경 사항을 확인합니다.
+

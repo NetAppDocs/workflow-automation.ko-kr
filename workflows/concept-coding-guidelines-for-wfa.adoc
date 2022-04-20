@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-coding-guidelines-for-wfa.html 
+sidebar: sidebar 
+keywords: understand, general, oncommand, workflow, automation, coding, guidelines, naming, conventions, recommendations, creating, various, building, blocks, filters, functions, commands 
+summary: '일반 WFA(OnCommand Workflow Automation) 코딩 지침, 명명 규칙, 필터, 기능, 명령, 워크플로우 등과 같은 다양한 구성 요소를 만드는 방법에 대한 권장 사항을 이해해야 합니다.' 
+---
+= WFA에 대한 코딩 지침
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일반 WFA(OnCommand Workflow Automation) 코딩 지침, 명명 규칙, 필터, 기능, 명령, 워크플로우 등과 같은 다양한 구성 요소를 만드는 방법에 대한 권장 사항을 이해해야 합니다.

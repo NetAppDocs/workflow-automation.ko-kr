@@ -1,0 +1,150 @@
+---
+permalink: windows-install/task-set-up-a-data-source.html 
+sidebar: sidebar 
+keywords: set up, data source 
+summary: '데이터 소스에서 데이터를 가져오려면 WFA(OnCommand Workflow Automation)에서 데이터 소스와의 연결을 설정해야 합니다.' 
+---
+= 데이터 원본을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+데이터 소스에서 데이터를 가져오려면 WFA(OnCommand Workflow Automation)에서 데이터 소스와의 연결을 설정해야 합니다.
+
+* Active IQ Unified Manager 6.0 이전 버전의 경우, 데이터베이스에 대한 원격 읽기 전용 액세스를 지원하고 구성하려면 Unified Manager 서버에서 최신 버전의 ocsetup 툴을 실행해야 합니다.
+* Active IQ Unified Manager6.0 이상에서는 통합 관리자 서버에 데이터베이스 사용자 계정을 만들어야 합니다.
++
+자세한 내용은 _OnCommand Unified Manager 온라인 도움말_을 참조하십시오.
+
+* Unified Manager 서버에서 들어오는 연결의 TCP 포트가 열려 있어야 합니다.
++
+자세한 내용은 방화벽 설명서를 참조하십시오.
+
++
+다음은 기본 TCP 포트 번호입니다.
+
++
+[cols="3*"]
+|===
+| TCP 포트 번호입니다 | Unified Manager 서버 버전입니다 | 설명 
+
+
+ a| 
+2638)를 참조하십시오
+ a| 
+5.x
+ a| 
+Sybase SQL Anywhere 데이터베이스 서버
+
+
+
+ a| 
+3306
+ a| 
+6.x
+ a| 
+MySQL 데이터베이스 서버
+
+|===
+* Performance Advisor의 경우 GlobalRead 이상의 역할을 가진 Active IQ Unified Manager 사용자 계정을 만들어야 합니다.
++
+자세한 내용은 _OnCommand Unified Manager 온라인 도움말_을 참조하십시오.
+
+* VMware vCenter Server의 경우 vCenter Server에서 사용자 계정을 생성해야 합니다.
++
+자세한 내용은 VMware vCenter Server 설명서를 참조하십시오.
+
++
+[NOTE]
+====
+VMware PowerCLI를 설치해야 합니다. vCenter Server 데이터 소스에서만 워크플로우를 실행하려면 Unified Manager 서버를 데이터 소스로 설정하지 않아도 됩니다.
+
+====
+* VMware vCenter Server에서 들어오는 연결의 TCP 포트가 열려 있어야 합니다.
++
+기본 TCP 포트 번호는 443입니다. 자세한 내용은 방화벽 설명서를 참조하십시오.
+
+
+
+이 절차를 사용하여 여러 Unified Manager 서버 데이터 소스를 WFA에 추가할 수 있습니다. 하지만 Unified Manager Server 6.3 이상을 WFA와 페어링하고 Unified Manager 서버에서 보호 기능을 사용하려는 경우에는 이 절차를 사용하지 않아야 합니다.
+
+WFA를 Unified Manager Server 6.x와 페어링하는 방법에 대한 자세한 내용은 _OnCommand Unified Manager 온라인 도움말_을 참조하십시오.
+
+
+NOTE: WFA를 사용하여 데이터 소스를 설정하는 동안에는 Active IQ Unified Manager 6.0, 6.1 및 6.2 데이터 소스 유형이 WFA 4.0 릴리즈에서 사용되지 않으며, 이러한 데이터 소스 유형은 이후 릴리즈에서 지원되지 않습니다.
+
+.단계
+. 웹 브라우저를 사용하여 WFA에 액세스합니다.
+. 설정 * 을 클릭하고 * 설정 * 에서 * 데이터 소스 * 를 클릭합니다.
+. 적절한 작업을 선택합니다.
++
+[cols="2*"]
+|===
+| 대상... | 수행할 작업... 
+
+
+ a| 
+새 데이터 원본을 만듭니다
+ a| 
+을 클릭합니다 image:../media/new_wfa_icon.gif["새 아이콘"] 를 클릭합니다.
+
+
+
+ a| 
+WFA를 업그레이드한 경우 복원된 데이터 소스를 편집합니다
+ a| 
+기존 데이터 원본 항목을 선택하고 을 클릭합니다 image:../media/edit_wfa_icon.gif["편집 아이콘"] 를 클릭합니다.
+
+|===
++
+WFA에 Unified Manager 서버 데이터 소스를 추가한 다음 Unified Manager 서버 버전을 업그레이드한 경우, WFA에서 Unified Manager 서버의 업그레이드된 버전을 인식하지 못합니다. 이전 버전의 Unified Manager 서버를 삭제한 다음, 업그레이드된 버전의 Unified Manager 서버를 WFA에 추가해야 합니다.
+
+. 새 데이터 원본 대화 상자에서 필요한 데이터 원본 유형을 선택하고 데이터 원본 이름과 호스트 이름을 입력합니다.
++
+선택한 데이터 소스 유형에 따라 포트, 사용자 이름, 암호 및 시간 제한 필드가 가능한 경우 기본 데이터로 자동으로 채워질 수 있습니다. 필요에 따라 이러한 항목을 편집할 수 있습니다.
+
+. 적절한 작업 선택:
++
+[cols="2*"]
+|===
+| 대상... | 수행할 작업... 
+
+
+ a| 
+6.0 이전의 Active IQ Unified Manager 버전
+ a| 
+ocsetup 도구를 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 사용자 이름과 암호를 입력합니다.
+
+
+
+ a| 
+Active IQ Unified Manager 6.3 이상
+ a| 
+Unified Manager 서버에서 생성한 데이터베이스 사용자 계정의 자격 증명을 입력합니다. 데이터베이스 사용자 계정 만들기에 대한 자세한 내용은 _OnCommand Unified Manager 온라인 도움말_을 참조하십시오.
+
+
+
+ a| 
+Performance Advisor for (Active IQ Unified Manager 6.0 이전 버전)
+ a| 
+Active IQ Unified Manager 사용자의 최소 역할이 GlobalRead인 자격 증명을 입력합니다.
+
+[NOTE]
+====
+명령줄 인터페이스 또는 ocsetup 도구를 사용하여 만든 Active IQ Unified Manager 데이터베이스 사용자 계정의 자격 증명을 제공해서는 안 됩니다.
+
+====
+
+
+ a| 
+VMware vCenter Server(Windows 전용)
+ a| 
+(Windows만 해당) VMware vCenter Server에서 생성한 사용자의 사용자 이름과 암호를 입력합니다.
+
+|===
+. 저장 * 을 클릭합니다.
+. 데이터 원본 테이블에서 데이터 원본을 선택하고 을 클릭합니다 image:../media/acquire_now_wfa_icon.gif["지금 촬영 아이콘"] 를 클릭합니다.
+. 데이터 획득 프로세스의 상태를 확인합니다.
+

@@ -1,0 +1,16 @@
+---
+permalink: windows-install/reference-cannot-open-the-oncommand-workflow-automation-login-page.html 
+sidebar: sidebar 
+keywords: cannot, oncommand, workflow, automation, login page 
+summary: 'Net 3.5를 설치한 경우 IIS(인터넷 정보 서비스)가 함께 설치됩니다. IIS는 WFA에서 사용하는 포트 80을 사용합니다.' 
+---
+= OnCommand Workflow Automation 로그인 페이지를 열 수 없습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Net 3.5를 설치한 경우 IIS(인터넷 정보 서비스)가 함께 설치됩니다. IIS는 WFA에서 사용하는 포트 80을 사용합니다.
+
+IIS 역할이 제거되었거나 WFA 서버에서 IIS가 비활성화되어 있는지 확인합니다.

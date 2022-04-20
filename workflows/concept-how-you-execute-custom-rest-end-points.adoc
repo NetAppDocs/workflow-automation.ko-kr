@@ -1,0 +1,29 @@
+---
+permalink: workflows/concept-how-you-execute-custom-rest-end-points.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, mechanism, configure, custom, end points, execute, help, architect, configure, easy, understand, intuitive, uniform, resource, identifiers, follow, conventions, post, put, delete, based, semantics, client, code, developers 
+summary: 'OnCommand Workflow Automation(WFA)는 워크플로우를 실행하도록 사용자 지정 REST 끝점을 구성하는 메커니즘을 제공합니다. 사용자 지정 REST 끝점은 설계자가 이해하기 쉽고 직관적이며 통일된 URI(리소스 식별자)를 구성하여 워크플로 의미론을 기반으로 POST, PUT 또는 삭제의 나머지 규칙을 따르는 워크플로를 실행할 수 있도록 도와줍니다. 이러한 URI는 클라이언트 개발자를 위한 클라이언트 코드 개발을 용이하게 합니다.' 
+---
+= 사용자 지정 REST 끝점을 실행하는 방법
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation(WFA)는 워크플로우를 실행하도록 사용자 지정 REST 끝점을 구성하는 메커니즘을 제공합니다. 사용자 지정 REST 끝점은 설계자가 이해하기 쉽고 직관적이며 통일된 URI(리소스 식별자)를 구성하여 워크플로 의미론을 기반으로 POST, PUT 또는 삭제의 나머지 규칙을 따르는 워크플로를 실행할 수 있도록 도와줍니다. 이러한 URI는 클라이언트 개발자를 위한 클라이언트 코드 개발을 용이하게 합니다.
+
+WFA를 사용하면 API 호출을 통해 워크플로우 실행을 위한 사용자 지정 URI 경로를 구성할 수 있습니다. URI 경로의 각 세그먼트는 "/DevOps/\{ProjectName}/clone"과 같이 대괄호로 묶인 워크플로의 사용자 입력의 문자열 또는 유효한 이름일 수 있습니다 이 워크플로는 '_https_://WFAServer:HTTPS_PORT/REST/DevOps/Project1/clone/jobs'에 대한 호출로 호출할 수 있습니다
+
+URI 경로에 대한 유효성 검사는 다음과 같습니다.
+
+* 나머지 경로는 ""/"로 시작해야 합니다.
+* 허용되는 문자는 영문자, 숫자 및 밑줄입니다.
+* 사용자 입력 이름은 ""{}"(으)로 둘러싸야 합니다.
++
+
+NOTE: ""{}" 에 둘러싸인 값이 올바른 사용자 입력 이름인지 확인해야 합니다.
+
+* //, /{}/ 등의 빈 경로 세그먼트가 없어야 합니다.
+* HTTP 메서드 구성과 사용자 지정 URI 경로 구성은 둘 다 구성되거나 구성되지 않아야 합니다.
+

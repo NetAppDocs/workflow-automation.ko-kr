@@ -1,0 +1,22 @@
+---
+permalink: workflows/reference-wfa-powershell-functions.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, several, powershell, cmdlets, perl, function, use, wfa commands 
+summary: 'OnCommand Workflow Automation(WFA)에서는 몇 가지 PowerShell cmdlet과 WFA 명령에서 사용할 수 있는 PowerShell 및 Perl 기능을 제공합니다.' 
+---
+= WFA cmdlet 및 기능
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation(WFA)에서는 몇 가지 PowerShell cmdlet과 WFA 명령에서 사용할 수 있는 PowerShell 및 Perl 기능을 제공합니다.
+
+다음 PowerShell 명령을 사용하여 WFA 서버에서 제공하는 모든 PowerShell cmdlet 및 기능을 볼 수 있습니다.
+
+* 'get-Command-Module WFAWrapper'
+* get-Command-Module WFA를 선택합니다
+
+
+WFA 서버에서 제공하는 모든 Perl 기능은 'WFAUtil.pm' 모듈에서 확인할 수 있습니다. WFA PowerShell cmdlet 도움말 및 WFA Perl 메서드의 도움말, WFA 도움말 모듈 지원 링크의 도움말 섹션에서는 모든 PowerShell cmdlet 및 기능, Perl 기능에 액세스할 수 있습니다.

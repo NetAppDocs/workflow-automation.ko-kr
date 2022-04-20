@@ -1,0 +1,64 @@
+---
+permalink: workflows/reference-guidelines-for-indentation.html 
+sidebar: sidebar 
+keywords: aware, guidelines, indentation, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation)용 PowerShell 또는 Perl 스크립트를 작성할 때 들여쓰기에 대한 지침을 숙지해야 합니다.' 
+---
+= 들여쓰기를 위한 지침
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)용 PowerShell 또는 Perl 스크립트를 작성할 때 들여쓰기에 대한 지침을 숙지해야 합니다.
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+탭은 네 개의 빈 공간과 같습니다.
+ a| 
+
+
+
+ a| 
+탭과 중괄호를 사용하여 블럭의 시작과 끝을 표시합니다.
+ a| 
+PowerShell 스크립트
+
+[listing]
+----
+if
+($pair.length-ne 2)
+{
+throw "Got wrong input data"
+}
+----
+Perl 스크립트
+
+[listing]
+----
+if
+(defined $MaxDirectorySize)
+{
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+}
+----
+
+
+ a| 
+작업 집합 또는 코드 청크 사이에 빈 줄을 추가합니다.
+ a| 
+[listing]
+----
+$options=$option.trim();
+$pair=$option.split(" ");
+Get-WFAlogger -Info -messages $("split options: "+
+$Pair)
+----
+|===

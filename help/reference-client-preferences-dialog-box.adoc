@@ -1,0 +1,61 @@
+---
+permalink: help/reference-client-preferences-dialog-box.html 
+sidebar: sidebar 
+keywords: preference, window, enable, view, modify, refresh, logging, options, client, associated specific, workflow, automation, server, access, settings, setup, click 
+summary: '기본 설정 창에서는 특정 WFA(Workflow Automation) 서버와 연결된 모든 클라이언트에 대한 새로 고침 및 로깅 옵션을 보고 수정할 수 있습니다. 설정 을 선택하고 설정 에서 기본 설정 을 클릭하여 이 창에 액세스할 수 있습니다.' 
+---
+= Preferences(기본 설정) 창
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+기본 설정 창에서는 특정 WFA(Workflow Automation) 서버와 연결된 모든 클라이언트에 대한 새로 고침 및 로깅 옵션을 보고 수정할 수 있습니다. 이 창은 * 설정 * 을 선택하고 * 설정 * 에서 * 기본 설정 * 을 클릭하여 액세스할 수 있습니다.
+
+* * 자동 새로 고침 사용 *
++
+서버에서 트리거되는 클라이언트의 자동 새로 고침을 선택할 수 있습니다. 이 옵션은 기본적으로 선택되어 있습니다. 선택된 경우 다음 WFA 표가 자동으로 업데이트됩니다.
+
++
+** 실행 상태
+** 데이터 소스
+** 예약
+
+
+
+
+선택하지 않으면 * Refresh * (새로 고침 *)를 클릭할 때까지 테이블이 업데이트되지 않습니다. 이 확인란은 기본적으로 선택되어 있습니다.
+
+* * 새로 고침 간격(초) *
++
+새로 고침 간격을 선택할 수 있습니다. 기본값은 3초입니다.
+
+* * 표시할 최대 행 수 *
++
+최대 크기 * 열의 값을 클릭하고 서버가 검색 및 표시하는 행 수를 목록 유형별로 수정할 수 있습니다.
+
++
+예를 들어, * Workflow Execution * 설정은 사용자의 과거 실행 횟수를 표시합니다. 기본값은 다음과 같습니다.
+
++
+** 워크플로우 실행: 100
+** 획득 이력: 30
+** 예약: 100
+** 재고 행 추가: 1000
++
+재고로 얻을 수 있는 최대 결과 수를 지정할 수 있습니다. 기본값은 1000입니다.
+
+
+
+
+
+
+
+== 명령 단추
+
+* * 저장 *
++
+구성 설정을 저장합니다.
+
+

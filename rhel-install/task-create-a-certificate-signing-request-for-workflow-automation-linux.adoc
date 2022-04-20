@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-create-a-certificate-signing-request-for-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: workflow, automation, wfa, linux, create, certificate, sign, request 
+summary: 'WFA(Workflow Automation)용 기본 SSL 인증서 대신 CA(인증 기관)에서 서명한 SSL 인증서를 사용할 수 있도록 Linux에서 CSR(인증서 서명 요청)을 생성할 수 있습니다.' 
+---
+= Workflow Automation에 대한 인증서 서명 요청을 생성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(Workflow Automation)용 기본 SSL 인증서 대신 CA(인증 기관)에서 서명한 SSL 인증서를 사용할 수 있도록 Linux에서 CSR(인증서 서명 요청)을 생성할 수 있습니다.
+
+* WFA를 설치한 Linux 시스템에 대한 루트 권한이 있어야 합니다.
+* WFA에서 제공하는 기본 SSL 인증서를 교체해야 합니다.
+
+
+기본 WFA 설치 경로가 이 절차에 사용됩니다. 설치 중에 기본 경로를 변경한 경우 사용자 지정 WFA 설치 경로를 사용해야 합니다.
+
+.단계
+. WFA 호스트 시스템에서 루트 사용자로 로그인합니다.
+. WFA 서버에서 셸 프롬프트를 열고 디렉터리를 다음 위치로 변경합니다. <OpenJDK_install_location>/bin
+. CSR 파일 생성:
++
+"keytool-certreq-keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore-alias "SSL keystore" -file/root/file_name.csr"
+
++
+file_name 은 CSR 파일의 이름입니다.
+
+. 메시지가 표시되면 암호를 입력합니다(기본값 또는 새 암호).
++
+changeit는 기본 암호입니다. 기본 암호를 사용하지 않으려면 standalone-full.xml 파일의 SSL 요소 암호 특성을 WFA_install_location/WFA/jboss/standalone/configuration 위치에서 변경해야 합니다.
+
++
+[listing]
+----
+<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
+----
+. CA에 file_name.csr 파일을 보내 서명된 인증서를 얻습니다.
++
+자세한 내용은 CA 웹 사이트를 참조하십시오.
+
+. CA에서 체인 인증서를 다운로드한 다음 체인 인증서를 keystore:'keytool-import-alias" SSL keystore CA certificate" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustacerts -file C:\chain_cer" 로 가져옵니다
++
+C:\chain_cert.cer는 CA로부터 받은 체인 인증서 파일입니다. 파일은 X.509 형식이어야 합니다.
+
+. CA로부터 받은 서명된 인증서를 가져옵니다.
++
+"keytool-import-alias "SSL keystore" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustacerts -file C:\certificate.cer"
+
++
+C:\certificate.cer는 CA로부터 받은 체인 인증서 파일입니다.
+
+. WFA 서비스를 시작합니다.
++
+'./WFA--start=DB'./WFA--start=WFA
+
+

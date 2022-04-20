@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/reference-pack-identification-during-upgrade.html 
+sidebar: sidebar 
+keywords: pack, identification, upgrade 
+summary: '업그레이드 프로세스 중에 OnCommand Workflow Automation(WFA)는 엔티티를 하나의 팩으로 식별 및 분류합니다. 업그레이드 전에 팩 엔티티를 삭제한 경우 업그레이드 중에 팩이 식별되지 않습니다.' 
+---
+= 업그레이드 중 팩 식별
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+업그레이드 프로세스 중에 OnCommand Workflow Automation(WFA)는 엔티티를 하나의 팩으로 식별 및 분류합니다. 업그레이드 전에 팩 엔티티를 삭제한 경우 업그레이드 중에 팩이 식별되지 않습니다.
+
+업그레이드 프로세스 중에 WFA는 데이터베이스의 팩을 스토리지 자동화 스토어에 릴리스된 팩 목록과 비교하여 업그레이드 전에 설치된 팩을 확인합니다. 따라서 팩 식별은 데이터베이스의 기존 팩을 분류합니다.
+
+WFA는 팩을 식별하고 분류하기 위해 다음 프로세스를 수행합니다.
+
+* Storage Automation Store에 릴리즈된 팩 목록을 유지 관리하여 업그레이드 전에 설치된 팩을 비교하고 확인합니다.
+* Storage Automation Store가 활성화된 경우 팩의 엔터티를 Storage Automation Store 동기화의 일부로 분류합니다.
+* 업데이트된 목록을 사용하여 요소를 팩으로 분류합니다.
+
+
+팩 ID는 스토리지 자동화 스토어에서 다운로드한 NetApp 인증 팩에만 적용됩니다.
+
+업그레이드 중에 팩이 식별되지 않으면 팩을 다시 가져와 WFA에서 식별할 수 있습니다. wfa.log 파일은 업그레이드 중에 팩으로 식별되지 않은 엔터티에 대한 세부 정보를 제공합니다.

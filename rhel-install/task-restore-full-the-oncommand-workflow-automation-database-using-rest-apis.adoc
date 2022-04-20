@@ -1,0 +1,40 @@
+---
+permalink: rhel-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, rest apis 
+summary: 'REST API를 사용하여 WFA(OnCommand Workflow Automation) 데이터베이스를 전체 복원할 수 있습니다. 전체 복원 기능을 통해 WFA 데이터베이스, WFA 구성 및 키를 복원할 수 있습니다.' 
+---
+= REST API를 사용하여 WFA 데이터베이스를 전체 상태로 복원합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST API를 사용하여 WFA(OnCommand Workflow Automation) 데이터베이스를 전체 복원할 수 있습니다. 전체 복원 기능을 통해 WFA 데이터베이스, WFA 구성 및 키를 복원할 수 있습니다.
+
+* WFA 데이터베이스의 .zip 백업을 만들어야 합니다.
+* 관리자 또는 설계자 자격 증명이 있어야 합니다.
+* 마이그레이션 절차의 일부로 데이터베이스를 복원하는 경우 전체 복구를 수행해야 합니다.
+
+
+.단계
+. REST 클라이언트 브라우저에 '+https://IP address of WFA server/rest/backups? full=true+'를 입력합니다
+. 백업 창에서 * POST * 방법을 선택합니다.
+. Part * 드롭다운 목록에서 * MultiPart Body * 를 선택합니다.
+. 파일 * 필드에 다음 정보를 입력합니다.
++
+.. 콘텐츠 유형 * 드롭다운 목록에서 * 다중 파트/양식-데이터 * 를 선택합니다.
+.. CharSet * 드롭다운 목록에서 * ISO-8859-1 * 을 선택합니다.
+.. 파일 이름 * 필드에 사용자가 만든 백업 파일의 이름과 복원할 백업 파일의 이름을 입력합니다.
+.. 찾아보기 * 를 클릭합니다.
+.. zip 백업 파일의 위치를 선택합니다.
+
+
+. /opt/netapp/WFA/bin 디렉터리로 이동하여 WFA 서비스를 다시 시작합니다.
+. NetApp WFA 데이터베이스 * 및 * NetApp WFA Server * 서비스를 다시 시작합니다.
++
+WFA-restart를 선택합니다
+
+. 복원 작업에 성공했고 WFA에 액세스할 수 있는지 확인합니다.
+

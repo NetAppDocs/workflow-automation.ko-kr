@@ -1,0 +1,39 @@
+---
+permalink: rhel-install/reference-related-documentation-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: related, documentation, oncommand, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation) 서버에 대한 고급 구성을 수행하는 방법에 대해 자세히 알아볼 수 있는 추가 문서 및 툴이 있습니다.' 
+---
+= OnCommand Workflow Automation 관련 문서
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 서버에 대한 고급 구성을 수행하는 방법에 대해 자세히 알아볼 수 있는 추가 문서 및 툴이 있습니다.
+
+
+
+== 기타 참조
+
+NetApp 커뮤니티 내의 Workflow Automation 스페이스에서는 다음을 포함한 추가 학습 리소스를 제공합니다.
+
+* NetApp 커뮤니티 *
++
+http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29["NetApp 커뮤니티: WFA(Workflow Automation)"^]
+
+
+
+
+
+== 도구 참조
+
+* * 상호 운용성 매트릭스 *
++
+에는 지원되는 하드웨어 구성 요소 및 소프트웨어 버전 조합이 나와 있습니다.
+
++
+http://mysupport.netapp.com/matrix/["상호 운용성 매트릭스"^]
+
+

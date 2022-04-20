@@ -1,0 +1,33 @@
+---
+permalink: workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html 
+sidebar: sidebar 
+keywords: update, version, pack, oncommand, workflow, automation, check, new, location, source, control, management, server 
+summary: 'WFA(OnCommand Workflow Automation)에서 팩 버전을 업데이트한 다음 업데이트된 팩을 SCM(소스 제어 관리) 서버의 새 위치로 확인할 수 있습니다.' 
+---
+= WFA 워크플로우 팩의 새 버전을 확인합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에서 팩 버전을 업데이트한 다음 업데이트된 팩을 SCM(소스 제어 관리) 서버의 새 위치로 확인할 수 있습니다.
+
+SCM을 설정해야 하며 관리자 또는 설계자 자격 증명이 있어야 합니다.
+
+.단계
+. 웹 브라우저를 통해 * WFA * 창에 로그인합니다.
+. 콘텐츠 관리 * > * 팩 * 을 클릭합니다.
+. Edit Pack * 아이콘을 클릭합니다.
+. Pack <pack name>* 대화 상자의 * 버전 * 필드에서 팩 버전을 업데이트합니다.
+. 저장 * 을 클릭합니다.
+. 팩 수준에서 * 서버로 내보내기 * 아이콘을 클릭합니다.
+. Export to Server Folder * (서버 폴더로 내보내기 *) 대화 상자의 * Folder location at server system * (서버 시스템의 * 폴더 위치) 필드에 새 파일 시스템 위치를 입력합니다.
++
+이전에 'C:\p4\cDOT\1.0.0' 파일 시스템 위치에 저장했다면 이제 'C:\p4\cDOT\2.0.0' 위치에 저장하십시오.
+
+. SCM 클라이언트 위치에서 SCM 서버의 새 위치에 팩 콘텐츠를 체크 인합니다.
++
+SCM 서버의 '//depot/WFA/pack/cDOT/1.0.0' 경로에 팩이 이전에 저장된 경우 //depot/WFA/pack/cDOT/2.0.0' 등의 다른 위치에 팩을 저장할 수 있습니다
+
+

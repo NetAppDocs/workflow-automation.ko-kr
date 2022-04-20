@@ -1,0 +1,48 @@
+---
+permalink: help/concept-what-schemes-are.html 
+sidebar: sidebar 
+keywords: scheme, represent, data, model, system, collection, dictionary, entries, define, source, type, acquire, populate, example, virtual, environment, machines, hosts, datastores 
+summary: 스키마는 시스템의 데이터 모델을 나타냅니다. 데이터 모델은 사전 항목의 모음입니다. 스키마를 정의한 다음 데이터 소스 형식을 정의할 수 있습니다. 데이터 원본은 데이터 획득 방법과 스키마가 채워지는 방법을 정의합니다. 예를 들어 VC 스키마는 가상 머신, 호스트 및 데이터 저장소와 같은 가상 환경에 대한 데이터를 가져옵니다. 
+---
+= 구성표는 무엇입니까
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스키마는 시스템의 데이터 모델을 나타냅니다. 데이터 모델은 사전 항목의 모음입니다. 스키마를 정의한 다음 데이터 소스 형식을 정의할 수 있습니다. 데이터 원본은 데이터 획득 방법과 스키마가 채워지는 방법을 정의합니다. 예를 들어 VC 스키마는 가상 머신, 호스트 및 데이터 저장소와 같은 가상 환경에 대한 데이터를 가져옵니다.
+
+또한 특정 문제를 해결하도록 사용자 지정된 워크플로우를 통해 스키마에 데이터를 직접 채울 수 있습니다.
+
+사전 항목은 사전 항목을 만들 때 기존 스키마와 연결됩니다. 사전 항목은 캐시 쿼리에도 연결되며 캐시 쿼리에는 SQL 쿼리가 포함됩니다.
+
+스키마는 스크립트 기반 데이터 소스 유형 또는 SQL 데이터 소스 유형을 사용하여 데이터를 획득할 수 있습니다. 데이터 소스 형식을 만드는 동안 스크립트가 정의되고 SQL 쿼리가 캐시 쿼리에 정의됩니다.
+
+WFA에는 다음 구성표가 포함되어 있습니다.
+
+* * 7-Mode (스토리지) *
++
+7-Mode로 운영되는 Data ONTAP에서 Active IQ Unified Manager를 통해 데이터를 획득하기 위한 구성표,
+
+* * clustered Data ONTAP(cm_storage) *
++
+Clustered Data ONTAP에서 Active IQ Unified Manager을 통해 데이터를 취득하기 위한 계획
+
+* * 7-Mode 성능(성능) *
++
+Performance Advisor를 통해 7-Mode로 운영되는 Data ONTAP의 성능 데이터를 획득하기 위한 계획
+
+* * clustered Data ONTAP 성능(cm_performance) *
++
+Performance Advisor를 통해 clustered Data ONTAP의 성능 데이터를 획득하기 위한 계획
+
+* * VMware vCenter(VC) *
++
+VMware vCenter에서 데이터를 획득하기 위한 체계입니다.
+
+* * 운동장(운동장) *
++
+데이터를 직접 채울 수 있는 체계.
+
+

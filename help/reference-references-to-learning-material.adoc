@@ -1,0 +1,174 @@
+---
+permalink: help/reference-references-to-learning-material.html 
+sidebar: sidebar 
+keywords: aware, certain, scripting, programming, practices, advanced, workflow, automation, reference, material, learn, required, options, building blocks 
+summary: '고급 WFA(Workflow Automation) 워크플로우를 생성하기 위한 특정 스크립팅 및 프로그래밍 방식에 대해 알고 있어야 합니다. 참조 자료를 사용하여 WFA 구성 요소 또는 워크플로우를 생성하기 전에 필요한 옵션에 대해 알아볼 수 있습니다.' 
+---
+= 학습 자료에 대한 참고 자료
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+고급 WFA(Workflow Automation) 워크플로우를 생성하기 위한 특정 스크립팅 및 프로그래밍 방식에 대해 알고 있어야 합니다. 참조 자료를 사용하여 WFA 구성 요소 또는 워크플로우를 생성하기 전에 필요한 옵션에 대해 알아볼 수 있습니다.
+
+
+
+== Windows PowerShell
+
+WFA에서는 워크플로우 작업에 PowerShell 스크립트를 사용합니다. 다음 표에는 PowerShell에 대한 학습 자료에 대한 참조가 포함되어 있습니다.
+
+[cols="2*"]
+|===
+
+
+ a| 
+Windows PowerShell 시작하기
+ a| 
+http://msdn.microsoft.com/en-us/library/windows/desktop/aa973757(v=vs.85).aspx[]
+
+
+
+ a| 
+PowerShell 개발 -- ISE(Integrated Scripting Environment)
+ a| 
+https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/ise/introducing-the-windows-powershell-ise?view=powershell-7.2[]
+
+
+
+ a| 
+_.NET 프레임워크 이름 지침 _
+ a| 
+http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx[]
+
+
+
+ a| 
+PowerShell 코드 스타일
+ a| 
+http://get-powershell.com/post/2011/04/13/Extra-Points-for-Style-when-writing-PowerShell-Code.aspx[]
+
+
+
+ a| 
+PowerShell 시험 사용/캐치
+ a| 
+http://technet.microsoft.com/en-us/library/dd315350.aspx[]
+
+
+
+ a| 
+PowerShell 자동 변수
+ a| 
+http://technet.microsoft.com/en-us/library/dd347675.aspx[]
+
+
+
+ a| 
+PowerShell 오류 보고
+ a| 
+https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/error-reporting-concepts?view=powershell-7.2[]
+
+
+
+ a| 
+PowerShell 일반 매개 변수
+ a| 
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7.2[]
+
+|===
+
+
+== Data ONTAP PowerShell 툴킷
+
+Data ONTAP PowerShell 툴킷은 WFA와 함께 번들로 제공됩니다. PowerShell 툴킷 cmdlet을 사용하여 PowerShell 스크립트에서 Data ONTAP 명령을 호출할 수 있습니다. 자세한 내용은 다음 위치에서 액세스할 수 있는 _Data ONTAP PowerShell Toolkit 도움말_을 참조하십시오. "WFA_INSTALL_LOCATION\WFA\posh\Modules\DataONTAP\WebHelp\index.html"
+
+'_WFA_INSTALL_LOCATION_'은 WFA 설치 디렉토리이며, 기본 설치 디렉토리는 'C:\Program Files\NetApp'입니다.
+
+다음 표에는 Data ONTAP PowerShell 툴킷에 대한 정보에 대한 참조가 포함되어 있습니다.
+
+[cols="2*"]
+|===
+
+
+ a| 
+ONTAP PowerShell 툴킷 문서입니다
+ a| 
+https://community.netapp.com/t5/Tech-OnTap-Articles/The-Data-ONTAP-PowerShell-Toolkit/ta-p/85933[]
+
+
+
+ a| 
+ONTAP PowerShell Toolkit NetApp 커뮤니티
+ a| 
+https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/microsoft-cloud-and-virtualization-discussions/label-name/powershell%20toolkit[]
+
+|===
+
+
+== Perl
+
+WFA는 워크플로우 작업을 위해 Perl 명령을 지원합니다. WFA를 설치할 때 필요한 Perl 및 Perl 모듈이 WFA 서버에 설치됩니다.
+
+https://docs.activestate.com/activeperl/5.26/perl/["ActivePerl 사용 설명서"^]
+
+또한 다음 위치에서 _ActivePerl 사용자 가이드 _ 에 액세스할 수 있습니다: "WFA_install_location\WFA\Perl64\HTML\index.html.
+
+'_WFA_INSTALL_LOCATION_'은 WFA 설치 디렉토리이고, 'C:\Program Files\NetApp은 기본 설치 디렉토리입니다. WFA는 워크플로우 작업을 위해 Perl 스크립트를 사용합니다. 다음 표에는 Perl에 대한 학습 자료에 대한 참조가 포함되어 있습니다.
+
+[cols="2*"]
+|===
+
+
+ a| 
+최신 Perl: 2014
+ a| 
+http://modernperlbooks.com/books/modern_perl_2014/index.html[]
+
+
+
+ a| 
+Perl 프로그래밍 설명서
+ a| 
+http://perldoc.perl.org/[]
+
+
+
+ a| 
+Perl 프로그래밍 언어
+ a| 
+http://www.perl.org/[]
+
+|===
+
+
+== NetApp 관리 SDK
+
+NetApp Manageability SDK의 필수 Perl 모듈은 WFA와 함께 번들로 제공됩니다. 이러한 Perl 모듈은 WFA에서 Perl 명령을 사용하는 데 필요합니다. 자세한 내용은 다음 위치에서 액세스할 수 있는 NetApp Manageability SDK 문서를 참조하십시오. 'WFA_install_location\WFA\perl\NMSDK\HTML.
+
+WFA_INSTALL_LOCATION은 WFA 설치 디렉토리이고, 기본 설치 디렉토리는 C:\Program Files\NetApp입니다.
+
+
+
+== SQL(구조적 쿼리 언어)
+
+SQL SELECT 구문은 필터에 사용되고 사용자 입력을 채우는 데 사용됩니다.
+
+http://dev.mysql.com/doc/refman/5.1/en/select.html["MySQL 구문 선택"^]
+
+
+
+== MVFLEX Expression Language(MVEL)
+
+함수 및 변수와 같은 WFA 워크플로우에서 MVEL expression synt세는 사용할 수 있습니다.
+
+자세한 내용은 _MVEL 언어 가이드_를 참조하십시오.
+
+
+
+== 정규식입니다
+
+WFA에서는 정규식(regex)을 사용할 수 있습니다.
+
+https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/RegExp.html["정규식을 사용하는 ActionScript 3.0"^]

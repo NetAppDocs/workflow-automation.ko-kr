@@ -1,0 +1,30 @@
+---
+permalink: workflows/task-create-a-template.html 
+sidebar: sidebar 
+keywords: create, template, use, blueprint, fill, attribute, command, details 
+summary: 명령 세부 정보에 속성을 채우기 위한 청사진으로 사용할 수 있는 템플릿을 만들 수 있습니다. 
+---
+= 템플릿을 만듭니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+명령 세부 정보에 속성을 채우기 위한 청사진으로 사용할 수 있는 템플릿을 만들 수 있습니다.
+
+.단계
+. Workflow Design * > * Templates * 를 클릭합니다.
+. 을 클릭합니다 image:../media/new_wfa_icon.gif["새 아이콘"] 를 클릭합니다.
+. 새 템플릿 * 대화 상자에서 * 이름 *, * 유형 * 및 * 설명 * 필드에 필요한 세부 정보를 입력하거나 선택합니다.
++
+특성 테이블은 * Type * 필드에서 선택한 사전 개체를 기반으로 채워집니다.
+
+. 각 속성의 값 열을 클릭하고 다음 중 하나를 수행합니다.
++
+** 목록에서 필요한 값을 입력하거나 선택합니다.
+** 사용자 입력 항목(예: 사용자 입력 크기에 대한 '$size')을 입력합니다.
+
+
+. 저장 * 을 클릭합니다.
+

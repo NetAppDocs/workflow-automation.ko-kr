@@ -1,0 +1,42 @@
+---
+permalink: windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html 
+sidebar: sidebar 
+keywords: back up, wfa, database, powershell script 
+summary: 'WFA(OnCommand Workflow Automation) 데이터베이스를 자주 백업하려는 경우 WFA 설치 패키지에 제공되는 PowerShell 스크립트를 사용할 수 있습니다.' 
+---
+= PowerShell 스크립트를 사용하여 WFA 데이터베이스를 백업합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 데이터베이스를 자주 백업하려는 경우 WFA 설치 패키지에 제공되는 PowerShell 스크립트를 사용할 수 있습니다.
+
+관리자 사용자 자격 증명, 설계자 자격 증명 또는 백업 사용자 자격 증명이 있어야 합니다.
+
+자세한 내용은 REST 설명서를 참조하십시오.
+
+.단계
+. Windows PowerShell을 admin 사용자로 열고 WFA 데이터베이스(< WFA_install_location\WFA\bin\Backup.ps1>-User user_name-Password password-Path backup_file_path)를 백업합니다
++
+** WFA_INSTALL_LOCATION은 WFA 설치 디렉토리입니다.
+** user_name 은 admin 사용자, architect 또는 백업 사용자의 사용자 이름입니다.
+** password 는 admin 사용자, architect 또는 백업 사용자의 암호입니다.
+** backup_file_path는 백업 파일의 전체 디렉토리 경로입니다.
+
+
+
+
+[NOTE]
+====
+백업 파일은 wfa_backup_servername_.zip 형식의 이름을 가진 zip 파일입니다
+
+====
+* WFA_BACKUP_은 파일 이름의 고정된 부분으로, 백업 서버의 이름입니다.
+* 서버 이름이 Windows 서버 환경에서 추출됩니다.
+* _.zip 파일 이름의 고정 부분입니다. 'C:\Program Files\NetApp\WFA\bin\Backup.ps1 - 사용자 백업 - 암호 MyPassword123 - 경로 C:\WFA_backups\backup_10_08_12'
++
+백업이 완료되면 C:\WFA_Backups\backup_10__08_12\wfa_backup_myserver__.zip 출력이 표시됩니다. 백업 파일이 지정된 위치에 생성되었는지 확인합니다.
+
+

@@ -1,0 +1,156 @@
+---
+permalink: workflows/reference-guidelines-for-error-handling.html 
+sidebar: sidebar 
+keywords: aware, guidelines, error, handling, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation)용 PowerShell 또는 Perl 스크립트를 작성할 때 오류 처리에 대한 지침을 숙지해야 합니다.' 
+---
+= 오류 처리 지침
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)용 PowerShell 또는 Perl 스크립트를 작성할 때 오류 처리에 대한 지침을 숙지해야 합니다.
+
+
+
+== PowerShell 오류 처리
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+PowerShell 런타임에 의해 cmdlet에 추가된 일반적인 매개 변수에는 ErrorAction 및 WarningAction 같은 오류 처리 매개 변수가 포함됩니다.
+
+* ErrorAction 매개 변수는 cmdlet이 명령에서 발생하는 비종료 오류에 대응하는 방법을 결정합니다.
+* WarningAction 매개 변수는 cmdlet이 명령의 경고에 반응하는 방식을 결정합니다.
+* Stop, SilentlyContinue, Inquire 및 Continue 는 ErrorAction 및 WarningAction 매개 변수에 유효한 값입니다.
+
+
+자세한 내용은 PowerShell CLI에서 'Get-Help About_CommonParameters' 명령을 사용할 수 있습니다.
+ a| 
+ErrorAction: 다음 예제에서는 비종료 오류를 종료 오류로 처리하는 방법을 보여 줍니다.
+
+[listing]
+----
+New-NcIgroup-Name $IgroupName-Protocol $Protocol-Type$OSType-ErrorActionstop
+----
+경고 조치
+
+[listing]
+----
+New-VM-Name $VMName-VM $SourceVM-DataStore$DataStoreName-VMHost$VMHost-WarningActionSilentlyContinue
+----
+
+
+ a| 
+들어오는 예외의 유형을 알 수 없는 경우 일반 ""try/catch"" 문을 사용합니다.
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch
+{
+"Got exception"
+}
+----
+
+
+ a| 
+들어오는 예외의 유형이 알려진 경우 특정 ""try/catch"" 문을 사용합니다.
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch[System.Net.WebExceptional], [System.IO.
+IOException]
+{
+"Got exception"
+}
+----
+
+
+ a| 
+리소스를 해제하려면 ""finally""" 문을 사용하십시오.
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch
+{
+"Got exception"
+}
+finally
+{
+"Release resources"
+}
+----
+
+
+ a| 
+PowerShell 자동 변수를 사용하여 예외에 대한 정보에 액세스합니다.
+ a| 
+[listing]
+----
+try
+{
+Get-WFALogger -Info -message $("Creating
+Ipspace: " + $Ipspace)
+New-NaNetIpspace-Name $Ipspace
+}
+catch
+{
+Throw "Failed to create Ipspace. Message:
+" + $_.Exception.Message;
+}
+----
+|===
+
+
+== Perl 오류 처리
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+Perl에는 try/catch 블록에 대한 기본 언어 지원이 포함되어 있지 않습니다. eval 블록을 사용하여 오류를 검사하고 처리합니다. 평가 블록을 가능한 한 작게 유지합니다.
+ a| 
+[listing]
+----
+eval {
+
+$wfa_util->sendLog('INFO',
+"Quiescing the relationship :
+$DestinationCluster://$DestinationVserver
+/$DestinationVolume"
+    );
+$server->snapmirror_quiesce(
+'destination-vserver' => $DestinationVserver,
+'destination-volume'  => $DestinationVolume
+    );
+$wfa_util->sendLog('INFO', 'Quiesce operation
+started successfully.');
+};
+
+$wfa_util->checkEvalFailure(
+"Failed to quiesce the SnapMirror relationship
+$DestinationCluster://$DestinationVserver
+/$DestinationVolume",
+    $@
+);
+----
+|===

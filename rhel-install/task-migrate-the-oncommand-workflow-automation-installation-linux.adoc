@@ -1,0 +1,45 @@
+---
+permalink: rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 'WFA(OnCommand Workflow Automation) 설치를 마이그레이션하여 WFA 설치 중에 설치된 고유한 WFA 데이터베이스 키를 유지할 수 있습니다.' 
+---
+= OnCommand Workflow Automation 설치를 마이그레이션합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 설치를 마이그레이션하여 WFA 설치 중에 설치된 고유한 WFA 데이터베이스 키를 유지할 수 있습니다.
+
+* WFA 데이터베이스 키가 포함된 WFA 설치를 다른 서버로 마이그레이션하려는 경우에만 이 절차를 수행해야 합니다.
+* WFA 데이터베이스 복원으로 WFA 키가 마이그레이션되지 않습니다.
+* WFA 설치를 마이그레이션해도 SSL 인증서는 마이그레이션되지 않습니다.
+* 기본 WFA 설치 경로가 이 절차에 사용됩니다.
++
+설치 중에 기본 위치를 변경한 경우 변경된 WFA 설치 경로를 사용해야 합니다.
+
+
+
+.단계
+. 웹 브라우저를 통해 admin으로 WFA에 액세스할 수 있습니다.
+. WFA 데이터베이스를 백업합니다.
+. WFA 서버에서 셸 프롬프트를 열고 디렉터리를 WFA_INSTALL_LOCATION/WFA/BIN/ 위치로 변경합니다
+. 데이터베이스 키를 가져오려면 셸 프롬프트에 다음을 입력합니다.
++
+'./WFA - 키'
+
+. 표시되는 데이터베이스 키를 확인합니다.
+. WFA를 제거합니다.
+. 필요한 시스템에 WFA를 설치합니다.
+. WFA 서버에서 셸 프롬프트를 열고 디렉토리를 WFA_INSTALL_LOCATION/WFA/BIN/ 위치로 변경합니다
+. 쉘 프롬프트에서 다음 명령을 입력하여 데이터베이스 키를 설치합니다.
++
+'./WFA-key=데이터데이터베이스키'
+
++
+데이터베이스 키는 이전 WFA 설치에서 기록한 키입니다.
+
+. 생성한 백업에서 WFA 데이터베이스를 복원합니다.
+

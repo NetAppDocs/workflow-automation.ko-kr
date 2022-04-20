@@ -1,0 +1,31 @@
+---
+permalink: help/task-delete-a-scheme.html 
+sidebar: sidebar 
+keywords: delete, scheme, create, oncommand, workflow, automation, require 
+summary: 'WFA(OnCommand Workflow Automation)에서 만든 구성표가 더 이상 필요하지 않으면 삭제할 수 있습니다.' 
+---
+= 구성표를 삭제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에서 만든 구성표가 더 이상 필요하지 않으면 삭제할 수 있습니다.
+
+* 필요한 것 *
+
+* WFA를 설치해야 합니다.
+* WFA에 대한 관리자 권한이나 설계자 자격 증명이 있어야 합니다.
+
+
+* 이 작업에 대한 정보 *
+
+미리 정의된 구성표는 삭제할 수 없습니다.
+
+.단계
+. 웹 브라우저를 통해 관리자 또는 설계자로 WFA에 로그인합니다.
+. 데이터 원본 디자인 * > * 구성표 * 를 클릭합니다.
+. 삭제할 구성표를 선택하고 을 클릭합니다 image:../media/delete_wfa_icon.gif["삭제 아이콘"] 를 클릭합니다.
+. 구성표 삭제 * 확인 대화 상자에서 * 예 * 를 클릭합니다.
+

@@ -1,0 +1,85 @@
+---
+permalink: workflows/concept-what-a-playground-database-is.html 
+sidebar: sidebar 
+keywords: playground, database, mysql, include, Workflow, automation, server, installation, add, tables, information, filters, queries, user, input 
+summary: '운동장 데이터베이스는 MySQL 데이터베이스로, WFA(Workflow Automation) 서버 설치에 포함됩니다. 운동장 데이터베이스에 테이블을 추가하여 정보를 포함할 수 있습니다. 이러한 정보는 필터 및 SQL 쿼리에서 사용자 입력에 사용할 수 있습니다.' 
+---
+= 운동장 데이터베이스입니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+운동장 데이터베이스는 MySQL 데이터베이스로, WFA(Workflow Automation) 서버 설치에 포함됩니다. 운동장 데이터베이스에 테이블을 추가하여 정보를 포함할 수 있습니다. 이러한 정보는 필터 및 SQL 쿼리에서 사용자 입력에 사용할 수 있습니다.
+
+운동장 데이터베이스는 WFA 웹 포털을 통해 액세스할 수 없는 스키마입니다. SQLyog, MySQL용 Toad, MySQL Workbench 또는 CLI(명령줄 인터페이스)와 같은 MySQL 클라이언트를 사용하여 데이터베이스에 액세스할 수 있습니다.
+
+운동장 데이터베이스에 액세스하려면 다음 자격 증명을 사용해야 합니다.
+
+* 사용자 이름: WFA
+* 암호: Wfa123
+
+
+자격 증명을 통해 운동장 데이터베이스에 완벽하게 액세스하고 WFA MySQL 데이터베이스에 정의된 다른 스키마에 읽기 전용 액세스를 제공할 수 있습니다. 운동장 데이터베이스에 필요한 테이블을 만들 수 있습니다.
+
+환경의 스토리지 개체에 사용 중인 태그나 메타데이터를 놀이터 데이터베이스의 테이블에 추가할 수 있습니다. 그런 다음 WFA 필터 및 사용자 입력 쿼리를 통해 태그나 메타데이터를 다른 WFA 캐시 표의 정보와 함께 사용할 수 있습니다.
+
+예를 들어 다음과 같은 사용 사례에서 운동장 데이터베이스를 사용할 수 있습니다.
+
+* BU(Business Unit) 이름으로 애그리게이트를 태깅하고 이러한 태그를 기반으로 볼륨을 버스에 할당합니다
+* vFiler 유닛을 BU 이름으로 태그 지정
+* 스토리지 객체에 지역 또는 위치 세부 정보 추가
+* 데이터베이스 관리자의 데이터베이스 액세스 정의
+
+
+예를 들어 BU의 이름을 애그리게이트 및 vFiler 유닛과 같은 스토리지 객체의 태그로 사용하는 경우, BU 이름이 포함된 테이블을 놀이터 데이터베이스에 생성할 수 있습니다. 그런 다음 BU 이름을 워크플로에 대한 필터 및 사용자 입력 쿼리에서 사용할 수 있습니다.
+
+다음은 Playground 데이터베이스 테이블(Playground.volume_bu)의 예입니다.
+
+[cols="3*"]
+|===
+| Array_IP입니다 | 볼륨_이름 | 사업부 
+
+
+ a| 
+10.225.126.23
+ a| 
+데이터_11
+ a| 
+마케팅
+
+
+
+ a| 
+10.225.126.28
+ a| 
+아치_11
+ a| 
+시간
+
+|===
+다음은 BU로 볼륨을 필터링하는 데 사용할 수 있는 SQL 쿼리의 예입니다.
+
+[listing]
+----
+SELECT
+    vol.name,
+    array.ip AS 'array.ip'
+FROM
+    storage.volume AS vol,
+    storage.array AS array,
+    playground.volume_bu AS vol_bu
+WHERE
+    vol.array_id = array.id
+    AND array.ip = vol_bu.array_ip
+    AND vol.name = vol_bu.volume_name
+    AND vol_bu.bu = '{$bu}'
+----
+* 관련 정보 *
+
+https://www.webyog.com/["SQLyog"^]
+
+http://www.mysql.com/products/workbench/["MySQL 워크벤치"^]
+
+http://www.quest.com/toad-for-mysql/["MySQL용 TOAD"^]

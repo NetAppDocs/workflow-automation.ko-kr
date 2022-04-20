@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-tasks-involved-in-creating-workflows.html 
+sidebar: sidebar 
+keywords: create, storage, automation, workflows, define, steps, perform, building blocks, commands, finders, filters, dictionary, entries 
+summary: 'WFA(OnCommand Workflow Automation)에서 스토리지 자동화 워크플로우를 생성하려면 워크플로우에서 수행할 단계를 정의하고 명령, 찾기, 필터, 사전 항목 등과 같은 WFA 구성 요소를 사용하여 워크플로우를 생성해야 합니다.' 
+---
+= 워크플로 생성과 관련된 작업
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에서 스토리지 자동화 워크플로우를 생성하려면 워크플로우에서 수행할 단계를 정의하고 명령, 찾기, 필터, 사전 항목 등과 같은 WFA 구성 요소를 사용하여 워크플로우를 생성해야 합니다.
+
+다음 순서도는 워크플로 만들기 프로세스를 보여 줍니다.
+
+image::../media/designing_wfa_workflows_flowchart.gif[WFA 워크플로우 순서도를 디자인합니다]

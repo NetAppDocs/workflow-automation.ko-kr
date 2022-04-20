@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-building-blocks-for-workflows.html 
+sidebar: sidebar 
+keywords: workflow, automation, include, several, building, blocks, use, construct, workflow, create, require 
+summary: 'WFA(Workflow Automation)에는 다양한 구성 요소가 포함되어 있으며, 워크플로우 구성에 사용됩니다. 워크플로우에 필요한 WFA 구성 요소를 생성할 수 있습니다.' 
+---
+= 워크플로우를 위한 구성 요소 생성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(Workflow Automation)에는 다양한 구성 요소가 포함되어 있으며, 워크플로우 구성에 사용됩니다. 워크플로우에 필요한 WFA 구성 요소를 생성할 수 있습니다.

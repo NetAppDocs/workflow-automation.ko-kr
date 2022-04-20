@@ -1,0 +1,39 @@
+---
+permalink: windows-install/task-regular-restore-of-the-oncommand-workflow-automation-database-using-clis-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, regular, wfa, database, cli 
+summary: 'REST API를 사용하여 WFA(OnCommand Workflow Automation) 데이터베이스를 정기적으로 복원할 수 있습니다. 정기적인 복구에서는 WFA 데이터베이스만 백업할 수 있습니다.' 
+---
+= CLI를 사용하여 WFA 데이터베이스를 복원(일반
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST API를 사용하여 WFA(OnCommand Workflow Automation) 데이터베이스를 정기적으로 복원할 수 있습니다. 정기적인 복구에서는 WFA 데이터베이스만 백업할 수 있습니다.
+
+* WFA 데이터베이스의 백업을 만들어야 합니다.
+* 관리자 자격 증명, 설계자 자격 증명 또는 백업 사용자 자격 증명이 있어야 합니다.
+
+
+.단계
+. 쉘 프롬프트에서 WFA 서버의 다음 디렉토리로 이동합니다. WFA_install_location\WFA\bin
++
+WFA_INSTALL_LOCATION은 WFA 설치 디렉토리입니다.
+
+. 복구 작업을 수행합니다.
++
+'WFA.cmd--restore--user=user_name[--password=password][--location=path]'
+
++
+** user_name 은 admin 또는 architect 사용자의 사용자 이름입니다.
+** password 는 사용자의 암호입니다.
++
+암호를 입력하지 않은 경우 메시지가 표시되면 암호를 입력해야 합니다.
+
+** path 는 복원 파일의 전체 디렉터리 경로입니다.
+
+
+. 복원 작업에 성공했고 WFA에 액세스할 수 있는지 확인합니다.
+

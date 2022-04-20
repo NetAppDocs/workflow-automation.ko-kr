@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/concept-setting-up-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: set up, oncommand, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation) 설치를 완료한 후에는 몇 가지 구성 설정을 완료해야 합니다. WFA에 액세스하고, 사용자를 구성하고, 데이터 소스를 설정하고, 자격 증명을 구성하고, WFA를 구성해야 합니다.' 
+---
+= OnCommand Workflow Automation 설정
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 설치를 완료한 후에는 몇 가지 구성 설정을 완료해야 합니다. WFA에 액세스하고, 사용자를 구성하고, 데이터 소스를 설정하고, 자격 증명을 구성하고, WFA를 구성해야 합니다.

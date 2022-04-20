@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-data-sources-are.html 
+sidebar: sidebar 
+keywords: data, source, method, establishing, connection, systems, files, databases, order, extract, example, active iq, unified manager 9.4, type 
+summary: 데이터 원본은 데이터를 추출하기 위해 다른 시스템, 파일 및 데이터베이스에 대한 연결을 설정하는 방법입니다. 예를 들어, 데이터 소스는 Active IQ Unified Manager 9.4 데이터 소스 유형의 Active IQ Unified Manager 데이터베이스에 대한 연결이 될 수 있습니다. 
+---
+= 데이터 원본은 무엇입니까
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+데이터 원본은 데이터를 추출하기 위해 다른 시스템, 파일 및 데이터베이스에 대한 연결을 설정하는 방법입니다. 예를 들어, 데이터 소스는 Active IQ Unified Manager 9.4 데이터 소스 유형의 Active IQ Unified Manager 데이터베이스에 대한 연결이 될 수 있습니다.
+
+필수 데이터 소스 유형을 정의한 후 데이터 수집을 위해 WFA(OnCommand Workflow Automation)에 사용자 지정 데이터 소스를 추가할 수 있습니다. 캐싱 체계, 필요한 포트 및 획득 방법을 데이터 소스 유형과 연결하면 됩니다.
+
+WFA는 다양한 데이터 소스를 통해 정보를 캐싱합니다. WFA는 데이터 소스에서 리소스 정보를 수집하고 캐싱 체계에 맞게 형식을 지정합니다. 캐시 테이블(캐싱 구조 내의 테이블)은 사전 항목 개체와 일치하도록 서식이 지정됩니다. 워크플로에서 파인더를 사용하면 사전 개체가 반환되고 사전 개체의 데이터가 캐시 테이블에서 채워집니다. 데이터 소스에서 데이터를 획득하는 프로세스를 _ 데이터 소스 획득 _ 이라고 합니다. 스크립트 기반 방법이나 드라이버 기반 방법을 사용하여 데이터 소스를 획득할 수 있습니다. 소스는 서로 다를 수 있으며 데이터 소스 획득은 서로 다른 시간 간격으로 이를 샘플링할 수 있습니다. 그런 다음 WFA가 해당 정보를 데이터베이스에 병합하고 예약 데이터를 중첩하여 데이터베이스의 업데이트된 리소스 정보를 유지합니다.
+
+WFA 데이터베이스에는 여러 가지 다른 캐싱 스키마가 포함되어 있습니다. 캐싱 체계는 테이블 집합이며 각 테이블에는 특정 사전 항목 형식의 정보가 포함되어 있지만 특정 데이터 소스 형식의 여러 원본에서 가져온 결합된 정보가 포함될 수 있습니다. WFA는 데이터베이스 정보를 사용하여 리소스 상태를 이해하고, 계산을 수행하고, 리소스에 대한 명령을 실행합니다.

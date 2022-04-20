@@ -1,0 +1,62 @@
+---
+permalink: windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later versions 
+summary: 'WFA(OnCommand Workflow Automation) 3.1 이상 버전에서 사용 가능한 최신 WFA 버전으로 데이터 이동 없이 업그레이드하여 새로운 기능과 향상된 기능을 사용할 수 있습니다.' 
+---
+= OnCommand Workflow Automation 3.1 이상 버전에서 업그레이드합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 3.1 이상 버전에서 사용 가능한 최신 WFA 버전으로 데이터 이동 없이 업그레이드하여 새로운 기능과 향상된 기능을 사용할 수 있습니다.
+
+NetApp Support 사이트에서 WFA 호스트 시스템으로 .exe 바이너리 파일을 다운로드해야 합니다.
+
+WFA 5.1 클러스터 연결에 SSL 인증서를 승인해야 합니다. 이전 버전의 WFA에서 WFA 5.1로 업데이트하는 경우 클러스터 연결을 인증해야 합니다. 데이터 이동 없이 업그레이드 후 클러스터 인증에 대한 클러스터 연결 세부 정보를 저장합니다.
+
+이전 버전의 WFA에서 업그레이드할 때는 MySQL을 직접 설치할 수 없습니다. 그러나 직접 MySQL을 설치할 수 있습니다.
+
+* WFA 4.2 이상을 새로 설치하는 동안 또는 를 설치합니다
+* WFA 4.2에서 상위 버전의 WFA로 업그레이드할 때,
+
+
+.단계
+. 다음 방법 중 하나를 선택하여 WFA 3.1 이상 버전에서 업그레이드합니다.
++
+** 대화형 설치
++
+... WFA 호스트 시스템에서 .exe 바이너리 파일로 이동한 다음 파일을 실행합니다.
+... 마법사의 화면 지시에 따라 업그레이드를 완료합니다.
+
+
+** 자동 설치
++
+명령 프롬프트에 다음을 입력합니다.
+
++
+' WFA-version_number-build_number.exe /s /v " WFA_admin_username_up = WFA 사용자 이름 WFA_admin_password_up = password/QR/l * v C:\upgrade.log"
+
++
+* 예 *:
+
++
+' WFA-x64-v4.2.0.0.0-B2973881.exe /s /v " WFA_admin_username_up = admin WFA_admin_password_up = password * 123/QR/l * v C:\upgrade.log"
+
++
+
+NOTE: /qn 옵션은 WFA에서 지원되지 않습니다.
+
++
+자동 업그레이드를 수행하려면 모든 명령 매개 변수의 값을 포함해야 합니다.
+
++
+*** WFA_admin_username_up은 WFA 데이터베이스 백업을 생성할 수 있는 권한이 있는 WFA 사용자의 사용자 이름입니다.
+*** WFA_admin_password_up은 사용자의 암호입니다.
+
+
+
+
+

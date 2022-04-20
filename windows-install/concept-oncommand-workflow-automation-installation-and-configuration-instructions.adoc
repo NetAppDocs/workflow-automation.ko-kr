@@ -1,0 +1,18 @@
+---
+permalink: windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, installation, setup, overview 
+summary: 'WFA(OnCommand Workflow Automation)를 설치하는 경우 설치 준비, WFA 설치 관리자 다운로드, 설치 관리자 실행 등의 작업이 포함됩니다. 설치가 완료되면 WFA를 요구사항에 맞게 구성할 수 있습니다.' 
+---
+= OnCommand Workflow Automation 설치 및 설정 개요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)를 설치하는 경우 설치 준비, WFA 설치 관리자 다운로드, 설치 관리자 실행 등의 작업이 포함됩니다. 설치가 완료되면 WFA를 요구사항에 맞게 구성할 수 있습니다.
+
+다음 순서도는 설치 및 구성 작업을 보여줍니다.
+
+image::../media/wfa_isg_flowchart.gif[WFA ISG 흐름도]

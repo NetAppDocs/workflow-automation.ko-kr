@@ -1,0 +1,171 @@
+---
+permalink: rhel-install/task-install-perl-module-on-centos-and-rhel.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, perl modules, centos, rhel 
+summary: 일부 Perl 모듈은 Linux용 Perl 패키지와 함께 기본적으로 포함되어 있지 않습니다. 
+---
+= CentOS 및 RHEL에 Perl 모듈을 설치합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일부 Perl 모듈은 Linux용 Perl 패키지와 함께 기본적으로 포함되어 있지 않습니다.
+
+WFA 설치 중에 WFA 설치 관리자는 시스템에서 모든 Perl 모듈을 사용할 수 있는지 확인한 다음, 이 요구사항이 충족되면 계속 진행합니다. WFA(OnCommand Workflow Automation)를 설치하기 전에 Perl 모듈을 설치해야 합니다.
+
+
+NOTE: 시스템에 구성된 yum 저장소에서 perl 모듈을 사용할 수 있는 경우 WFA 설치 관리자는 Perl 모듈을 자동으로 설치하려고 시도합니다. Perl 모듈을 사용할 수 없는 경우 설치 프로그램에서 Perl 모듈을 수동으로 설치하라는 메시지를 표시합니다. 한 가지 예외는 "perl-core" 모듈입니다. 이 모듈은 시스템에 구성된 yum 리포지토리에서 사용할 수 있는 경우에도 시스템에 자동으로 설치되지 않습니다. 이는 알려진 문제입니다.
+
+[cols="2*"]
+|===
+| Perl 모듈 | RPM 패키지 이름 
+
+
+ a| 
+Perl 핵심 모듈
+ a| 
+Perl-core의 약자로
+
+
+
+ a| 
+dBi
+ a| 
+Perl-DBI
+
+
+
+ a| 
+XML::DOM
+ a| 
+Perl-XML-DOM을 참조하십시오
+
+
+
+ a| 
+용어::ReadKey
+ a| 
+Perl-TermReadKey를 참조하십시오
+
+
+
+ a| 
+HTTP:: 요청
+ a| 
+Perl-libwww-perl
+
+
+
+ a| 
+XML::LibXML perl-xml-LibXML
+ a| 
+Perl-XML-LibXML을 참조하십시오
+
+
+
+ a| 
+DBD::MySQL
+ a| 
+Perl-DBD-MySQL의 약자로
+
+
+
+ a| 
+Uri::URL입니다
+ a| 
+Perl-URI입니다
+
+
+
+ a| 
+HTTP:: 응답
+ a| 
+Perl-libwww-perl
+
+
+
+ a| 
+HTTP::: 머리말
+ a| 
+Perl-libwww-perl
+
+
+
+ a| 
+결과::SSLeay
+ a| 
+Perl-Net-SSLeay
+
+
+
+ a| 
+우리당: 탈출
+ a| 
+Perl-URI입니다
+
+
+
+ a| 
+LWP::프로토콜::https perl-LWP-Protocol-https
+ a| 
+Perl-LWP 프로토콜 - https
+
+
+
+ a| 
+XML::파서
+ a| 
+Perl-XML-Parser를 참조하십시오
+
+
+
+ a| 
+LWP::사용자에이전트
+ a| 
+Perl-libwww-perl
+
+
+
+ a| 
+결과::LDAP
+ a| 
+Perl-LDAP입니다
+
+
+
+ a| 
+날짜: 계산
+ a| 
+Perl-Date - CalcXML입니다
+
+|===
+.단계
+. Linux 서버에 루트 사용자로 로그인합니다.
+. WFA에 필요한 모든 Perl 모듈이 시스템에 설치되어 있는지 확인합니다.
++
+'./WFA-4.2.0.0.0.bin -l'
+
+. Perl 모듈이 감지되지 않으면 구성된 리포지토리에서 사용 가능한지 확인합니다.
++
+'yum search Perl-module-name'입니다
+
++
+DBD::MySQL 모듈이 감지되지 않는 경우:
+
++
+'yum search perl-dbd-mysql'
+
+. Perl 모듈이 리포지토리에 없는 경우 Perl 모듈이 포함된 리포지토리를 구성하거나 인터넷에서 Perl 모듈을 다운로드합니다.
+. 구성된 리포지토리에서 누락된 Perl 모듈을 설치합니다.
++
+'yum-y install Perl-module-name'입니다
+
++
+구성된 리포지토리에서 DBD::MySQL 모듈을 설치합니다.
+
++
+'yum-y install perl-dbd-mysql'을 선택합니다
+
+

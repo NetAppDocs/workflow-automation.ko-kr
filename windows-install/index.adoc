@@ -1,0 +1,12 @@
+---
+permalink: windows-install/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Windows ® 용 설치 및 설정 안내서
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

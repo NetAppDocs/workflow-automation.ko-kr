@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-dictionary-entry.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, dictionary, entries, oncommand, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation)에서 사전 항목을 생성하기 위한 지침에 대해 알고 있어야 합니다.' 
+---
+= WFA 사전 항목에 대한 지침입니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에서 사전 항목을 생성하기 위한 지침에 대해 알고 있어야 합니다.
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+사전 항목 이름에는 영숫자와 밑줄만 사용할 수 있습니다.
+ a| 
+Cluster_License
+
+스위치_23
+
+
+
+ a| 
+사전 항목 이름은 대문자로 시작해야 합니다. 이름의 모든 단어를 대문자로 시작하고 각 단어를 밑줄(_)로 구분합니다.
+ a| 
+볼륨
+
+Array_License를 선택합니다
+
+
+
+ a| 
+사전 항목 속성 이름은 사전 항목의 이름을 포함할 수 없습니다.
+ a| 
+없음
+
+
+
+ a| 
+사전 항목의 속성 및 참조는 소문자여야 합니다.
+ a| 
+애그리게이트, 크기_MB
+
+
+
+ a| 
+밑줄로 단어를 구분합니다. 공백은 허용되지 않습니다.
+ a| 
+resource_pool을 선택합니다
+
+
+
+ a| 
+사전 항목에는 다른 구성표의 참조가 포함될 수 없습니다. 사전 항목에 다른 스키마의 개체에 대한 상호 참조가 필요한 경우 참조되는 개체의 모든 기본 키가 사전 항목에 있는지 확인합니다.
+ a| 
+Array_Performance 사전 항목에는 Array 사전 항목의 모든 고유 키가 직접 특성으로 필요합니다.
+
+
+
+ a| 
+속성에 적절한 데이터 형식을 사용합니다.
+ a| 
+없음
+
+
+
+ a| 
+크기 또는 공간 관련 속성에 긴 데이터 형식을 사용합니다.
+ a| 
+size_MB and available_size_MB in storage.Volume 사전 항목
+
+
+
+ a| 
+특성에 고정 값 집합이 있는 경우 Enum 을 사용합니다.
+ a| 
+storage.Volume 사전 항목의 RAID_TYPE
+
+
+
+ a| 
+데이터 소스에서 해당 특성 또는 참조에 대한 값을 제공하는 경우 특성 또는 참조에 대해 ""캐시됨""을 true로 설정합니다. Active IQ Unified Manager 데이터 소스의 경우 데이터 소스에서 해당 값을 제공할 수 있으면 캐시 가능 특성을 추가합니다.
+ a| 
+없음
+
+
+
+ a| 
+이 특성 또는 참조에 대한 값을 제공하는 데이터 소스가 NULL을 반환할 수 있는 경우 ""Null일 수 있음""을 true로 설정합니다.
+ a| 
+없음
+
+
+
+ a| 
+각 특성 및 참조에 의미 있는 설명을 제공합니다. 이 설명은 워크플로를 디자인할 때 명령 세부 정보에 표시됩니다.
+ a| 
+없음
+
+
+
+ a| 
+사전 항목의 속성 이름으로 ""id""를 사용하지 마십시오. 내부 WFA 사용용으로 예약되어 있습니다.
+ a| 
+없음
+
+|===
+* 관련 정보 *
+
+xref:reference-references-to-learning-material.adoc[학습 자료에 대한 참고 자료]

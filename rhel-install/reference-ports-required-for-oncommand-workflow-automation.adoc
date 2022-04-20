@@ -1,0 +1,184 @@
+---
+permalink: rhel-install/reference-ports-required-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: ports, required, workflow, automation 
+summary: '방화벽을 사용하는 경우 WFA(Workflow Automation)에 필요한 포트를 알고 있어야 합니다.' 
+---
+= Workflow Automation에 필요한 포트 수
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+방화벽을 사용하는 경우 WFA(Workflow Automation)에 필요한 포트를 알고 있어야 합니다.
+
+기본 포트 번호는 이 섹션에 나와 있습니다. 기본 포트 번호가 아닌 포트 번호를 사용하려면 통신을 위해 해당 포트를 열어야 합니다. 자세한 내용은 방화벽에 있는 설명서를 참조하십시오.
+
+다음 표에는 WFA 서버에서 열어야 하는 기본 포트가 나와 있습니다.
+
+[cols="4*"]
+|===
+| 포트 | 프로토콜 | 방향 | 목적 
+
+
+ a| 
+80, 443
+ a| 
+HTTP, HTTPS
+ a| 
+수신
+ a| 
+WFA를 열고 로그인합니다
+
+
+
+ a| 
+80, 443, 22
+ a| 
+HTTP, HTTPS, SSH
+ a| 
+발신 중입니다
+ a| 
+명령 실행(ZAPI, PowerCLI)
+
+
+
+ a| 
+445, 139, 389, 636
+ a| 
+Microsoft-DS, NetBIOS-SSN, AD LDAP, AD LDAPS
+ a| 
+발신 중입니다
+ a| 
+Microsoft Active Directory LDAP 인증
+
+
+
+ a| 
+161
+ a| 
+SNMP를 선택합니다
+ a| 
+발신 중입니다
+ a| 
+워크플로우 상태에 대한 SNMP 메시지 전송
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+수신
+ a| 
+읽기 전용 사용자 캐싱
+
+
+
+ a| 
+25
+ a| 
+SMTP
+ a| 
+발신 중입니다
+ a| 
+메일 알림
+
+
+
+ a| 
+80, 443, 25
+ a| 
+HTTP, HTTPS, SMTP
+ a| 
+발신 중입니다
+ a| 
+AutoSupport 메시지를 보내는 중입니다
+
+
+
+ a| 
+514
+ a| 
+Syslog를 클릭합니다
+ a| 
+발신 중입니다
+ a| 
+syslog 서버로 로그를 보내는 중입니다
+
+|===
+다음 표에는 Unified Manager 서버에서 열어야 하는 기본 포트가 나와 있습니다.
+
+[cols="4*"]
+|===
+| 포트 | 프로토콜 | 방향 | 목적 
+
+
+ a| 
+2638)를 참조하십시오
+ a| 
+Sybase
+ a| 
+수신
+ a| 
+Active IQ Unified Manager 6.0 이전의 데이터 캐싱
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+수신
+ a| 
+Active IQ Unified Manager 6.0 이상의 데이터 캐싱
+
+
+
+ a| 
+8088, 8488
+ a| 
+HTTP, HTTPS
+ a| 
+수신
+ a| 
+6.0 이전의 Active IQ Unified Manager에 포함되어 있는 Performance Advisor의 데이터 캐싱
+
+|===
+다음 표에는 VMware vCenter에서 열어야 하는 기본 포트가 나와 있습니다.
+
+[cols="4*"]
+|===
+| 포트 | 프로토콜 | 방향 | 목적 
+
+
+ a| 
+443
+ a| 
+HTTPS
+ a| 
+수신
+ a| 
+VMware vCenter의 데이터 캐싱
+
+|===
+다음 표에는 SNMP 호스트 시스템에서 열어야 하는 기본 포트가 나열되어 있습니다.
+
+[cols="4*"]
+|===
+| 포트 | 프로토콜 | 방향 | 목적 
+
+
+ a| 
+162
+ a| 
+SNMP를 선택합니다
+ a| 
+수신
+ a| 
+워크플로우 상태에 대한 SNMP 메시지를 수신합니다
+
+|===

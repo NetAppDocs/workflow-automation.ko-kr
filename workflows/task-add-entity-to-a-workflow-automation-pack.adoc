@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-add-entity-to-a-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: entity, workflow, pack, oncommand, automation, storage, integration, requirements 
+summary: 'WFA(OnCommand Workflow Automation)에서 스토리지 자동화 및 통합 요구사항에 대해 하나 이상의 엔터티를 워크플로우 팩에 추가할 수 있습니다.' 
+---
+= WFA 워크플로우 팩에 엔터티를 추가합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에서 스토리지 자동화 및 통합 요구사항에 대해 하나 이상의 엔터티를 워크플로우 팩에 추가할 수 있습니다.
+
+다음 요소에서 팩을 제거할 수 있습니다.
+
+* 워크플로우
+* 파인더
+* 필터
+* 명령
+* 기능
+* 템플릿
+* 구성표
+* 사전
+* 데이터 소스 형식
+* 원격 시스템 유형
+* 캐시 쿼리
+* 범주
+
+
+.단계
+. 웹 브라우저를 통해 * WFA * 창에 로그인합니다.
+. Workflow Design 포털에서 * 추가할 엔터티를 찾아 * <Entity> * 를 클릭합니다.
+. Entity * 창에서 팩에 추가할 요소를 선택합니다.
+. Add to Pack * 아이콘을 클릭합니다.
++
+"Add to Pack"은 인증이 * None으로 설정된 엔터티에 대해서만 활성화됩니다
+
+. Add to Pack <Entity> * (팩에 추가) 대화 상자의 * Available Packs * (사용 가능한 팩 *) 드롭다운 목록에서 엔티티를 추가할 팩을 선택합니다.
+. 확인 * 을 클릭합니다.
+

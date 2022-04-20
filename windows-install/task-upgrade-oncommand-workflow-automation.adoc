@@ -1,0 +1,47 @@
+---
+permalink: windows-install/task-upgrade-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: upgrade, oncommand, workflow, automation 
+summary: '이전 버전의 OnCommand Workflow Automation(WFA)를 설치한 경우, 최신 버전의 WFA로 업그레이드하여 새로운 기능과 향상된 기능을 사용할 수 있습니다.' 
+---
+= OnCommand Workflow Automation를 업그레이드합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+이전 버전의 OnCommand Workflow Automation(WFA)를 설치한 경우, 최신 버전의 WFA로 업그레이드하여 새로운 기능과 향상된 기능을 사용할 수 있습니다.
+
+* WFA 5.0이나 4.2에서만 WFA 5.1로 업그레이드할 수 있습니다.
++
+현재 WFA 4.1 이하 버전을 실행 중인 경우, 먼저 WFA 5.0 또는 4.2로 업그레이드한 다음 WFA 5.1로 업그레이드해야 합니다.
+
+* WFA 5.0이나 4.2에서 수행된 백업을 WFA 5.1에서 복원할 수 있습니다. WFA 데이터베이스 백업은 동일한 버전 또는 상위 버전의 WFA를 실행하는 시스템에만 복원할 수 있습니다.
++
+예를 들어, WFA 4.2를 실행하는 시스템에서 백업을 생성한 경우, WFA 4.2 이상을 실행하는 시스템에만 백업을 복원할 수 있습니다.
+
+* WFA 4.2 이전 버전에서 업그레이드할 때는 MySQL을 직접 설치할 수 없습니다.
++
+그러나 직접 MySQL을 설치할 수 있습니다.
+
++
+** WFA 4.2 이상을 새로 설치하는 동안 또는 를 설치합니다
+** WFA 4.2에서 상위 버전의 WFA로 업그레이드할 때,
++
+... 다음 옵션 중 하나를 사용하여 WFA 데이터베이스를 백업합니다.
+
+
+** WFA 웹 포털
+** PowerShell 스크립트 WFA의 동일한 버전으로 되돌리려면, 생성한 백업을 사용하여 WFA 데이터베이스를 복원할 수 있습니다.
++
+... 기존 버전의 WFA를 제거합니다.
+... 최신 버전의 WFA를 설치합니다.
+... WFA 데이터베이스를 복원합니다.
+
+
+
+
+
+
+복원된 콘텐츠의 기능 완전성을 검토할 수 있습니다. 예를 들어 사용자 지정 워크플로의 기능을 확인할 수 있습니다.

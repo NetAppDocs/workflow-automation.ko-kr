@@ -1,0 +1,59 @@
+---
+permalink: help/task-create-local-users.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, enable, create, manage, local, users, specific, permissions, roles, guest, operator, approver, architect, admin, backup 
+summary: 'OnCommand Workflow Automation(WFA)를 사용하여 게스트, 운영자, 승인자, 설계자, 권한 등 다양한 역할에 대한 특정 권한을 가진 로컬 WFA 사용자를 생성하고 관리할 수 관리, 백업.' 
+---
+= 로컬 사용자를 생성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation(WFA)를 사용하여 게스트, 운영자, 승인자, 설계자, 권한 등 다양한 역할에 대한 특정 권한을 가진 로컬 WFA 사용자를 생성하고 관리할 수 관리, 백업.
+
+* 필요한 것 *
+
+WFA를 설치하고 관리자로 로그인해야 합니다.
+
+* 이 작업에 대한 정보 *
+
+WFA를 사용하여 다음 역할에 맞는 사용자를 생성할 수 있습니다.
+
+* * 게스트 *
++
+이 사용자는 포털과 워크플로 실행 상태를 볼 수 있으며 워크플로 실행 상태의 변경 사항을 알릴 수 있습니다.
+
+* * 연산자 *
++
+이 사용자는 사용자에게 액세스 권한이 부여된 워크플로우를 미리 보고 실행할 수 있습니다.
+
+* * 승인자 *
++
+이 사용자는 사용자에게 액세스 권한이 부여된 워크플로우를 미리 보고, 실행, 승인 및 거부할 수 있습니다.
+
++
+
+NOTE: 승인자의 이메일 ID를 제공하는 것이 좋습니다. 승인자가 여러 개인 경우 * 이메일 * 필드에 그룹 이메일 ID를 제공할 수 있습니다.
+
+* * 설계자 *
++
+이 사용자는 워크플로우를 생성할 수 있는 모든 액세스 권한을 가지고 있지만, 글로벌 WFA 서버 설정을 수정할 수 없습니다.
+
+* * 관리자 *
++
+이 사용자는 WFA 서버에 완전히 액세스할 수 있습니다.
+
+* * 백업 *
++
+WFA 서버의 백업을 원격으로 생성할 수 있는 유일한 사용자입니다. 그러나 사용자는 다른 모든 액세스로부터 제한됩니다.
+
+
+
+.단계
+. 설정 * 을 클릭하고 * 관리 * 에서 * 사용자 * 를 클릭합니다.
+. 를 클릭하여 새 사용자를 생성합니다 image:../media/new_wfa_icon.gif["새 아이콘"] 를 클릭합니다.
+. 새 사용자 * 대화 상자에 필요한 정보를 입력합니다.
+. 저장 * 을 클릭합니다.
+

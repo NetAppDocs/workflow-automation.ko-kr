@@ -1,0 +1,135 @@
+---
+permalink: workflows/reference-guidelines-for-sql-in-wfa.html 
+sidebar: sidebar 
+keywords: aware, guidelines, use, sql, oncommand, workflow, automation, write, sql, queries, wfa 
+summary: 'WFA(SQL in OnCommand Workflow Automation)를 사용하여 WFA에 대한 SQL 쿼리를 작성하는 방법에 대한 지침을 알고 있어야 합니다.' 
+---
+= WFA에서의 SQL에 대한 지침입니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(SQL in OnCommand Workflow Automation)를 사용하여 WFA에 대한 SQL 쿼리를 작성하는 방법에 대한 지침을 알고 있어야 합니다.
+
+SQL은 WFA의 다음 위치에서 사용됩니다.
+
+* 선택할 사용자 입력을 채우기 위한 SQL 쿼리입니다
+* 특정 사전 항목 유형의 개체를 필터링하기 위한 필터를 만들기 위한 SQL 쿼리입니다
+* 운동장 데이터베이스의 테이블에 있는 정적 데이터
+* CMDB(사용자 정의 구성 관리 데이터베이스)와 같은 외부 데이터 소스에서 데이터를 추출해야 하는 SQL 유형의 사용자 정의 데이터 소스 유형입니다.
+* SQL은 예약 및 검증 스크립트를 쿼리합니다
+
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+SQL 예약 키워드는 대문자여야 합니다.
+ a| 
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.vserver vserver
+----
+
+
+ a| 
+테이블 및 열 이름은 소문자여야 합니다.
+ a| 
+표: 애그리게이트
+
+열: used_space_MB
+
+
+
+ a| 
+밑줄(_) 문자로 단어를 구분하십시오. 공백은 허용되지 않습니다.
+ a| 
+array_performance.(배열 성능
+
+
+
+ a| 
+테이블 이름은 단수명으로 정의됩니다. 테이블은 하나 이상의 항목의 모음입니다.
+ a| 
+"기능"이 아니라 "기능"
+
+
+
+ a| 
+선택 쿼리에 의미 있는 이름이 있는 테이블 별칭을 사용합니다.
+ a| 
+[listing]
+----
+SELECT
+	vserver.name
+FROM
+	cm_storage.cluster cluster,
+	cm_storage.vserver vserver
+WHERE
+	vserver.cluster_id = cluster.id
+	AND cluster.name = '${ClusterName}'
+	AND vserver.type = 'cluster'
+ORDER BY
+	vserver.name ASC
+----
+
+
+ a| 
+필터 쿼리 또는 사용자 쿼리에서 필터 입력 매개 변수 또는 사용자 입력 매개 변수를 참조해야 하는 경우 구문을 '$\{inputVariableName}으로 사용합니다. 또한 이 구문을 사용하여 예약 스크립트 및 검증 스크립트에서 명령 정의 매개 변수를 참조할 수도 있습니다.
+ a| 
+[listing]
+----
+SELECT
+	volume.name AS Name,
+	aggregate.name as Aggregate,
+	volume.size_mb AS 'Total Size (MB)',
+	voulme.used_size_mb AS 'Used Size (MB)',
+	volume.space_guarantee AS 'Space Guarantee'
+FROM
+	cm_storage.cluster,
+	cm_storage.aggregate,
+	cm_storage.vserver,
+	cm_storage.volume
+WHERE
+	cluster.id = vserver.cluster_id
+	AND aggregate.id = volume.aggregate_id
+	AND vserver.id = voulme.vserver_id
+	AND vserver.name = '${VserverName}'
+	AND cluster.name = '${ClusterName}'
+ORDER BY
+	volume.name ASC
+----
+
+
+ a| 
+복잡한 쿼리에 주석을 사용합니다. 쿼리에서 지원되는 주석 스타일 중 일부는 다음과 같습니다.
+
+* ''-'''를 끝까지 누릅니다
++
+이 주석 스타일의 두 번째 하이픈 뒤에 공백이 있어야 합니다.
+
+* ""#" 문자부터 줄의 끝까지
+* ""/ * ""에서 다음 "" * /"" 시퀀스로
+
+ a| 
+[listing]
+----
+/*
+multi-line
+comment
+*/
+--line comment
+SELECT
+	ip as ip, # comment till end of this line
+	NAME as name
+FROM --end of line comment
+	storage.array
+----
+|===

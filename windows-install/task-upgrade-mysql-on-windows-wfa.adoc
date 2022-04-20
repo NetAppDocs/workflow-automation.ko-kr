@@ -1,0 +1,42 @@
+---
+permalink: windows-install/task-upgrade-mysql-on-windows-wfa.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade mysql 
+summary: 'Windows 서버에서 MySQL for OnCommand Workflow Automation(WFA)의 새 버전을 업그레이드할 수 있습니다. 최신 버전의 MySQL로 업그레이드하여 Windows 서버의 보안 취약점에 대한 수정 사항을 확인할 수 있습니다.' 
+---
+= MySQL 업그레이드
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows 서버에서 MySQL for OnCommand Workflow Automation(WFA)의 새 버전을 업그레이드할 수 있습니다. 최신 버전의 MySQL로 업그레이드하여 Windows 서버의 보안 취약점에 대한 수정 사항을 확인할 수 있습니다.
+
+WFA 서버에서 MySQL 루트 사용자의 Windows 관리자 권한 및 암호가 있어야 합니다.
+
+
+NOTE: WFA 4.2 이상을 재설치하기 전에 MySQL을 제거한 경우 MySQL 데이터 디렉터리를 삭제해야 합니다.
+
+다음과 같은 제한 사항을 숙지해야 합니다.
+
+* MySQL 5.7의 모든 버전에서 업그레이드할 수 있습니다.
++
+예를 들어, MySQL 5.7.1에서 MySQL 5.7.2로 업그레이드할 수 있습니다.
+
+* MySQL 5.7에서 MySQL 5.8로 업그레이드할 수 없습니다
+
+
+.단계
+. WFA 호스트 시스템에서 admin 사용자로 로그인합니다.
+. 대상 시스템에 적절한 버전의 MySQL을 다운로드합니다.
+. Windows 서비스 콘솔을 사용하여 다음 WFA 서비스를 중지하십시오.
++
+** NetApp WFA 데이터베이스 또는 SQL57입니다
+** NetApp WFA 서버
+
+
+. MySQL msi 패키지를 클릭하여 MySQL 업그레이드를 호출합니다.
+. 화면의 지시에 따라 MySQL 설치를 완료합니다.
+. Windows 서비스 콘솔을 사용하여 WFA 서비스를 시작합니다.
+

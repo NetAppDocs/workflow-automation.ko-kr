@@ -1,0 +1,151 @@
+---
+permalink: windows-install/task-configure-wfa-with-mscs-using-configuration-scripts.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, mscs 
+summary: 'MSCS(Microsoft Cluster Server)에 WFA(Workflow Automation)를 설치한 후에는 구성 스크립트를 사용하여 MSCS에서 고가용성을 지원하도록 WFA를 구성해야 합니다.' 
+---
+= MSCS를 사용하여 Workflow Automation을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MSCS(Microsoft Cluster Server)에 WFA(Workflow Automation)를 설치한 후에는 구성 스크립트를 사용하여 MSCS에서 고가용성을 지원하도록 WFA를 구성해야 합니다.
+
+WFA 백업을 만들어야 합니다.
+
+
+NOTE: 구성을 시작하기 전에 두 MSCS 클러스터 노드에서 WFA 암호화 키가 일관되게 설정되어 있는지 확인하십시오. 두 노드에 모두 설정되어 있지 않은 경우 페일오버가 발생하면 두 번째 노드에서 자격 증명을 해독할 수 없어 워크플로우 장애가 발생합니다.
+
+.단계
+. MSCS 클러스터의 첫 번째 노드에 로그인하고 다음 단계를 수행하십시오.
++
+[cols="2*"]
+|===
+| 대상... | 수행할 작업... 
+
+
+ a| 
+Windows 2012, Windows 2016, Windows 2019
+ a| 
+.. Failover Cluster Manager에서 * Service Roles * 를 마우스 오른쪽 버튼으로 클릭합니다.
+.. Create Empty Service Role * 을 선택한 다음 역할의 이름을 ""WFA""로 변경합니다.
+.. 새로 생성된 "WFA" 역할에 IP 주소 리소스를 추가합니다.
++
+... Failover Cluster Manager에서 새로 생성된 "WFA" 역할을 마우스 오른쪽 버튼으로 클릭합니다.
+... 리소스 * > * 추가 리소스 * > * IP 주소 * 를 선택합니다.
+... 클러스터 IP 주소를 구성합니다.
+
+
+
+
+|===
+. mSCS_DATA_PARAMETERS.xml' 파일을 편집하고 MySQL data 디렉토리의 상대 경로를 설정한다.
++
+[listing]
+----
+<dir>
+    <description>Data directory</description>
+    <srcpath>..\..\..\..\..\ProgramData\MySQL\MySQLServerData</srcpath>
+    <destpath>wfa</destpath>
+</dir>
+----
+. mscs_resource_properties.xml' 파일을 편집하고 다음 업데이트를 수행합니다.
++
+.. NA_WFA_DB 서비스 이름에 대해 찾기/바꾸기를 수행하고 MYSQL57로 업데이트합니다.
+.. 가상 IP 주소 이름으로 'VIP_res<p꾸티이름>'을 설정합니다.
++
+[listing]
+----
+<resource>
+    <type>essential</type>
+    <id>vip_res</id>
+    <prettyname>WFA IP address</prettyname>
+</resource>
+----
+.. data_res <p프레티이름>'을 공유 디스크 리소스에 할당된 디스크 이름으로 설정합니다.
++
+[listing]
+----
+<resource>
+    <type>essential</type>
+    <id>datadisk_res</id>
+    <prettyname>Cluster Disk 2</prettyname>
+</resource>
+----
+.. 첫 번째 노드에서 두 번째 노드로 XML 파일을 복사합니다.
++
+"copy "\\node1\D$\Program Files\NetApp\WFA\bin\ha\ * xml" "D:\Program Files\NetApp\WFA\bin\ha"
+
+.. 명령을 실행하여 두 번째 노드를 클러스터에 결합합니다.
++
+dl:\Program Files\NetApp\WFA\bin\ha > perl ha_setup.pl - -join -t MSCS -f E:\"
+
+
+
+. 명령 프롬프트에서 ha_setup.pl 스크립트를 실행하여 WFA 데이터를 공유 위치로 이동하고 장애 조치를 위해 MSCS를 사용하여 WFA를 구성합니다. 이 스크립트는 WFA_INSTALL_LOCATION\WFA\BIN\ha\에서 사용할 수 있습니다.
++
+"perl ha_setup.pl -- 첫 번째 [-t type_of_cluster_vcs] [-g cluster_group_name] [-i ip_address_name] [-n cluster_name] [-k shared_disk_resource_name] [-f shared_drive_path]"
+
++
+ha_setup.pl 스크립트에는 MSCS 클러스터의 IP 주소 리소스를 사용하는 입력이 필요합니다. MSCS 2016에 설치할 때는 IP 주소, WFA IP 주소가 아닌 이름으로 리소스를 추가해야 합니다. 예를 들면 다음과 같습니다.
+
++
+"perl ha_setup.pl --first-t MSCS-g WFA-i "WFA IP 주소" -n WFA_cluster -k "Cluster Disk 2" -f E:\"
+
+. 출력에서 성공적으로 구성된 메시지를 확인하여 MSCS 리소스가 생성되었는지 확인합니다.
++
+[listing]
+----
+Successfully configured MSCS cluster resources on this node
+----
+. 페일오버 클러스터 관리자에서 WFA 서비스를 중지합니다.
++
+[cols="2*"]
+|===
+| 대상... | 수행할 작업... 
+
+
+ a| 
+Windows 2012, Windows 2016, Windows 2019
+ a| 
+.. 서비스 역할 * 을 선택한 다음 새로 생성된 "'WFA' 역할을 선택합니다.
+.. 리소스 창에서 * MYSQL57 * 을 마우스 오른쪽 단추로 클릭한 다음 * 오프라인 상태로 전환 * 을 선택합니다.
+.. 리소스 창에서 * NA_WFA_SRV * 를 마우스 오른쪽 단추로 클릭한 다음 * 오프라인 상태로 전환 * 을 선택합니다.
+
+
+|===
+
+
+WFA 데이터베이스 서비스와 WFA 서버 서비스를 오프라인으로 전환해야 하는 경우 Windows 서비스에서 WFA 서비스를 중지해서는 안 됩니다.
+
+. WFA 리소스를 보조 노드로 수동으로 이동합니다.
+. 두 번째 노드에서 공유 디스크를 액세스할 수 있는지 확인합니다.
+. 명령 프롬프트에서 클러스터의 2차 노드에서 ha_setup.pl 스크립트를 실행하여 공유 위치의 데이터를 사용하도록 WFA를 구성합니다.
++
+"perl ha_setup.pl -- join [-t type_of_cluster_MSCS] [-f shared_drive_path]"
+
++
+ha_setup.pl 스크립트는 WFA_INSTALL_LOCATION\WFA\BIN\ha\에서 사용할 수 있습니다.
+
++
+' perl ha_setup.pl - -join -t MSCS -f E:\'
+
+. Failover Cluster Manager에서 WFA 리소스를 온라인으로 전환합니다.
++
+[cols="2*"]
+|===
+| 대상... | 수행할 작업... 
+
+
+ a| 
+Windows 2012, Windows 2016, Windows 2019
+ a| 
+.. 새로 생성된 ""WFA" 역할을 마우스 오른쪽 버튼으로 클릭한 다음 * Start Role * 을 선택합니다. 역할은 실행 중 상태여야 하며 개별 리소스는 온라인 상태여야 합니다.
+
+
+|===
+. MSCS 클러스터의 두 번째 노드로 수동으로 전환합니다.
+. WFA 서비스가 클러스터의 두 번째 노드에서 제대로 시작되는지 확인합니다.
+

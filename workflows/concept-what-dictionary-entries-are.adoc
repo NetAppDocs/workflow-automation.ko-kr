@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-dictionary-entries-are.html 
+sidebar: sidebar 
+keywords: dictionary, entries, oncommand, workflow, automation, building, blocks, use, represent, object, types, relationships, storage, environments, filters, return, value, natural, keys 
+summary: '사전 항목은 WFA(OnCommand Workflow Automation) 구성 요소 중 하나입니다. 사전 항목을 사용하여 스토리지 및 스토리지 관련 환경에서 개체 유형과 해당 관계를 나타낼 수 있습니다. 그런 다음 워크플로의 필터를 사용하여 사전 항목의 기본 키 값을 반환할 수 있습니다.' 
+---
+= 사전 항목이 무엇입니까
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+사전 항목은 WFA(OnCommand Workflow Automation) 구성 요소 중 하나입니다. 사전 항목을 사용하여 스토리지 및 스토리지 관련 환경에서 개체 유형과 해당 관계를 나타낼 수 있습니다. 그런 다음 워크플로의 필터를 사용하여 사전 항목의 기본 키 값을 반환할 수 있습니다.
+
+사전 항목은 WFA에서 지원하는 개체 유형의 정의입니다. 각 사전 항목은 지원되는 스토리지 및 스토리지 관련 환경에서 개체 유형과 해당 관계를 나타냅니다. 사전 개체는 형식 검사를 받을 수 있는 특성 목록으로 구성됩니다. 완전한 값이 있는 사전 개체는 형식의 개체 인스턴스를 설명합니다. 또한 참조 속성은 개체와 환경의 관계를 설명합니다. 예를 들어 볼륨 사전 개체에는 이름, size_MB 및 volume_보증 같은 여러 특성이 있습니다. 또한 볼륨 사전 개체에는 array_id 및 aggregate_id 형식으로 볼륨을 포함하는 배열과 Aggregate에 대한 참조가 포함됩니다
+
+개체의 캐시 테이블은 캐시용으로 표시된 사전 항목의 일부 또는 모든 특성이 포함된 데이터베이스입니다. 캐시 테이블을 포함하는 사전 항목의 경우 캐싱 대상으로 적어도 하나의 사전 항목의 특성을 표시해야 합니다. 사전 항목에는 개체의 고유 식별자인 고유 키가 포함됩니다. 예를 들어 7-Mode 볼륨은 고유한 이름 및 해당 항목이 포함된 어레이의 IP 주소로 식별됩니다. qtree는 qtree 이름, 볼륨 이름 및 어레이 IP 주소로 식별됩니다. 사전 항목을 만들 때 사전 항목의 기본 키에 속하는 사전 특성을 식별해야 합니다.

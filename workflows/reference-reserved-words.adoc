@@ -1,0 +1,95 @@
+---
+permalink: workflows/reference-reserved-words.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, reserved, words, must, attributes, parameters, variable names, user input, constants, return parameters 
+summary: 'OnCommand Workflow Automation(WFA)에는 예약된 단어가 몇 개 포함되어 있습니다. 변수 이름, 사용자 입력, 상수 및 반환 매개 변수와 같은 특성이나 매개 변수에 대해서는 워크플로에서 예약된 단어를 사용하지 않아야 합니다.' 
+---
+= 예약된 단어
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation(WFA)에는 예약된 단어가 몇 개 포함되어 있습니다. 변수 이름, 사용자 입력, 상수 및 반환 매개 변수와 같은 특성이나 매개 변수에 대해서는 워크플로에서 예약된 단어를 사용하지 않아야 합니다.
+
+다음은 WFA에 예약된 단어 목록입니다.
+
+[cols="3*"]
+|===
+
+
+ a| 
+* 및
+* 스토리지
+* 어설션
+* 부울
+* 부울
+* 바이트
+* 바이트
+* 문자
+* 문자
+* 차트시퀀스
+* 클래스
+* 클래스 로더
+* 컴파일러
+* 포함
+* 변환 가능 _
+* DEF
+* 해야 합니다
+* 더블
+* 더블
+* 기타
+* 비어 있습니다
+* 거짓
+
+ a| 
+* 부동
+* 부동
+* 용
+* 용서하십시오
+* 기능
+* If(경우
+* 가져오기
+* IMPORT_STATIC
+* 인치
+* instanceof(인스턴스)
+* 내부
+* 정수
+* 있습니다
+* isdef
+* 길게
+* 길게
+* 수학
+* 신규
+* null입니다
+* 번호
+* 오브젝트
+* 또는
+
+ a| 
+* 프로를 참조하십시오
+* 돌아가기
+* 런타임
+* 보안 관리자
+* 짧게
+* 짧게
+* 사운드처럼
+* 스트릭ath
+* 문자열
+* StringBuffer 를 클릭합니다
+* StringBuilder 를 선택합니다
+* Strsim
+* 스위치
+* 시스템
+* 나사산
+* ThreadLocal 을 선택합니다
+* 참
+* 그때까지
+* VAR
+* 무효입니다
+* 있습니다
+* 와 함께
+
+
+|===

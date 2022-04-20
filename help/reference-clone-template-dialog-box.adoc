@@ -1,0 +1,50 @@
+---
+permalink: help/reference-clone-template-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, template, dialog box, enable, create, copy, template, edit 
+summary: 템플릿 복제 대화 상자에서는 템플릿 복제본을 생성하고 템플릿을 편집할 수 있습니다. 
+---
+= 템플릿 복제 대화 상자
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+템플릿 복제 대화 상자에서는 템플릿 복제본을 생성하고 템플릿을 편집할 수 있습니다.
+
+* * 이름 *
++
+템플릿 이름을 편집할 수 있습니다.
+
+* * 유형 *
++
+목록에서 사전 개체를 선택할 수 있습니다. 클론 생성을 위해 선택한 템플릿의 이름은 클론 이름으로 사용되고 기본적으로 -copy 가 추가됩니다.
+
+* * 엔터티 버전 *
++
+템플릿의 버전 번호를 major.minor.revision 형식으로 입력할 수 있습니다(예: 1.0.0).
+
+* * 설명 *
++
+템플릿의 설명을 편집할 수 있습니다.
+
+* * 특성 *
++
+선택한 사전 개체의 속성을 표시하고 enum 및 함수 같은 각 특성에 대한 값을 입력할 수 있습니다.
+
+
+
+
+
+== 명령 버튼
+
+* * 저장 *
++
+템플릿을 저장하고 대화 상자를 닫습니다.
+
+* * 취소 *
++
+템플릿을 저장하지 않고 대화 상자를 닫습니다.
+
+

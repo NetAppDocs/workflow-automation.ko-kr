@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-managing-high-availability.html 
+sidebar: sidebar 
+keywords: manage, high availability 
+summary: 네트워크 작업에 대한 지속적인 지원을 제공하도록 고가용성 설정을 구성할 수 있습니다. 구성 요소 중 하나에 장애가 발생하면 설치 프로그램에서 미러링된 구성 요소가 작업을 대신 수행하고 중단 없는 네트워크 리소스를 제공합니다. WFA 데이터베이스와 지원되는 구성을 백업할 수도 있으므로 재해 발생 시 데이터를 복구할 수 있습니다. 
+---
+= 고가용성 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+네트워크 작업에 대한 지속적인 지원을 제공하도록 고가용성 설정을 구성할 수 있습니다. 구성 요소 중 하나에 장애가 발생하면 설치 프로그램에서 미러링된 구성 요소가 작업을 대신 수행하고 중단 없는 네트워크 리소스를 제공합니다. WFA 데이터베이스와 지원되는 구성을 백업할 수도 있으므로 재해 발생 시 데이터를 복구할 수 있습니다.

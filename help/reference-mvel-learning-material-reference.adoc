@@ -1,0 +1,16 @@
+---
+permalink: help/reference-mvel-learning-material-reference.html 
+sidebar: sidebar 
+keywords: use, language, guide, learn, expression 
+summary: 'MVEL 언어 가이드를 사용하여 MVFLEX Expression Language(MVEL)에 대해 자세히 알아볼 수 있습니다.' 
+---
+= MVEL에 대한 정보를 찾는 위치
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MVFLEX Expression Language(MVEL)에 대한 자세한 내용은 _MVEL 언어 가이드_를 참조하십시오.
+
+MVEL은 Java 구문을 기반으로 하는 식 언어입니다. MVEL expression synt세는 함수 및 변수와 같은 WFA(OnCommand Workflow Automation) 워크플로에서 사용할 수 있습니다.

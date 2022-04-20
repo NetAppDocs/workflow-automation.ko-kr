@@ -1,0 +1,48 @@
+---
+permalink: workflows/concept-how-repeat-row-works.html 
+sidebar: sidebar 
+keywords: workflow, contain, commands, details, arranged, rows, specify, repeat, fixed, number, iterations, dynamic, results, search, criteria 
+summary: 워크플로에는 명령 및 명령 세부 정보가 행으로 정렬되어 있습니다. 검색 조건 결과에 따라 고정된 반복 수나 동적 반복 수에 대해 반복할 행의 명령을 지정할 수 있습니다. 
+---
+= 행 반복 작동 방식
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+워크플로에는 명령 및 명령 세부 정보가 행으로 정렬되어 있습니다. 검색 조건 결과에 따라 고정된 반복 수나 동적 반복 수에 대해 반복할 행의 명령을 지정할 수 있습니다.
+
+특정 횟수만큼 반복하거나 워크플로가 설계된 경우 행의 명령 세부 정보를 지정할 수 있습니다. 또한 워크플로를 실행하거나 실행을 예약할 때 행을 반복해야 하는 횟수를 지정할 수 있도록 워크플로를 설계할 수 있습니다. 개체에 대한 검색 조건을 지정할 수 있으며, 행의 명령은 검색 조건에 의해 반환된 개체만큼 반복되도록 설정할 수 있습니다. 특정 조건이 충족되면 행을 반복하도록 설정할 수도 있습니다.
+
+
+
+== 행 반복 변수
+
+변수 목록에서 행 반복 중에 조작할 수 있는 변수를 지정할 수 있습니다. 변수의 경우 행 반복이 반복될 때마다 계산되는 이름, 변수가 초기화된 값 및 MVFLEX Expression Language(MVEL) 식을 지정할 수 있습니다.
+
+다음 그림에서는 반복 행 옵션과 행 반복 변수의 예를 보여 줍니다.
+
+image::../media/row_repetition_details.png[행 반복 세부 정보]
+
+
+
+== 승인 지점이 있는 행 반복
+
+명령에 대해 반복 행을 지정하고 승인 지점을 포함시킨 경우, 승인 지점이 실행되기 전에 모든 명령이 반복됩니다. 승인 지점을 승인한 후 다음 승인 시점까지 연속 명령의 모든 반복 실행이 계속됩니다.
+
+다음 그림에서는 승인 지점이 워크플로에 포함될 때 반복 행의 반복 실행 방법을 보여 줍니다.
+
+image::../media/approval_repetition.png[승인 반복]
+
+
+
+== 미리 정의된 워크플로에서 행 예제를 반복합니다
+
+디자이너에서 미리 정의된 다음 워크플로를 열어 반복 행이 사용되는 방식을 이해할 수 있습니다.
+
+* Clustered Data ONTAP NFS 볼륨을 생성합니다
+* Clustered Data ONTAP 스토리지에서 VMware NFS 데이터 저장소를 생성합니다
+* 클러스터 피어링을 설정합니다
+* Clustered Data ONTAP 볼륨을 제거합니다
+

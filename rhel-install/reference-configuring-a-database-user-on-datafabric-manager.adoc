@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/reference-configuring-a-database-user-on-datafabric-manager.html 
+sidebar: sidebar 
+keywords: configure, database, user, datafabric, manager 
+summary: OnCommand Workflow Automation에 대한 DataFabric Manager 5.x 데이터베이스의 읽기 전용 액세스를 구성하려면 DataFabric Manager 5.x에서 데이터베이스 사용자를 만들어야 합니다. 
+---
+= DataFabric Manager에서 데이터베이스 사용자 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation에 대한 DataFabric Manager 5.x 데이터베이스의 읽기 전용 액세스를 구성하려면 DataFabric Manager 5.x에서 데이터베이스 사용자를 만들어야 합니다.

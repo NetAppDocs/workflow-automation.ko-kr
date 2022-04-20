@@ -1,0 +1,36 @@
+---
+permalink: workflows/concept-how-you-use-the-rest-api.html 
+sidebar: sidebar 
+keywords: use, provided, rest api, workflow, automation, invoke, workflows, external, portals, data center, orchestration, software, support, xml, json, content types 
+summary: 'WFA(Workflow Automation)에서 제공하는 REST API를 사용하여 외부 포털 및 데이터 센터 오케스트레이션 소프트웨어에서 워크플로우를 호출할 수 있습니다. WFA는 모든 REST API에 대해 XML 및 JSON 콘텐츠 유형을 지원합니다.' 
+---
+= REST API 사용 방법
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(Workflow Automation)에서 제공하는 REST API를 사용하여 외부 포털 및 데이터 센터 오케스트레이션 소프트웨어에서 워크플로우를 호출할 수 있습니다. WFA는 모든 REST API에 대해 XML 및 JSON 콘텐츠 유형을 지원합니다.
+
+WFA를 사용하면 외부 서비스에서 워크플로우, 사용자, 필터, 파인더와 같은 다양한 리소스 컬렉션을 액세스할 수 있으며 URI 경로를 통해 외부 서비스는 GET, PUT, POST, DELETE 등의 HTTP 메소드를 사용할 수 있습니다. 이러한 URI로 리소스에 대해 CRUD 작업을 수행합니다.
+
+WFA REST API를 통해 다음을 비롯한 몇 가지 작업을 수행할 수 있습니다.
+
+* 워크플로우 정의 및 메타데이터에 액세스
+* 워크플로우 실행 및 실행 상태 모니터링
+* 사용자 및 역할을 보고 암호를 변경합니다.
+* 리소스 선택 필터를 실행하고 테스트합니다.
+* 리소스 파인더 실행 및 테스트
+* 스토리지 또는 기타 데이터 센터 오브젝트의 자격 증명 관리
+* 데이터 원본 및 데이터 원본 형식을 봅니다.
+
+
+_Rest 설명서_REST API에 대한 자세한 내용:
+
+_https_://WFA_server_IP: port/rest/docs
+
+WFA_SERVER_IP는 WFA 서버의 IP 주소이며, port는 설치 중에 WFA 서버에 사용된 TCP 포트 번호입니다.
+
+
+NOTE: WFA는 웹 UI에서 수신되는 요청에 대해 CSRF(사이트 간 요청 위조) 토큰을 확인합니다. 하지만 WFA는 REST 클라이언트나 오케스트레이션 소프트웨어에서 수신되는 REST 요청에 대해 CSRF 토큰을 확인하지 않습니다.

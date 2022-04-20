@@ -1,0 +1,72 @@
+---
+permalink: help/task-export-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: save, user-created, oncommand, workflow, automation, content, file, share, users, include, entire, specific, items, workflows, finders, comands, dictionary 
+summary: '사용자가 생성한 WFA(OnCommand Workflow Automation) 콘텐츠를 .DAR 파일로 저장하고 다른 사용자와 콘텐츠를 공유할 수 있습니다. WFA 콘텐츠에는 사용자가 생성한 전체 콘텐츠 또는 워크플로우, 찾기, 명령, 사전 용어 등의 특정 항목이 포함될 수 있습니다.' 
+---
+= OnCommand Workflow Automation 콘텐츠를 내보냅니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+사용자가 생성한 WFA(OnCommand Workflow Automation) 콘텐츠를 '.dar' 파일로 저장하고 다른 사용자와 콘텐츠를 공유할 수 있습니다. WFA 콘텐츠에는 사용자가 생성한 전체 콘텐츠 또는 워크플로우, 찾기, 명령, 사전 용어 등의 특정 항목이 포함될 수 있습니다.
+
+* 필요한 것 *
+
+* 내보낼 WFA 콘텐츠에 액세스할 수 있어야 합니다.
+* 내보낼 콘텐츠에 인증된 콘텐츠에 대한 참조가 포함되어 있는 경우 콘텐츠를 가져올 때 해당 인증된 콘텐츠 팩을 시스템에서 사용할 수 있어야 합니다.
++
+이러한 팩은 Storage Automation Store에서 다운로드할 수 있습니다.
+
+
+
+* 이 작업에 대한 정보 *
+
+* 다음 유형의 인증된 콘텐츠는 내보낼 수 없습니다.
++
+** image:../media/netapp_certified.gif[""] 인증받은 NetApp 컨텐츠
+** image:../media/ps_certified_icon_wfa.gif[""] ?PS(Professional Services)에서 개발한 컨텐츠로, PS에서 설치한 사용자 정의 설치에서만 사용할 수 있습니다
+** image:../media/community_certification.gif[""] 사용자가 개발한 팩입니다
+
+
+* 내보낸 개체에 종속된 모든 개체도 내보내집니다.
++
+예를 들어 워크플로를 내보내면 워크플로에 대한 종속 명령, 필터 및 파인더도 내보내집니다.
+
+* 잠긴 개체를 내보낼 수 있습니다.
++
+다른 사용자가 개체를 가져올 때 해당 개체는 잠긴 상태로 유지됩니다.
+
+
+
+.단계
+. 웹 브라우저를 통해 WFA에 로그인합니다.
+. 필요한 콘텐츠 내보내기:
++
+[cols="2*"]
+|===
+| 원하는 작업 | 수행할 작업... 
+
+
+ a| 
+사용자가 만든 모든 콘텐츠를 단일 .dar 파일로 내보냅니다
+ a| 
+.. 설정 * 을 클릭하고 * 유지 관리 * 에서 * 모든 워크플로 내보내기 * 를 클릭합니다.
+.. '.dar' 파일의 파일 이름을 지정한 다음 * 내보내기 * 를 클릭합니다.
+
+
+
+
+ a| 
+특정 콘텐츠 내보내기
+ a| 
+.. 콘텐츠를 내보낼 창으로 이동합니다.
+.. 창에서 하나 이상의 항목을 선택한 다음 을 클릭합니다 image:../media/export_wfa_icon.gif["내보내기 아이콘"].
+.. 내보내기 형식 대화 상자에서 '.dar' 파일의 파일 이름을 지정한 다음 * 내보내기 * 를 클릭합니다.
+
+
+|===
+. 다른 이름으로 저장 대화 상자에서 '.dar' 파일을 저장할 위치를 지정한 다음 * 저장 * 을 클릭합니다.
+

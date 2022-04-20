@@ -1,0 +1,114 @@
+---
+permalink: workflows/reference-guidelines-for-logging.html 
+sidebar: sidebar 
+keywords: aware, guidelines, logging, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation)용 PowerShell 또는 Perl 스크립트를 작성할 때 로깅 지침에 대해 알고 있어야 합니다.' 
+---
+= 로깅 지침
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)용 PowerShell 또는 Perl 스크립트를 작성할 때 로깅 지침에 대해 알고 있어야 합니다.
+
+
+
+== PowerShell 로깅
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+로깅에 Get-WFALogger cmdlet을 사용합니다.
+ a| 
+[listing]
+----
+Get-WFALogger -Info -message “Creating volume”
+----
+
+
+ a| 
+Data ONTAP, VMware 및 PowerCLI와 같은 내부 패키지와의 상호 작용이 필요한 모든 작업을 기록합니다. 모든 로그 메시지는 워크플로 실행 상태 기록의 실행 로그에서 사용할 수 있습니다.
+ a| 
+없음
+
+
+
+ a| 
+내부 패키지에 전달되는 모든 관련 인수를 기록합니다.
+ a| 
+없음
+
+
+
+ a| 
+사용 컨텍스트에 따라 Get-WFALogger cmdlet을 사용할 때 적절한 로그 수준을 사용합니다. -INFO, -Error, -Warn 및 -Debug 사용 가능한 다양한 로그 수준입니다. 로그 수준을 지정하지 않으면 기본 로그 수준은 디버그입니다.
+ a| 
+없음
+
+|===
+
+
+== Perl 로깅
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+로깅에 WFAUtil sendLog를 사용합니다.
+ a| 
+[listing]
+----
+my wfa_util = WFAUtil->new();
+eval {
+$wfa_util->sendLog('INFO', "Connecting to the
+cluster: $DestinationCluster");
+}
+----
+
+
+ a| 
+Data ONTAP, VMware, WFA와 같은 외부 명령어와 상호 작용해야 하는 모든 작업을 기록합니다. WFAUtil sendLog 루틴을 사용하여 생성한 모든 로그 메시지가 WFA 데이터베이스에 저장됩니다. 이러한 로그 메시지는 실행된 워크플로 및 명령에 사용할 수 있습니다.
+ a| 
+없음
+
+
+
+ a| 
+호출된 루틴에 전달된 모든 관련 인수를 기록합니다.
+ a| 
+없음
+
+
+
+ a| 
+적절한 로그 수준을 사용합니다. - 정보, - 오류, - 경고 및 - 디버그가 사용 가능한 다양한 로그 수준입니다.
+ a| 
+없음
+
+
+
+ a| 
+Info 수준에서 기록할 때는 정확하고 간결해야 합니다. 로그 메시지에 클래스 이름 및 함수 이름과 같은 구현 세부 정보를 지정하지 마십시오. 정확한 단계 또는 정확한 오류를 일반 영어로 설명합니다.
+ a| 
+다음 코드 조각에서는 양호한 메시지와 잘못된 메시지의 예를 보여 줍니다.
+
+[listing]
+----
+$wfa_util->sendLog('WARN', "Removing volume:
+'.$VolumeName);
+# Good Message
+----
+[listing]
+----
+$wfa_util->sendLog('WARN', 'Invoking volume-
+destroy ZAPI: '.$VolumeName);
+# Bad message
+----
+|===

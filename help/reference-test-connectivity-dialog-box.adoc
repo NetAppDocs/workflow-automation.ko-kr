@@ -1,0 +1,44 @@
+---
+permalink: help/reference-test-connectivity-dialog-box.html 
+sidebar: sidebar 
+keywords: test, connectivity, dialog box, enable, test, system, associated, credential, operation, trigger, search, path, first, look, exact, match, pattern, service, authentication 
+summary: 연결 테스트 대화 상자에서 자격 증명과 연결된 시스템에 대한 연결을 테스트할 수 있습니다. 테스트 연결 작업은 검색 경로를 트리거하고, 먼저 정확한 일치 항목을 찾은 다음 패턴 일치, 마지막으로 LDAP 서비스 인증을 찾습니다. 
+---
+= 연결 테스트 대화 상자
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+연결 테스트 대화 상자에서 자격 증명과 연결된 시스템에 대한 연결을 테스트할 수 있습니다. 테스트 연결 작업은 검색 경로를 트리거하고, 먼저 정확한 일치 항목을 찾은 다음 패턴 일치, 마지막으로 LDAP 서비스 인증을 찾습니다.
+
+ICMP(Internet Control Message Protocol)는 연결을 테스트하기 전에 시스템이 실행 중인지 확인하는 데 사용됩니다.
+
+
+
+== 연결 매개 변수를 테스트합니다
+
+* * 유형 *
++
+드롭다운 목록에서 자격 증명 유형을 선택할 수 있습니다.
+
+* * 이름/IP *
++
+자격 증명의 호스트 이름 또는 IP 주소를 지정할 수 있습니다.
+
+
+
+
+
+== 명령 버튼
+
+* * 테스트 *
++
+호스트 이름 또는 IP 주소에 대한 연결 시도를 엽니다.
+
+* * 닫기 *
++
+변경 사항이 있으면 취소하고 대화 상자를 닫습니다.
+
+

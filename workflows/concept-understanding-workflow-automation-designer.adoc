@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-understanding-workflow-automation-designer.html 
+sidebar: sidebar 
+keywords: create, workflows, automation, designer, use, building blocks, finders, filters, commands, understanding, important, before, start 
+summary: 'WFA(Workflow Automation) 디자이너에서 파인더, 필터, 명령 등의 구성 요소를 사용하여 워크플로우를 생성합니다. 워크플로우를 생성하기 전에 구성 요소와 워크플로우 생성 프로세스를 이해하는 것이 중요합니다.' 
+---
+= Workflow Automation 설계자 이해
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(Workflow Automation) 디자이너에서 파인더, 필터, 명령 등의 구성 요소를 사용하여 워크플로우를 생성합니다. 워크플로우를 생성하기 전에 구성 요소와 워크플로우 생성 프로세스를 이해하는 것이 중요합니다.

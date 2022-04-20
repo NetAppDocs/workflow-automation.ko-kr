@@ -1,0 +1,53 @@
+---
+permalink: windows-install/task-replace-the-default-workflow-automation-ssl-certificate.html 
+sidebar: sidebar 
+keywords: replace, default, workflow, automation, ssl certificate 
+summary: '인증서가 만료되었거나 인증서의 유효 기간을 늘리려면 기본 WFA(Workflow Automation) SSL 인증서를 교체할 수 있습니다.' 
+---
+= 기본 Workflow Automation SSL 인증서를 교체합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+인증서가 만료되었거나 인증서의 유효 기간을 늘리려면 기본 WFA(Workflow Automation) SSL 인증서를 교체할 수 있습니다.
+
+WFA 서버에 Windows 관리자 권한이 있어야 합니다.
+
+기본 WFA 설치 경로가 이 절차에 사용됩니다. 설치 중에 기본 위치를 변경한 경우 사용자 지정 WFA 설치 경로를 사용해야 합니다.
+
+.단계
+. WFA 호스트 시스템에서 admin 사용자로 로그인합니다.
+. Windows 서비스 콘솔을 사용하여 다음 WFA 서비스를 중지하십시오.
++
+** NetApp WFA 데이터베이스
+** NetApp WFA 서버
+
+
+. 다음 위치에서 WFA.keystore 파일을 삭제합니다.
++
+'<WFA_INSTALL_LOCATION>\WFA\jboss\standalone\configuration\keystore'
+
+. WFA 서버에서 명령 프롬프트를 열고 디렉터리를 <OpenJDK_install_location>\bin 위치로 변경합니다
+. 데이터베이스 키 가져오기:
++
+"keytool-keysize 2048-genkey-alias "SSL keystore"-keyalg rsa-keystore"<WFA_install_location>\WFA\jboss\standalone\configuration\keystore\WFA.keystore"-enity xxxx"입니다
+
++
+xxxx는 새 인증서의 유효 기간(일)입니다.
+
+. 메시지가 표시되면 암호를 입력합니다(기본값 또는 새 암호).
++
+changeit는 기본 암호입니다. 기본 암호를 사용하지 않으려면 standalone-full.xml 파일의 SSL 요소 암호 특성을 <WFA_install_location>\WFA\JBoss\standalone\configuration\ 위치에서 변경해야 합니다
+
++
+[listing]
+----
+<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
+----
+. 인증서에 필요한 세부 정보를 입력합니다.
+. 표시된 정보를 검토하고 Yes를 입력합니다.
+. 다음 메시지가 나타나면 * Enter * 를 누릅니다. <SSL keystore><return if same as keystore password> 키 암호를 입력합니다.
+. Windows 서비스 콘솔을 사용하여 WFA 서비스를 다시 시작합니다.
+

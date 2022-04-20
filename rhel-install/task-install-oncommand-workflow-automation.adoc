@@ -1,0 +1,188 @@
+---
+permalink: rhel-install/task-install-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, linux 
+summary: 'WFA(OnCommand Workflow Automation)는 CLI(Command-Line Interface)를 사용하여 설치할 수 있습니다.' 
+---
+= Linux에 OnCommand Workflow Automation를 설치합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)는 CLI(Command-Line Interface)를 사용하여 설치할 수 있습니다.
+
+* 설치 필수 구성 요소를 검토해야 합니다.
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[설치 필수 구성 요소]
+
+* NetApp Support 사이트에서 WFA 설치 프로그램을 다운로드해야 합니다.
+
+
+가상 머신(VM)에 WFA를 설치하는 경우 VM의 이름에 밑줄(_) 문자를 포함할 수 없습니다.
+
+셸 프롬프트에서 './WFA-version_number.bin [-I WFA_INSTALL_DIRECTORY] [-d MySQL_DATA_DIRECTORY]'를 사용하여 기본 설치 위치를 변경할 수 있습니다
+
+기본 설치 위치를 변경하는 경우 WFA를 설치 제거할 때 MySQL 데이터 디렉토리가 삭제되지 않습니다. 디렉터리를 수동으로 삭제해야 합니다.
+
+
+NOTE: WFA 4.2 이상을 재설치하기 전에 MySQL을 제거한 경우 MySQL 데이터 디렉터리를 삭제해야 합니다.
+
+.단계
+. Linux 서버에 루트 사용자로 로그인합니다.
+. 실행 파일 .bin 파일이 있는 디렉터리로 이동합니다.
+. 다음 방법 중 하나를 선택하여 WFA를 설치합니다.
++
+** 대화형 설치
++
+... 대화형 세션 './WFA-version_number.bin'을 시작합니다
+... 기본 admin 사용자의 자격 증명을 입력한 다음 Enter 키를 누릅니다.
++
+admin 사용자의 자격 증명을 기록하고 암호가 다음 기준을 충족하는지 확인해야 합니다.
+
++
+**** 최소 8자
+**** 대문자 1개
+**** 소문자 1개
+**** 숫자 1개
+**** 특수 문자 1개
+**** 다음 특수 문자는 암호에 지원되지 않으며 설치에 실패합니다.
++
+"";<>,=&{캐럿}|
+
+
+
+... WFA 구성에 대해 기본 포트를 사용하거나 사용자 지정 포트를 제공하고 Enter 키를 누릅니다.
+... 회사 이름과 사이트 이름을 지정한 다음 Enter 키를 누릅니다.
++
+사이트 이름에는 WFA 설치 위치(예: Pittsburgh, PA)가 포함될 수 있습니다.
+
+... 다음 작업 중 하나를 선택하여 WFA가 성공적으로 설치되었는지 확인합니다.
++
+**** 웹 브라우저를 통해 WFA에 액세스합니다.
+**** NetApp WFA Server 서비스 및 NetApp WFA 데이터베이스 서비스가 실행 중인지 확인합니다.
++
+....
+service wfa-server status
+service wfa-db status
+....
+
+
+
+
+** 자동 설치
++
+쉘 프롬프트에서 다음을 수행합니다.
+
++
+'./WFA-version_number.bin [-u admin_user_name] [-p admin_user_password] [-m https_port] [-n http_port] [-c company_name] [-s site_name] [-i install_directory] [-d mysql_data_directory] [-y] [-b]'
+
++
+자동 설치를 수행하려면 모든 명령 옵션에 대한 값을 지정해야 합니다. 명령 옵션은 다음과 같습니다.
+
++
+[cols="2*"]
+|===
+| 옵션을 선택합니다 | 설명 
+
+
+ a| 
+y입니다
+ a| 
+건너뛰는 옵션은 설치 확인을 건너뜁니다
+
+
+
+ a| 
+b
+ a| 
+업그레이드하는 동안 WFA 데이터베이스의 백업 생성을 건너뛰는 옵션입니다
+
+
+
+ a| 
+u
+ a| 
+관리자 사용자 이름입니다
+
+
+
+ a| 
+p
+ a| 
+admin 사용자 암호 admin 사용자 암호는 다음 조건을 충족해야 합니다.
+
+*** 최소 8자
+*** 대문자 1개
+*** 소문자 1개
+*** 숫자 1개
+*** 특수 문자 1개
+*** 다음 문자는 허용되지 않으며 암호 입력이 실패합니다.
++
+"";<>,=&{캐럿}|
+
+
+
+
+
+ a| 
+m
+ a| 
+HTTPS 포트
+
+
+
+ a| 
+n
+ a| 
+HTTP 포트
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+-s
+ a| 
+사이트 이름
+
+
+
+ a| 
+c
+ a| 
+회사 이름
+
+
+
+ a| 
+나는
+ a| 
+설치 디렉토리 경로
+
+
+
+ a| 
+d
+ a| 
+MySQL 데이터 디렉토리
+
+
+
+ a| 
+h
+ a| 
+옵션을 선택하면 도움말이 표시됩니다
+
+|===
+
+
+
+
+* 관련 정보 *
+
+https://mysupport.netapp.com/site/["NetApp 지원"^]

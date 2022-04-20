@@ -1,0 +1,16 @@
+---
+permalink: help/reference-wfa-store-window.html 
+sidebar: sidebar 
+keywords: storage, automation, store, cotains, netapp-certified, workflow, pack, developed, use, oncommand, download, import, execute 
+summary: '스토리지 자동화 스토어에는 WFA(OnCommand Workflow Automation)와 함께 사용하도록 개발된 NetApp 인증 자동 스토리지 워크플로우 팩이 포함되어 있습니다. 팩을 다운로드한 다음 WFA로 가져와 실행할 수 있습니다.' 
+---
+= 스토리지 자동화 스토어 창
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 자동화 스토어에는 WFA(OnCommand Workflow Automation)와 함께 사용하도록 개발된 NetApp 인증 자동 스토리지 워크플로우 팩이 포함되어 있습니다. 팩을 다운로드한 다음 WFA로 가져와 실행할 수 있습니다.
+
+자동화된 워크플로우는 에서 사용할 수 있습니다 https://automationstore.netapp.com["스토리지 자동화 스토어"^]

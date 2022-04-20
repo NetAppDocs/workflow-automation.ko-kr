@@ -1,0 +1,50 @@
+---
+permalink: help/task-configure-authentication-settings.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, use, microsoft, active, directory, lightweight, access, protocol, server, authentication, authorization 
+summary: '인증 및 승인을 위해 Microsoft Active Directory(AD) LDAP(Lightweight Directory Access Protocol) 서버를 사용하도록 WFA(OnCommand Workflow Automation)를 구성할 수 있습니다.' 
+---
+= 인증 설정을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+인증 및 승인을 위해 Microsoft Active Directory(AD) LDAP(Lightweight Directory Access Protocol) 서버를 사용하도록 WFA(OnCommand Workflow Automation)를 구성할 수 있습니다.
+
+* 필요한 것 *
+
+사용자 환경에서 Microsoft AD LDAP 서버를 구성해야 합니다.
+
+* 이 작업에 대한 정보 *
+
+WFA에는 Microsoft AD LDAP 인증만 지원됩니다. Microsoft AD LDS(Lightweight Directory Services) 또는 Microsoft Global Catalog를 비롯한 다른 LDAP 인증 방법은 사용할 수 없습니다.
+
+
+NOTE: 통신 중에 LDAP는 사용자 이름과 암호를 일반 텍스트로 보냅니다. 그러나 LDAPS(LDAP 보안) 통신은 암호화되어 안전하게 보호됩니다.
+
+.단계
+. 웹 브라우저를 통해 admin으로 WFA에 로그인합니다.
+. 설정 * 을 클릭하고 * 설정 * 에서 * 인증 * 을 클릭합니다.
+. Active Directory* 활성화 확인란을 선택합니다.
+. 필드에 필수 정보를 입력합니다.
++
+.. * 선택 사항: * 도메인 사용자에 대해 _user@domain_format을 사용하려면, 사용자 이름 속성 * 필드에서 'sAMAccountName'을 'userPrincipalName'으로 바꾸십시오.
+.. * 선택 사항: * 환경에 고유한 값이 필요한 경우 필수 필드를 편집합니다.
+.. 다음과 같이 AD 서버 URI를 입력합니다. +예: "LDAP://active_directory_server_address\[:port\]
++
+"LDAP://NB-T01.example.com[:389]`
+
++
+SSL을 통해 LDAP를 활성화한 경우 'LDAPS://active_directory_server_address\[:port\]'라는 URI 형식을 사용할 수 있습니다
+
+.. 필요한 역할에 필요한 AD 그룹 이름 목록을 추가합니다.
++
+
+NOTE: Active Directory 그룹 창에서 필요한 역할에 AD 그룹 이름 목록을 추가할 수 있습니다.
+
+
+
+. 저장 * 을 클릭합니다.
+

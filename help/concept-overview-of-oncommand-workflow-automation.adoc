@@ -1,0 +1,52 @@
+---
+permalink: help/concept-overview-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, software, solution, help, automate, storage, management, tasks, provision, migration, decommissioning, data, protection, configuration, cloning, complete, specified, process 
+summary: 'WFA(OnCommand Workflow Automation)는 프로비저닝, 마이그레이션, 사용 중단, 데이터 보호 구성 등과 같은 스토리지 관리 작업을 자동화하는 소프트웨어 클로닝할 수 있습니다. WFA를 사용하여 프로세스에서 지정한 작업을 완료하기 위해 워크플로우를 구축할 수 있습니다.' 
+---
+= OnCommand Workflow Automation 개요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)는 프로비저닝, 마이그레이션, 사용 중단, 데이터 보호 구성 등과 같은 스토리지 관리 작업을 자동화하는 소프트웨어 클로닝할 수 있습니다. WFA를 사용하여 프로세스에서 지정한 작업을 완료하기 위해 워크플로우를 구축할 수 있습니다.
+
+워크플로는 다음과 같은 유형의 작업을 포함하여 순차적 단계로 구성된 반복 및 절차 작업입니다.
+
+* 데이터베이스 또는 파일 시스템용 스토리지 프로비저닝, 마이그레이션 또는 폐기
+* 스토리지 스위치 및 데이터 저장소를 포함한 새로운 가상화 환경 설정
+* 애플리케이션용 스토리지를 광범위한 오케스트레이션 프로세스의 일부로 설정
+
+
+스토리지 설계자는 워크플로우를 정의하여 모범 사례를 따르고 다음과 같은 조직의 요구사항을 충족할 수 있습니다.
+
+* 필요한 명명 규칙을 사용합니다
+* 스토리지 객체에 대한 고유한 옵션 설정
+* 자원 선택
+* 내부 구성 관리 데이터베이스(CMDB)와 티켓팅 애플리케이션 통합
+
+
+
+
+== WFA 기능을 제공합니다
+
+* 워크플로우 설계 포털을 통해 워크플로우를 구축할 수 있습니다
++
+워크플로 디자인 포털에는 명령, 템플릿, 찾기, 필터, 워크플로우 생성에 사용되는 기능을 설명합니다. 디자이너는 자동화된 리소스 선택, 행 반복(반복) 및 승인 지점과 같은 워크플로에 고급 기능을 포함할 수 있습니다.
+
++
+또한 워크플로 디자인 포털에는 외부 시스템의 데이터를 캐시하기 위한 사전 항목, 캐시 쿼리 및 데이터 원본 형식과 같은 구성 요소도 포함되어 있습니다.
+
+* 워크플로우 실행, 워크플로우 실행 상태 확인 및 액세스 로그를 위한 실행 포털입니다
+* WFA 설정, 데이터 소스에 연결, 사용자 자격 증명 구성 등의 작업에 대한 관리/설정 옵션입니다
+* 웹 서비스 인터페이스를 통해 외부 포털 및 데이터 센터 오케스트레이션 소프트웨어에서 워크플로우를 호출할 수 있습니다
+* 스토리지 자동화 스토어 에서 WFA 팩을 다운로드합니다
+
+
+
+
+== WFA 라이센스 정보입니다
+
+OnCommand Workflow Automation 서버를 사용하기 위해 라이센스가 필요하지 않습니다.

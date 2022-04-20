@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-restrict-access-rights-of-oncommand-workflow-automation-on-the-host.html 
+sidebar: sidebar 
+keywords: restrict, access rights, oncommand, workflow, automation, host 
+summary: '기본적으로 WFA(OnCommand Workflow Automation)는 호스트 시스템의 관리자로 워크플로우를 실행합니다. 기본 설정을 변경하여 호스트 시스템에 대한 WFA 권한을 제한할 수 있습니다.' 
+---
+= 호스트에서 OnCommand Workflow Automation의 액세스 권한을 제한합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+기본적으로 WFA(OnCommand Workflow Automation)는 호스트 시스템의 관리자로 워크플로우를 실행합니다. 기본 설정을 변경하여 호스트 시스템에 대한 WFA 권한을 제한할 수 있습니다.
+
+WFA 호스트 시스템에 admin으로 로그인해야 합니다.
+
+.단계
+. 소켓을 열고 WFA 홈 디렉토리에 쓸 수 있는 권한이 있는 새 Windows 사용자 계정을 생성합니다.
+. services.msc를 사용하여 Windows 서비스 콘솔을 열고 * NetApp WFA Database * 를 두 번 클릭합니다.
+. Log On * 탭을 클릭합니다.
+. 이 계정 * 을 선택하고 생성한 새 사용자의 자격 증명을 입력한 다음 * 확인 * 을 클릭합니다.
+. NetApp WFA Server * 를 두 번 클릭합니다.
+. Log On * 탭을 클릭합니다.
+. 이 계정 * 을 선택하고 생성한 새 사용자의 자격 증명을 입력한 다음 * 확인 * 을 클릭합니다.
+. NetApp WFA 데이터베이스 * 및 * NetApp WFA Server * 서비스를 다시 시작합니다.
+

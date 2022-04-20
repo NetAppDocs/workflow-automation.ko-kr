@@ -1,0 +1,40 @@
+---
+permalink: help/reference-about-dialog-box.html 
+sidebar: sidebar 
+keywords: about, dialog, box, display, details, current, version, install, application 
+summary: 정보 대화 상자에 설치된 WFA 애플리케이션의 현재 버전에 대한 세부 정보가 표시됩니다. 
+---
+= 정보 대화 상자
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+정보 대화 상자에 설치된 WFA 애플리케이션의 현재 버전에 대한 세부 정보가 표시됩니다.
+
+
+
+== WFA 버전 정보
+
+* * 버전 *
++
+설치된 WFA 애플리케이션의 현재 버전 번호를 표시합니다.
+
++
+버전 번호는 서기 B.C. 형식으로 되어 있습니다
+
++
+A.B.C는 메이저, 마이너, 유지보수 릴리스 번호를 반영합니다.
+
++
+예를 들면 '2.0.0'입니다.
+
+* * 시스템 ID *
++
+추적 및 AutoSupport 용도로 WFA 시스템 설치를 식별합니다.
+
++
+고유한 시스템 생성 식별자입니다.
+
+

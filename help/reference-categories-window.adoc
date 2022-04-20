@@ -1,0 +1,135 @@
+---
+permalink: help/reference-categories-window.html 
+sidebar: sidebar 
+keywords: category, window, enable, manage, workflow 
+summary: 범주 창에서 워크플로 범주를 관리할 수 있습니다. 
+---
+= 범주 창
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+범주 창에서 워크플로 범주를 관리할 수 있습니다.
+
+
+NOTE: 역할 및 계정 권한에 따라 이 창이 표시되지 않을 수 있습니다.
+
+* 범주 테이블
+* 도구 모음
+
+
+범주는 작업을 완료할 수 있는 일련의 워크플로입니다. 관련 워크플로 집합을 그룹화하여 범주를 만들 수 있습니다. 특정 사용자에게 범주를 운영할 수 있는 액세스 권한을 부여할 수도 있습니다.
+
+
+
+== 범주 테이블
+
+범주 표에는 워크플로 범주가 나열됩니다. 범주는 다음 중 하나로 식별됩니다.
+
+* image:../media/community_certification.gif[""] - 사용자가 만든 콘텐츠입니다
+* image:../media/ps_certified_icon_wfa.gif[""] ?PS(Professional Services)에서 개발한 컨텐츠로, PS에서 설치한 사용자 정의 설치에서만 사용할 수 있습니다
+* image:../media/community_certification.gif[""] 사용자가 개발한 팩입니다
+* image:../media/lock_icon_wfa.gif[""] - 잠긴 사용자가 만든 콘텐츠입니다
+* image:../media/netapp_certified.gif[""] 인증받은 NetApp 컨텐츠
+
+
+각 열에 사용할 수 있는 필터링 및 정렬 기능을 사용하거나 열 순서를 다시 정렬하여 표 표시를 사용자 지정할 수 있습니다.
+
+* image:../media/filter_icon_wfa.gif["필터 아이콘"] 전체 테이블에 대한 필터링을 설정하거나 해제합니다. 필터링이 비활성화된 경우 아이콘 위에 빨간색 "x"가 나타납니다.
+* 두 번 클릭합니다 image:../media/filter_icon_wfa.gif["필터 아이콘"] 필터링 선택을 지우고 재설정합니다.
+* image:../media/wfa_filter_icon.gif["필터 아이콘"] 각 열 머리글에서 열의 내용을 기준으로 필터링할 수 있습니다. 를 클릭합니다 image:../media/wfa_filter_icon.gif["필터 아이콘"] 열에서 드롭다운 목록 또는 사용 가능한 모든 항목의 특정 항목을 필터링할 수 있습니다.
+* 열 머리글을 클릭하면 정렬 순서가 오름차순과 내림차순으로 전환됩니다. 적용된 정렬 순서를 정렬 화살표(image:../media/wfa_sortarrow_up_icon.gif["정렬 아이콘"] 오름차순 및 의 경우 image:../media/wfa_sortarrow_down_icon.gif["정렬 아이콘"] 내림차순).
+* 열의 위치를 다시 정렬하려면 열을 끌어서 놓아 원하는 순서대로 배치할 수 있습니다. 그러나 이러한 열은 숨기거나 삭제할 수 없습니다.
+* 검색 * 필터 텍스트 상자를 클릭하면 특정 콘텐츠를 검색할 수 있습니다. 또한 지원되는 연산자를 사용하여 해당 열 유형, 알파벳 또는 숫자를 검색할 수 있습니다.
+
+
+Categories 테이블에는 다음과 같은 열이 있습니다.
+
+* * 인증 *
++
+범주가 사용자 생성(image:../media/community_certification.gif[""]), PS(image:../media/ps_certified_icon_wfa.gif[""]), 커뮤니티(image:../media/community_certification.gif[""]), 사용자 잠금(image:../media/lock_icon_wfa.gif[""]) 또는 NetApp 인증(image:../media/netapp_certified.gif[""])를 클릭합니다.
+
+* * 이름 *
++
+범주 이름을 표시합니다.
+
+* * 설명 *
++
+범주에 대한 설명을 표시합니다.
+
+* 워크플로우 *
++
+범주에서 사용할 수 있는 워크플로를 표시합니다.
+
+* * 워크플로 인증에 사용됩니다 *
++
+** 운영자 역할을 가진 특정 사용자로 제한된 범주에 대해 ""참""을 표시합니다.
+** 운영자 역할을 가진 모든 사용자가 사용할 수 있는 범주에 대해 ""거짓""을 표시합니다.
+
+
+* 사용자 *
++
+범주를 실행할 권한이 있는 승인자 또는 운영자 역할이 있는 사용자의 이름을 표시합니다.
+
+* * Active Directory 그룹 *
++
+범주를 실행할 권한이 있는 Active Directory 그룹의 이름을 나타냅니다.
+
++
+검색 * 필터 텍스트 상자에 그룹 이름을 입력하여 그룹을 검색할 수 있습니다.
+
+* * 마지막 업데이트 날짜: *
++
+범주가 마지막으로 업데이트된 날짜와 시간을 표시합니다.
+
+* * 업데이트: *
++
+범주를 업데이트한 사용자의 이름을 표시합니다.
+
+
+
+
+
+== 도구 모음
+
+도구 모음은 열 머리글 위에 있습니다. 도구 모음의 아이콘을 사용하여 다양한 작업을 수행할 수 있습니다. 이러한 작업은 창의 오른쪽 클릭 메뉴에서도 액세스할 수 있습니다.
+
+* *image:../media/new_wfa_icon.gif["새 아이콘"] (신규) *
++
+새 범주를 만들 수 있는 새 범주 대화 상자를 엽니다.
+
+* *image:../media/edit_wfa_icon.gif["편집 아이콘"] (편집) *
++
+선택한 범주를 편집할 수 있는 범주 <category_name> 대화 상자를 엽니다. 범주를 두 번 클릭하여 범주 <category_name> 대화 상자를 열 수도 있습니다.
+
+* *image:../media/clone_wfa_icon.gif["클론 아이콘을 클릭합니다"] (클론) *
++
+선택한 범주의 클론 또는 복사본을 생성할 수 있는 새 범주 <category_name> - 복사 대화 상자를 엽니다.
+
+* *image:../media/delete_wfa_icon.gif["삭제 아이콘"] (삭제) *
++
+선택한 범주를 삭제할 수 있는 범주 삭제 확인 대화 상자를 엽니다.
+
+* *image:../media/export_wfa_icon.gif["내보내기 아이콘"] (내보내기) *
++
+선택한 범주를 내보낼 수 있습니다.
+
+* *image:../media/add_to_pack.png["팩 아이콘에 추가"] (팩에 추가) *
++
+팩 범주에 추가 대화 상자를 엽니다. 이 대화 상자에서 편집 가능한 팩에 범주 및 신뢰할 수 있는 요소를 추가할 수 있습니다.
+
++
+
+NOTE: Add to Pack 기능은 인증이 * None. * 으로 설정된 범주에 대해서만 활성화됩니다
+
+* *image:../media/remove_from_pack.png["팩에서 제거 아이콘"] (팩에서 제거) *
++
+선택한 범주에 대한 팩 범주에서 제거 대화 상자를 엽니다. 이 대화 상자에서 팩을 삭제하거나 팩에서 제거할 수 있습니다.
+
++
+
+NOTE: 인증에서 제거 기능은 인증이 * 없음 * 으로 설정된 범주에 대해서만 활성화됩니다
+
+

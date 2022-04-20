@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-categories.html 
+sidebar: sidebar 
+keywords: categorize, workflows, better, organize, apply, access, control, capability 
+summary: 워크플로를 분류하여 워크플로를 보다 효율적으로 구성하고 워크플로에 액세스 제어 기능을 적용할 수 있습니다. 
+---
+= 범주를 사용하는 방법
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+워크플로를 분류하여 워크플로를 보다 효율적으로 구성하고 워크플로에 액세스 제어 기능을 적용할 수 있습니다.
+
+WFA 포털에서 특정 그룹에 표시되도록 워크플로우를 분류할 수 있습니다. 워크플로 범주에 액세스 제어 기능을 적용할 수도 있습니다. 예를 들어, 특정 스토리지 운영자 또는 승인자만 특정 워크플로우 범주를 볼 수 있도록 허용할 수 있습니다. 스토리지 운영자 또는 승인자는 액세스 권한이 부여된 범주 내의 워크플로우만 실행할 수 있습니다.
+
+Active Directory 그룹을 사용하여 범주에 대한 액세스 제어를 수행할 수도 있습니다.

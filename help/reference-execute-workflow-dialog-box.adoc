@@ -1,0 +1,46 @@
+---
+permalink: help/reference-execute-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: execute, workflow, dialog box, enable, specify, user, iputs, time, execution, comment 
+summary: 워크플로 실행 대화 상자에서는 워크플로에 필요한 사용자 입력, 실행 시간 및 실행 주석을 지정할 수 있습니다. 
+---
+= 워크플로 실행 대화 상자
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+워크플로 실행 대화 상자에서는 워크플로에 필요한 사용자 입력, 실행 시간 및 실행 주석을 지정할 수 있습니다.
+
+
+
+== 사용자 입력
+
+워크플로의 입력을 지정할 수 있습니다. 필수 특성은 별표(*)로 표시되고 상자의 테두리는 빨간색으로 표시됩니다.
+
+
+
+== 옵션
+
+워크플로우 실행 시간을 지정할 수 있습니다.
+
+* * 지금 실행 *
++
+워크플로를 즉시 실행할 수 있습니다.
+
+* * 반복 실행 *
++
+정기적으로 되풀이되도록 워크플로를 설정할 수 있습니다. 이 옵션은 일정이 생성된 경우에만 표시됩니다.
+
+* * 한 번 실행 *
++
+워크플로우 실행을 예약할 수 있습니다.
+
+
+
+
+
+== 실행 설명
+
+워크플로 실행에 대한 설명을 지정할 수 있습니다. 이 설명은 실행 상태 창에 표시됩니다.

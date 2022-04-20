@@ -1,0 +1,193 @@
+---
+section: workflow
+title: 워크플로우
+entries:
+- title: OnCommand Workflow Automation 개요
+  url: "/workflows/concept-overview-of-oncommand-workflow-automation.html"
+- title: Workflow Automation 설계자 이해
+  url: "/workflows/concept-understanding-workflow-automation-designer.html"
+  entries:
+  - title: OnCommand Workflow Automation에서 빌딩 블록 작업
+    url: "/workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html"
+    entries:
+    - title: 데이터 원본은 무엇입니까
+      url: "/workflows/concept-what-data-sources-are.html"
+    - title: 사전 항목이 무엇입니까
+      url: "/workflows/concept-what-dictionary-entries-are.html"
+    - title: 명령이 작동하는 방식
+      url: "/workflows/concept-how-commands-work.html"
+    - title: 필터란
+      url: "/workflows/concept-what-filters-are.html"
+    - title: 어떤 장애물이 있는지 확인합니다
+      url: "/workflows/concept-what-finders-are.html"
+    - title: 기능은 무엇입니까
+      url: "/workflows/concept-what-functions-are.html"
+    - title: 구성표는 무엇입니까
+      url: "/workflows/concept-what-schemes-are.html"
+    - title: 어떤 원격 시스템 유형인지 확인하십시오
+      url: "/workflows/concept-what-remote-system-types-are.html"
+    - title: 서식 파일 사용 방법
+      url: "/workflows/concept-how-you-use-templates.html"
+    - title: 범주를 사용하는 방법
+      url: "/workflows/concept-how-you-use-categories.html"
+    - title: 엔터티 버전 관리 작동 방식
+      url: "/workflows/concept-how-entity-versioning-works.html"
+  - title: 운동장 데이터베이스입니다
+    url: "/workflows/concept-what-a-playground-database-is.html"
+- title: 워크플로 관리
+  url: "/workflows/concept-managing-workflows.html"
+  entries:
+  - title: 미리 정의된 워크플로 사용자 지정
+    url: "/workflows/task-customize-predefined-workflows.html"
+    entries:
+    - title: 볼륨 생성 및 CIFS 공유 워크플로우를 사용자 지정합니다
+      url: "/workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html"
+  - title: 워크플로우 생성
+    url: "/workflows/concept-creating-workflows.html"
+    entries:
+    - title: 워크플로 생성과 관련된 작업
+      url: "/workflows/concept-tasks-involved-in-creating-workflows.html"
+    - title: 워크플로우를 정의하는 방법
+      url: "/workflows/concept-how-you-define-workflows.html"
+    - title: 사용자 입력 정의 방법
+      url: "/workflows/concept-how-you-define-user-input.html"
+    - title: 명령 매개 변수를 매핑하는 방법입니다
+      url: "/workflows/concept-how-you-map-command-parameters.html"
+    - title: 상수를 정의하는 방법
+      url: "/workflows/concept-how-you-define-constants.html"
+    - title: 행 반복 작동 방식
+      url: "/workflows/concept-how-repeat-row-works.html"
+    - title: 리소스 선택 작동 방식
+      url: "/workflows/concept-how-resource-selection-works.html"
+    - title: 예약 방식
+      url: "/workflows/concept-how-reservation-works.html"
+    - title: 증분 이름은 입니다
+      url: "/workflows/concept-what-incremental-naming-is.html"
+    - title: 조건부 실행이란
+      url: "/workflows/concept-what-conditional-execution-is.html"
+    - title: 반환 매개 변수의 작동 방식
+      url: "/workflows/concept-what-return-parameters-are.html"
+    - title: 승인 지점은 무엇입니까
+      url: "/workflows/concept-what-approval-points-are.html"
+    - title: 사용자 지정 REST 끝점을 실행하는 방법
+      url: "/workflows/concept-how-you-execute-custom-rest-end-points.html"
+    - title: 장애 시 계속 진행 방법
+      url: "/workflows/concept-what-continue-on-failure-is.html"
+    - title: 워크플로 요구 사항 체크리스트 예
+      url: "/workflows/reference-workflow-requirements-checklist.html"
+    - title: 워크플로를 만듭니다
+      url: "/workflows/task-create-a-workflow.html"
+      entries:
+      - title: 워크플로 도움말 콘텐츠를 만듭니다
+        url: "/workflows/task-create-workflow-help-content.html"
+  - title: WFA 워크플로우 팩을 생성합니다
+    url: "/workflows/task-create-a-workflow-automation-pack.html"
+    entries:
+    - title: WFA 워크플로우 팩에 엔터티를 추가합니다
+      url: "/workflows/task-add-entity-to-a-workflow-automation-pack.html"
+    - title: OnCommand Workflow Automation 팩을 삭제합니다
+      url: "/workflows/task-delete-wfa-packs.html"
+    - title: OnCommand Workflow Automation 콘텐츠를 내보냅니다
+      url: "/workflows/task-export-oncommand-workflow-automation-content.html"
+    - title: OnCommand Workflow Automation 콘텐츠를 가져옵니다
+      url: "/workflows/task-import-oncommand-workflow-automation-content.html"
+    - title: WFA 워크플로우 팩을 가져옵니다
+      url: "/workflows/task-import-an-oncommand-workflow-automation-pack.html"
+    - title: OnCommand Workflow Automation 콘텐츠를 가져오는 동안 고려해야 할 사항입니다
+      url: "/workflows/reference-considerations-of-importing-wfa-content.html"
+    - title: 업그레이드 중 팩 식별
+      url: "/workflows/reference-pack-identification-during-upgrade.html"
+  - title: WFA 워크플로우 팩을 SCM 리포지토리에 통합합니다
+    url: "/workflows/concept-integrating-the-wfa-pack-with-scm-repository.html"
+    entries:
+    - title: SCM에 새 워크플로 팩을 체크 인합니다
+      url: "/workflows/task-check-in-a-new-pack-to-scm.html"
+    - title: WFA 워크플로우 팩의 새 버전을 확인합니다
+      url: "/workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html"
+    - title: SCM 서버에서 WFA 워크플로우 팩을 업데이트합니다
+      url: "/workflows/task-update-the-pack-from-scm.html"
+    - title: 기존 WFA 워크플로우 팩을 SCM 서버에 체크 인합니다
+      url: "/workflows/task-check-in-an-already-existing-pack-into-scm.html"
+    - title: 엔터티로부터 WFA 워크플로우 팩을 제거합니다
+      url: "/workflows/task-remove-entities-from-a-pack.html"
+    - title: SCM에서 WFA 워크플로우 팩을 이전 버전으로 롤백합니다
+      url: "/workflows/task-rollback-pack-to-a-previous-version-in-scm.html"
+- title: 워크플로우를 위한 구성 요소 생성
+  url: "/workflows/concept-creating-building-blocks-for-workflows.html"
+  entries:
+  - title: 데이터 원본 형식을 만듭니다
+    url: "/workflows/task-create-a-data-source-type.html"
+  - title: 명령을 생성합니다
+    url: "/workflows/task-create-a-command.html"
+    entries:
+    - title: 명령에 대한 예약 스크립트를 테스트합니다
+      url: "/workflows/task-test-the-wfa-reservation-script-for-commands.html"
+  - title: 파인더를 생성합니다
+    url: "/workflows/task-create-a-finder.html"
+  - title: 필터를 만듭니다
+    url: "/workflows/task-create-a-filter.html"
+  - title: 사전 항목을 만듭니다
+    url: "/workflows/task-create-a-dictionary-entry.html"
+  - title: 함수를 만듭니다
+    url: "/workflows/task-create-a-function.html"
+  - title: 템플릿을 만듭니다
+    url: "/workflows/task-create-a-template.html"
+  - title: 캐시 쿼리를 만듭니다
+    url: "/workflows/task-create-a-cache-query.html"
+  - title: 반복 일정을 생성합니다
+    url: "/workflows/task-create-recurring-schedules.html"
+  - title: 필터 규칙을 정의합니다
+    url: "/workflows/task-define-filter-rules.html"
+  - title: 승인 지점을 추가합니다
+    url: "/workflows/task-add-approval-points.html"
+- title: WFA에 대한 코딩 지침
+  url: "/workflows/concept-coding-guidelines-for-wfa.html"
+  entries:
+  - title: 변수에 대한 지침
+    url: "/workflows/reference-guidelines-for-variables.html"
+  - title: 들여쓰기를 위한 지침
+    url: "/workflows/reference-guidelines-for-indentation.html"
+  - title: 코멘트에 대한 지침
+    url: "/workflows/reference-guidelines-for-comments.html"
+  - title: 로깅 지침
+    url: "/workflows/reference-guidelines-for-logging.html"
+  - title: 오류 처리 지침
+    url: "/workflows/reference-guidelines-for-error-handling.html"
+  - title: WFA에 대한 일반 PowerShell 및 Perl 규칙
+    url: "/workflows/reference-general-powershell-conventions-for-wfa.html"
+    entries:
+    - title: Perl 모듈은 Windows와 함께 번들로 제공됩니다
+      url: "/workflows/reference-perl-database-modules-bundled-with-windows.html"
+  - title: 사용자 지정 PowerShell 및 Perl 모듈을 추가할 때의 고려 사항
+    url: "/workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html"
+  - title: WFA cmdlet 및 기능
+    url: "/workflows/reference-wfa-powershell-functions.html"
+  - title: PowerShell 및 Perl WFA 모듈
+    url: "/workflows/reference-powershell-and-perl-wfa-modules.html"
+  - title: PowerShell 명령을 Perl으로 변환할 때의 고려 사항
+    url: "/workflows/reference-guidelines-for-other-programming-aspects.html"
+  - title: WFA 구성 요소에 대한 지침입니다
+    url: "/workflows/reference-guidelines-for-wfa-building-blocks.html"
+    entries:
+    - title: WFA에서의 SQL에 대한 지침입니다
+      url: "/workflows/reference-guidelines-for-sql-in-wfa.html"
+    - title: WFA 기능에 대한 지침입니다
+      url: "/workflows/reference-guidelines-for-wfa-functions.html"
+    - title: WFA 사전 항목에 대한 지침입니다
+      url: "/workflows/reference-guidelines-for-wfa-dictionary-entry.html"
+    - title: 명령 지침
+      url: "/workflows/reference-guidelines-for-commands.html"
+    - title: 워크플로 지침
+      url: "/workflows/reference-guidelines-for-workflows.html"
+    - title: 원격 시스템 유형에 대한 검증 스크립트 생성 지침
+      url: "/workflows/reference-guidelines-for-creating-a-validation-script-for-remote-system-type.html"
+    - title: 데이터 소스 형식 만들기 지침
+      url: "/workflows/reference-guidelines-for-data-source-type.html"
+- title: 예약된 단어
+  url: "/workflows/reference-reserved-words.html"
+- title: REST API 사용 방법
+  url: "/workflows/concept-how-you-use-the-rest-api.html"
+- title: 학습 자료에 대한 참고 자료
+  url: "/workflows/reference-references-to-learning-material.html"
+- title: OnCommand Workflow Automation 관련 문서
+  url: "/workflows/reference-related-documentation-for-oncommand-workflow-automation.html"

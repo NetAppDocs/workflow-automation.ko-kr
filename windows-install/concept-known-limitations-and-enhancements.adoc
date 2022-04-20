@@ -1,0 +1,23 @@
+---
+permalink: windows-install/concept-known-limitations-and-enhancements.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations, enhancements 
+summary: 'WFA(OnCommand Workflow Automation) 5.1에는 WFA를 설치 및 구성하기 전에 알아야 하는 일부 제한 사항 및 지원되지 않는 기능이 포함되어 있습니다.' 
+---
+= 알려진 제한 사항 및 향상된 기능
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 5.1에는 WFA를 설치 및 구성하기 전에 알아야 하는 일부 제한 사항 및 지원되지 않는 기능이 포함되어 있습니다.
+
+* * 카테고리 이름 생성 *
++
+** 범주 이름에 하이픈(-)을 사용하면 범주가 저장되면 공백으로 바뀝니다. 예를 들어 범주 이름 "abc-xyz"가 제공된 경우 범주 이름은 하이픈이 제거된 "abc xyz"로 저장됩니다. 이 문제를 방지하려면 범주 이름에 하이픈을 사용하지 마십시오.
+** 범주 이름에 콜론(:)을 사용하면 범주가 저장되면 콜론 앞에 있는 텍스트 문자열은 무시됩니다. 예를 들어 범주 이름 "abc:xyz"가 제공된 경우 범주 이름은 "xyz"로 저장되고 "abc" 문자열은 제거됩니다. 이 문제를 방지하려면 범주 이름에 콜론을 사용하지 마십시오.
+** 이름이 같은 두 범주를 금지할 수 있는 검사는 없습니다. 그러나 탐색 창에서 이러한 범주를 선택할 때 문제가 발생합니다. 이 문제를 방지하려면 각 범주 이름이 고유해야 합니다.
+
+
+

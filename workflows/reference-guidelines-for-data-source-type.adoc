@@ -1,0 +1,45 @@
+---
+permalink: workflows/reference-guidelines-for-data-source-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, data, source, type, use, define, custom, oncommand, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation)에 대한 사용자 지정 데이터 소스를 정의하는 데 사용되는 데이터 소스 유형을 생성하기 위한 지침에 대해 알고 있어야 합니다.' 
+---
+= 데이터 소스 형식 만들기 지침
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에 대한 사용자 지정 데이터 소스를 정의하는 데 사용되는 데이터 소스 유형을 생성하기 위한 지침에 대해 알고 있어야 합니다.
+
+다음 방법 중 하나를 사용하여 데이터 소스 형식을 정의할 수 있습니다.
+
+* SQL: WFA SQL 지침을 사용하여 외부 데이터베이스를 기반으로 데이터 소스에서 선택한 쿼리를 정의할 수 있습니다.
+* 스크립트: 사전 항목의 특정 스키마에 대한 데이터를 제공하는 PowerShell 스크립트를 작성할 수 있습니다.
+
+
+데이터 소스 형식 만들기에 대한 지침은 다음과 같습니다.
+
+* 스크립트를 생성하려면 PowerShell 언어를 사용해야 합니다.
+* PowerShell 스크립트는 현재 작업 디렉토리의 각 사전 항목에 대한 출력을 제공해야 합니다.
+* 데이터 파일의 이름은 dictionary_entry.csv여야 합니다. 여기서 사전 항목의 이름은 소문자여야 합니다.
++
+Performance Advisor로부터 정보를 수집하는 사전 정의된 데이터 소스 유형은 스크립트 기반 데이터 소스 유형을 사용합니다. 출력 파일의 이름은 array_performance.csv, aggregate_performance.csv입니다
+
+* '.csv' 파일에는 사전 항목 속성의 순서와 정확히 일치하는 콘텐츠가 포함되어야 합니다.
++
+사전 항목에는 array_ip, date, day, hour, cpu_busy, Total_ops_per_sec, disk_throughput_per_sec
+
++
+PowerShell 스크립트는 같은 순서로 .csv 파일에 데이터를 추가합니다.
+
++
+[listing]
+----
+$values = get-Array-CounterValueString ([REF]$data)
+Add-Content $arrayFile ([byte[]][char[]] "\N t$arrayIP't$date't$day't$hour't$values'n")
+----
+* Encoding 을 사용하여 스크립트의 데이터 출력이 WFA 캐시에 정확하게 로드되도록 해야 합니다.
+* '.csv' 파일에 Null 값을 입력할 때 \N을 사용해야 합니다.
+

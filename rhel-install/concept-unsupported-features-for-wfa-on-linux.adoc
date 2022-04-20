@@ -1,0 +1,48 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations 
+summary: 'WFA(OnCommand Workflow Automation) 5.1에는 WFA를 설치 및 구성하기 전에 알아야 하는 일부 제한 사항 및 지원되지 않는 기능이 포함되어 있습니다.' 
+---
+= OnCommand Workflow Automation에 대해 알려진 제한 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation) 5.1에는 WFA를 설치 및 구성하기 전에 알아야 하는 일부 제한 사항 및 지원되지 않는 기능이 포함되어 있습니다.
+
+* * LDAP 인증 *
++
+** LDAP 인증에는 Microsoft Active Directory LDAP(Lightweight Directory Access Protocol) 서버만 사용할 수 있습니다.
+** LDAP 인증을 사용하려면 LDAP 그룹의 구성원이어야 합니다.
+** 인증 또는 알림을 위해 여러 도메인의 계층 구조에 속하는 LDAP 사용자 이름을 사용해서는 안 됩니다.
+
+
+
+
+[NOTE]
+====
+Microsoft AD LDS(Active Directory Lightweight Directory Services)는 지원되지 않습니다.
+
+====
+* * WFA 데이터 소스 유형 *
++
+OnCommand Unified Manager 6.0, 6.1 및 6.2 데이터 소스 유형은 WFA 4.1 릴리즈에서 더 이상 사용되지 않으며, 이러한 데이터 소스 유형은 이후 릴리즈에서 지원되지 않습니다.
+
+* Linux * 에 * WFA가 설치되어 있습니다
++
+** 현재 7-Mode에서 작동하는 Data ONTAP의 인증된 콘텐츠를 사용할 수 없습니다.
+** PowerShell 코드만 포함된 명령은 Linux와 호환되지 않습니다.
+** 7-Mode 및 VMware에 대한 인증 명령은 현재 Perl로 포팅되지 않으므로 Linux와 호환되지 않습니다.
+
+
+* * 카테고리 이름 생성 *
++
+** 범주 이름에 하이픈(-)을 사용하면 범주가 저장되면 공백으로 바뀝니다. 예를 들어 범주 이름 "abc-xyz"가 제공된 경우 범주 이름은 하이픈이 제거된 "abc xyz"로 저장됩니다. 이 문제를 방지하려면 범주 이름에 하이픈을 사용하지 마십시오.
+** 범주 이름에 콜론(:)을 사용하면 범주가 저장되면 콜론 앞에 있는 텍스트 문자열은 무시됩니다. 예를 들어 범주 이름 "abc:xyz"가 제공된 경우 범주 이름은 "xyz"로 저장되고 "abc" 문자열은 제거됩니다. 이 문제를 방지하려면 범주 이름에 콜론을 사용하지 마십시오.
+** 이름이 같은 두 범주를 금지할 수 있는 검사는 없습니다. 그러나 탐색 창에서 이러한 범주를 선택할 때 문제가 발생합니다. 이 문제를 방지하려면 각 범주 이름이 고유해야 합니다.
+
+
+

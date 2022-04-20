@@ -1,0 +1,130 @@
+---
+permalink: help/reference-remote-system-types-window.html 
+sidebar: sidebar 
+keywords: remote, system, types, windows, display, type, remote, oncommand, Workflow, automation, work, include, clustered, data, cloud manager, active, unified manager, datafabric, manager, server, e-series 
+summary: '원격 시스템 유형 창에는 WFA(OnCommand Workflow Automation)가 사용할 수 있는 원격 시스템 유형이 표시됩니다. 원격 시스템에는 clustered Data ONTAP, Cloud Manager, Active IQ Unified Manager, DataFabric Manager 서버, E-Series 시스템이 포함됩니다.' 
+---
+= 원격 시스템 유형 창
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+원격 시스템 유형 창에는 WFA(OnCommand Workflow Automation)가 사용할 수 있는 원격 시스템 유형이 표시됩니다. 원격 시스템에는 clustered Data ONTAP, Cloud Manager, Active IQ Unified Manager, DataFabric Manager 서버, E-Series 시스템이 포함됩니다.
+
+* 원격 시스템 유형 테이블
+* 도구 모음
+
+
+
+
+== 원격 시스템 유형 테이블
+
+원격 시스템 유형 표에는 WFA에서 사용할 수 있는 원격 시스템이 표 형식으로 나열되어 있습니다. 각 열에 사용할 수 있는 필터링 및 정렬 기능을 사용하거나 열 순서를 다시 정렬하여 표 표시를 사용자 지정할 수 있습니다.
+
+* image:../media/filter_icon_wfa.gif["필터 아이콘"] 전체 테이블에 대한 필터링을 설정하거나 해제합니다. 필터링이 비활성화된 경우 아이콘 위에 빨간색 "x"가 나타납니다.
+* 두 번 클릭합니다 image:../media/filter_icon_wfa.gif["필터 아이콘"] 필터링 선택을 지우고 재설정합니다.
+* image:../media/wfa_filter_icon.gif["필터 아이콘"] 각 열 머리글에서 열의 내용을 기준으로 필터링할 수 있습니다. 를 클릭합니다 image:../media/wfa_filter_icon.gif["필터 아이콘"] 열에서 드롭다운 목록 또는 사용 가능한 모든 항목의 특정 항목을 필터링할 수 있습니다.
+* 열 머리글을 클릭하면 정렬 순서가 오름차순과 내림차순으로 전환됩니다. 적용된 정렬 순서를 정렬 화살표(image:../media/wfa_sortarrow_up_icon.gif["정렬 아이콘"] 오름차순 및 의 경우 image:../media/wfa_sortarrow_down_icon.gif["정렬 아이콘"] 내림차순).
+* 열의 위치를 다시 정렬하려면 열을 끌어서 놓아 원하는 순서대로 배치할 수 있습니다. 그러나 이러한 열은 숨기거나 삭제할 수 없습니다.
+* 검색 * 필터 텍스트 상자를 클릭하면 특정 콘텐츠를 검색할 수 있습니다. 또한 지원되는 연산자를 사용하여 해당 열 유형, 알파벳 또는 숫자를 검색할 수 있습니다.
+
+
+원격 시스템 유형 테이블에는 다음과 같은 열이 있습니다.
+
+* * 이름 *
++
+원격 시스템 유형의 이름을 표시합니다.
+
++
+검색 * 필터 텍스트 상자에 해당 이름을 입력하여 원격 시스템 유형을 검색할 수 있습니다.
+
+* * 엔터티 버전 *
++
+원격 시스템 유형의 현재 버전을 major.minor.revision 형식(예: 1.0.0)으로 표시합니다.
+
++
+검색 * 필터 텍스트 상자에 버전 번호를 입력하여 원격 시스템 유형을 검색할 수 있습니다.
+
+* * 설명 *
++
+원격 시스템 유형에 대한 설명을 표시합니다.
+
++
+검색 * 필터 텍스트 상자에 해당 설명을 입력하여 원격 시스템 유형을 검색할 수 있습니다.
+
+* * 마지막 업데이트 날짜: *
++
+원격 시스템 유형이 마지막으로 업데이트된 날짜와 시간을 표시합니다.
+
++
+필터 드롭다운 목록에서 필요한 시간 범주를 선택하여 원격 시스템 유형을 검색할 수 있습니다.
+
+* * 업데이트: *
++
+원격 시스템 유형을 업데이트한 사용자의 이름을 표시합니다.
+
++
+검색 * 필터 텍스트 상자에 사용자 이름을 입력하여 원격 시스템 유형을 검색할 수 있습니다.
+
+* * 잠금 기준 *
++
+원격 시스템 유형을 잠근 사용자의 이름을 표시합니다.
+
++
+검색 * 필터 텍스트 상자에 사용자 이름을 입력하여 원격 시스템 유형을 검색할 수 있습니다.
+
+
+
+
+
+== 도구 모음
+
+도구 모음은 열 머리글 위에 있습니다. 도구 모음의 아이콘을 사용하여 다양한 작업을 수행할 수 있습니다. 이러한 작업은 창의 오른쪽 클릭 메뉴에서도 액세스할 수 있습니다.
+
+* *image:../media/new_wfa_icon.gif["새 아이콘"] (신규) *
++
+새 원격 시스템 유형 대화 상자를 엽니다. 이 대화 상자에서 세부 정보를 입력하여 WFA에 새 원격 시스템 유형을 추가할 수 있습니다.
+
+* *image:../media/edit_wfa_icon.gif["편집 아이콘"] (편집) *
++
+선택한 원격 시스템 유형에 대한 원격 시스템 유형 <RemoteSystemTypeName> 대화 상자를 엽니다. 이 대화 상자에서 원격 시스템 유형을 편집할 수 있습니다.
+
+* *image:../media/clone_wfa_icon.gif["클론 아이콘을 클릭합니다"] (클론) *
++
+선택한 원격 시스템 유형의 클론 또는 복제본을 생성할 수 있는 New Remote System Type <RemoteSystemTypeName>-copy 대화 상자를 엽니다.
+
+* *image:../media/lock_wfa_icon.gif["잠금 아이콘"] (잠금) *
++
+선택한 원격 시스템 유형을 잠글 수 있는 원격 시스템 유형 잠금 확인 대화 상자를 엽니다. 이 옵션은 사용자가 만든 원격 시스템 유형에 대해서만 활성화됩니다.
+
+* *image:../media/unlock_wfa_icon.gif["잠금 해제 아이콘"] (잠금 해제) *
++
+선택한 원격 시스템 유형의 잠금을 해제할 수 있는 Unlock Remote System Type(원격 시스템 유형 잠금 해제) 확인 대화 상자를 엽니다. 이 옵션은 잠긴 원격 시스템 유형에 대해서만 활성화됩니다. 관리자는 다른 사용자가 잠근 원격 시스템 유형을 잠금 해제할 수 있습니다.
+
+* *image:../media/delete_wfa_icon.gif["삭제 아이콘"] (삭제) *
++
+선택한 원격 시스템 유형을 삭제할 수 있는 원격 시스템 유형 삭제 확인 대화 상자를 엽니다.
+
+* *image:../media/export_wfa_icon.gif["내보내기 아이콘"] (내보내기) *
++
+선택한 원격 시스템 유형을 내보낼 수 있습니다.
+
+* *image:../media/add_to_pack.png["팩 아이콘에 추가"] (팩에 추가) *
++
+원격 시스템 유형 및 신뢰할 수 있는 요소를 팩에 추가할 수 있는 Add to Pack Remote System Types(원격 시스템 유형 팩에 추가) 대화 상자를 엽니다. 이 대화 상자는 편집할 수 있습니다.
+
++
+
+NOTE: Add to Pack 기능은 인증이 * None. * 으로 설정된 원격 시스템 유형에 대해서만 활성화됩니다
+
+* *image:../media/remove_from_pack.png["팩에서 제거 아이콘"] (팩에서 제거) *
++
+선택한 원격 시스템 유형에 대해 원격 시스템 유형 팩에서 제거 대화 상자를 엽니다. 이 대화 상자에서 팩에서 원격 시스템 유형을 삭제하거나 제거할 수 있습니다.
+
++
+
+NOTE: 인증에서 제거 기능은 인증이 * 없음 * 으로 설정된 원격 시스템 유형에 대해서만 활성화됩니다
+
+

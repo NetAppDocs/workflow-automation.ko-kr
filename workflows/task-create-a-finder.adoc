@@ -1,0 +1,39 @@
+---
+permalink: workflows/task-create-a-finder.html 
+sidebar: sidebar 
+keywords: create, wfa, finder, search, resources, predefined, suitable, required 
+summary: 필요한 리소스를 검색하는 데 적합한 사전 정의된 WFA 파인더가 없는 경우 리소스를 검색할 수 있는 WFA 파인더를 생성할 수 있습니다. 
+---
+= 파인더를 생성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+필요한 리소스를 검색하는 데 적합한 사전 정의된 WFA 파인더가 없는 경우 리소스를 검색할 수 있는 WFA 파인더를 생성할 수 있습니다.
+
+파인더에 사용되는 필수 필터를 만들어야 합니다.
+
+.단계
+. Workflow Design * > * Finders * 를 클릭합니다.
+. 을 클릭합니다 image:../media/new_wfa_icon.gif["새 아이콘"] 를 클릭합니다.
+. 새 파인더 * 대화 상자의 * 속성 * 탭에서 * 이름 *, * 유형 * 및 * 설명 * 필드에 필요한 정보를 입력하거나 선택합니다.
+. Filters * (필터 *) 탭의 * Available Filters * (사용 가능한 필터 *) 목록에서 필요한 필터를 선택하고 를 클릭합니다 image:../media/right_arrow_button.gif["오른쪽 화살표 버튼"].
++
+요구 사항에 따라 필터를 추가하거나 제거할 수 있습니다.
+
+. 반환된 특성 탭의 * 사용 가능 * 목록에서 필터에 필요한 특성을 선택하고 을 클릭합니다 image:../media/right_arrow_button.gif["오른쪽 화살표 버튼"].
+. * 선택 사항: * 검색 기능을 테스트하려면 * 테스트 * 를 클릭하십시오.
++
+.. Test Finder <FinderName>* 대화 상자에서 필요한 테스트 매개 변수를 입력합니다.
+.. 파인더를 테스트하는 데 예약 데이터를 사용하지 않으려면 * Use reservation data in test * 확인란의 선택을 취소합니다.
+.. Test * 를 클릭합니다.
++
+테스트 결과가 표시됩니다.
+
+.. 대화 상자를 닫습니다.
+
+
+. 저장 * 을 클릭합니다.
+

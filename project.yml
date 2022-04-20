@@ -1,0 +1,37 @@
+---
+settings:
+  name: OnCommand Workflow Automation 5.1
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ko-kr,us-en,ja-jp,zh-cn
+sidebar:
+  entries:
+  - title: OnCommand Workflow Automation 5.1 문서
+    url: "/index.html"
+  - title: 릴리스 정보
+    url: "/reference-releasenotes.html"
+  - section: rhel-install
+  - section: windows-install
+  - section: workflow
+  - section: help
+  - title: 법적 고지
+    url: "/reference-legal-notices.html"
+homepage:
+  tiles:
+  - title: 시작하십시오
+    links:
+    - title: 릴리즈 노트
+      url: reference-releasenotes.html
+  - title: 설치 및 설정
+    links:
+    - title: Linux 시스템에 OnCommand Workflow Automation를 설치합니다
+      url: rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html
+    - title: Windows에 OnCommand Workflow Automation를 설치합니다
+      url: windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html
+  - title: 워크플로우 구축 및 관리
+    links:
+    - title: 워크플로 관리
+      url: workflows/concept-managing-workflows.html

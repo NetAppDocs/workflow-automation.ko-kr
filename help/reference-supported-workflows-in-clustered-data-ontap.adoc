@@ -1,0 +1,462 @@
+---
+permalink: help/reference-supported-workflows-in-clustered-data-ontap.html 
+sidebar: sidebar 
+keywords: aware, workflow, supported, oncommand, workflow, automation, paired, different, version, unified manager, server 
+summary: 'WFA(OnCommand Workflow Automation)가 다른 버전의 Unified Manager 서버와 페어링되어 있을 때 지원되는 워크플로우에 대해 알고 있어야 합니다.' 
+---
+= ONTAP에서 지원되는 워크플로우
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)가 다른 버전의 Unified Manager 서버와 페어링되어 있을 때 지원되는 워크플로우에 대해 알고 있어야 합니다.
+
+다음 표에는 여러 Unified Manager 서버 버전에서 지원되는 워크플로우가 나와 있습니다.
+
+[cols="3*"]
+|===
+| 워크플로 이름 | Unified Manager Server 6.3 이상에서 지원됩니다 | Unified Manager Server 5.x에서 지원됩니다 
+
+
+ a| 
+SnapMirror 관계를 중단합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+무한 확장 볼륨에 용량 스토리지 클래스를 추가하거나 확장합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+무한 확장 볼륨에 성능 스토리지 클래스를 추가하거나 확장합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계 끊기
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+CIFS/SMB 서버 구성
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+컨트롤러 및 HA 쌍의 쉘프 업그레이드
+ a| 
+예
+ a| 
+예
+
+Data ONTAP 8.3 이전 버전을 실행하는 클러스터에만 지원됩니다.
+
+
+
+ a| 
+기본 clustered Data ONTAP 볼륨을 생성합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+Clustered Data ONTAP NFS 볼륨을 생성합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+Clustered Data ONTAP 트리 CIFS 공유를 생성합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+Clustered Data ONTAP 볼륨을 생성합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+Clustered Data ONTAP 볼륨 CIFS 공유를 생성합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+QoS 정책 그룹을 사용하여 clustered Data ONTAP 볼륨을 생성합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+cron 일정을 생성합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+무한 확장 볼륨을 지원하는 스토리지 가상 머신을 생성하고 구성합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+NAS 스토리지 가상 머신을 생성하고 구성합니다
+ a| 
+예
+ a| 
+예
+
+Data ONTAP 8.3 이전 버전을 실행하는 클러스터에만 지원됩니다.
+
+
+
+ a| 
+SAN 스토리지 가상 머신을 생성하고 구성합니다
+ a| 
+예
+ a| 
+예
+
+Data ONTAP 8.3 이전 버전을 실행하는 클러스터에만 지원됩니다.
+
+
+
+ a| 
+8.1.x에서 clustered Data ONTAP SnapMirror 관계를 생성합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+스케줄 및 정책을 생성합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계 작성
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+스케줄 및 정책을 생성합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror를 생성한 다음 SnapMirror 캐스케이드합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror를 생성한 다음 SnapVault 캐스케이딩 생성
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapVault 관계를 생성합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapVault를 생성한 다음 SnapMirror 캐스케이드합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+Clustered Data ONTAP 스토리지에서 VMware NFS 데이터 저장소를 생성합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+SnapMirror 관계를 통해 clustered Data ONTAP LUN을 생성, 매핑 및 보호합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+클러스터 피어링을 설정합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+스토리지 클래스 없이 무한 확장 볼륨 확장
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계 수정
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+Clustered Data ONTAP 볼륨을 이동합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+멀티 프로토콜 파일 액세스
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+다중 프로토콜 서버 구성
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+NFSv3 파일 액세스
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+NFSv3 서버 구성
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계로 볼륨 보호
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapVault 관계로 볼륨 보호
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계 중지
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+Clustered Data ONTAP 볼륨을 제거합니다
+ a| 
+예
+ a| 
+예
+
+
+
+ a| 
+SnapMirror 관계를 제거합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계를 재개합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계를 다시 동기화합니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계 역재동기화
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+무한 확장 볼륨에 대한 데이터 보호 설정
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SMB 파일 액세스
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+스토리지 가상 머신 피어링
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+스토리지 가상 시스템 루트 볼륨 프로모션입니다
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+스토리지 가상 시스템 루트 볼륨 보호
+ a| 
+예
+ a| 
+아니요
+
+
+
+ a| 
+SnapMirror 관계 전송
+ a| 
+예
+ a| 
+아니요
+
+|===
+* 관련 정보 *
+
+http://mysupport.netapp.com/matrix["상호 운용성 매트릭스 툴"^]

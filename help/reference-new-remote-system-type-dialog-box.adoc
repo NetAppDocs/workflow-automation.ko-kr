@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, dialog box, enable, add, oncommand, workflow, automation, predefined, meet, requirement, change, configuration 
+summary: '사전 정의된 시스템 유형이 요구 사항을 충족하지 않거나 사전 정의된 시스템 유형의 구성을 변경하려는 경우 새로운 원격 시스템 유형 대화 상자를 사용하여 OnCommand Workflow Automation(WFA)에 새 원격 시스템 유형을 추가할 수 있습니다.' 
+---
+= 새 원격 시스템 유형 대화 상자
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+사전 정의된 시스템 유형이 요구 사항을 충족하지 않거나 사전 정의된 시스템 유형의 구성을 변경하려는 경우 새로운 원격 시스템 유형 대화 상자를 사용하여 OnCommand Workflow Automation(WFA)에 새 원격 시스템 유형을 추가할 수 있습니다.
+
+* 세부 정보 탭
+* 검증 스크립트 탭
+
+
+
+
+== 세부 정보 탭
+
+이름, 설명, 버전 및 연결 프로토콜과 같은 원격 시스템 유형의 세부 정보를 지정할 수 있습니다.
+
+* * 이름 *
++
+원격 시스템 유형의 이름을 지정할 수 있습니다. 원격 시스템 유형을 저장하려면 이름을 지정해야 합니다.
+
+* * 설명 *
++
+원격 시스템 유형에 대한 설명을 입력할 수 있습니다.
+
+* * 버전 *
++
+원격 시스템 유형에 대한 버전 번호를 major.minor.revision 형식으로 지정할 수 있습니다. 예를 들어 1.0.0과 같은 형식입니다.
+
+* * 연결 프로토콜 *
++
+원격 시스템에 연결할 때 WFA에서 사용해야 하는 다음 프로토콜 중 하나를 선택할 수 있습니다.
+
++
+** HTTP로 폴백하는 HTTPS
++
+이 연결은 주로 HTTPS를 사용합니다. HTTPS를 통한 연결에 실패하면 HTTP가 사용됩니다. HTTP를 통한 연결도 실패하면 연결 시도가 끊어집니다.
+
+** HTTPS만 해당
+** HTTP만 해당
+** 맞춤형
+
+
+
+
+연결 프로토콜을 선택하면 프로토콜, 기본 포트 및 기본 시간 제한(초) 필드가 데이터로 채워집니다.
+
+
+
+== 검증 스크립트 탭
+
+선택한 프로토콜의 연결을 원격 시스템 유형과 테스트할 수 있습니다.
+
+Perl 스크립트 * 테스트 를 클릭하여 연결 테스트를 위한 스크립트를 실행할 수 있습니다.
+
+
+
+== 명령 버튼
+
+* * 저장 *
++
+원격 시스템 유형의 구성 설정을 저장하고 대화 상자를 닫습니다.
+
+* * 취소 *
++
+변경 사항이 있으면 취소하고 대화 상자를 닫습니다.
+
+

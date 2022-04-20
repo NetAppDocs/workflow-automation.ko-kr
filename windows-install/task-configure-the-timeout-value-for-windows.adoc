@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-configure-the-timeout-value-for-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: '기본 시간 초과 값을 사용하지 않고 WFA(Workflow Automation) 웹 GUI에 대한 시간 초과 값을 구성할 수 있습니다.' 
+---
+= Workflow Automation의 시간 초과 값을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+기본 시간 초과 값을 사용하지 않고 WFA(Workflow Automation) 웹 GUI에 대한 시간 초과 값을 구성할 수 있습니다.
+
+WFA 웹 GUI의 기본 시간 초과 값은 180분입니다. CLI를 통해 요구 사항에 맞게 시간 초과 값을 구성할 수 있습니다. WFA 웹 GUI에서 시간 초과 값을 설정할 수 없습니다.
+
+
+NOTE: 설정한 시간 초과 값은 비활성 관련 시간 초과가 아니라 절대 시간 초과입니다. 예를 들어 이 값을 30분으로 설정하면 이 시간이 끝날 때 활성 상태인 경우에도 30분 후에 로그아웃됩니다.
+
+.단계
+. WFA 호스트 시스템에 관리자로 로그인합니다.
+. 시간 초과 값을 설정합니다.
++
+'installdir bin/WFA-S = 시간 초과 값(분)'
+
+

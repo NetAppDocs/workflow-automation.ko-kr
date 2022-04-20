@@ -1,0 +1,59 @@
+---
+permalink: help/task-configure-email-notifications-for-data-source-acquisition-failures.html 
+sidebar: sidebar 
+keywords: control, notifications, generate, oncommand, workflow, automation, data, source, acquisition, fail, configure, threshold, interval, factor, notifications 
+summary: '데이터 소스 획득에 실패할 경우 WFA(OnCommand Workflow Automation)에서 생성되는 알림을 제어할 수 있습니다. 알림에 대한 임계값 및 간격 계수를 구성할 수 있습니다.' 
+---
+= 데이터 소스 획득 실패에 대한 이메일 알림을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+데이터 소스 획득에 실패할 경우 WFA(OnCommand Workflow Automation)에서 생성되는 알림을 제어할 수 있습니다. 알림에 대한 임계값 및 간격 계수를 구성할 수 있습니다.
+
+* 필요한 것 *
+
+WFA(OnCommand Workflow Automation)에서 이메일 알림을 구성해야 합니다.
+
+.단계
+. 웹 브라우저를 통해 관리자로 WFA에 로그인합니다.
+. 알림 임계값 구성:
++
+.. 설정 * 을 클릭하고 * 설정 * 에서 * 워크플로 설정 * 을 클릭합니다.
+.. 아래로 스크롤하여 * 고급 * 섹션을 찾습니다.
+.. Acquisition notification threshold * (획득 알림 임계값 *) 필드에 필요한 값을 입력합니다.
++
+기본값은 2입니다.
+
++
+지정된 값이 2인 경우 WFA는 이메일 알림을 보내기 전에 2회 연속 데이터 소스 획득 실패를 기다립니다.
+
+
+
+. 저장 * 을 클릭합니다.
+. 알림 간격 요소 구성:
++
+.. 설정 * 을 클릭하고 * 설정 * 에서 * 데이터 소스 * 를 클릭합니다.
+.. 필요한 데이터 소스에 대해 지정된 간격을 기록해 둡니다.
++
+기본값은 30입니다. 데이터 원본을 편집하여 간격 시간을 수정할 수 있습니다.
+
+.. 설정 * 을 클릭하고 * 설정 * 에서 * 워크플로 설정 * 을 클릭합니다.
+.. 아래로 스크롤하여 * 고급 * 섹션을 찾습니다.
+.. Acquisition notification interval factor * (획득 알림 간격 계수 *) 필드에 필요한 값을 입력합니다.
++
+기본값은 6입니다.
+
++
+데이터 원본에 대해 지정된 간격이 30분이고 곱하기 계수가 6이면 데이터 원본에 대한 데이터 원본 획득이 180분 동안 수행되지 않으면 전자 메일 알림이 전송됩니다.
+
++
+
+NOTE: 데이터 소스에 대해 획득 간격으로 12시간 이상을 지정하는 경우 WFA는 간격 요소를 1로 간주하고 데이터 소스에 대해 지정된 획득 간격 후에 알림을 보냅니다.
+
+
+
+. 저장 * 을 클릭합니다.
+

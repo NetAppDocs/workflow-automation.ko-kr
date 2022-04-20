@@ -1,0 +1,14 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-building-blocks.html 
+sidebar: sidebar 
+keywords: aware, guidelines, workflow, automation, building, blocks 
+summary: Workflow Automation 구성 요소를 사용하기 위한 지침에 대해 알고 있어야 합니다. 
+---
+= WFA 구성 요소에 대한 지침입니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflow Automation 구성 요소를 사용하기 위한 지침에 대해 알고 있어야 합니다.

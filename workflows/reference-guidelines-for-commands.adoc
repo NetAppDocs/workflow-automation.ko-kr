@@ -1,0 +1,152 @@
+---
+permalink: workflows/reference-guidelines-for-commands.html 
+sidebar: sidebar 
+keywords: must, aware, guidelines, create, commands, oncommand, workflow, automation 
+summary: 'WFA(OnCommand Workflow Automation)에서 명령을 생성하기 위한 지침에 대해 알고 있어야 합니다.' 
+---
+= 명령 지침
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)에서 명령을 생성하기 위한 지침에 대해 알고 있어야 합니다.
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+명령에 쉽게 식별할 수 있는 이름을 사용합니다.
+ a| 
+'Qtree 생성'
+
+
+
+ a| 
+공백을 사용하여 단어를 구분하고 각 단어는 대문자로 시작해야 합니다.
+ a| 
+볼륨 만들기
+
+
+
+ a| 
+선택적 매개 변수의 예상 결과를 포함하여 명령의 기능을 설명하는 설명을 제공합니다.
+ a| 
+없음
+
+
+
+ a| 
+기본적으로 표준 명령의 시간 제한은 600초입니다. 명령을 생성하는 동안 기본 시간 초과가 설정됩니다. 명령이 완료되는 데 시간이 더 오래 걸릴 수 있는 경우에만 기본값을 변경하십시오.
+ a| 
+볼륨 만들기 명령
+
+
+
+ a| 
+장기 실행 작업의 경우 두 개의 명령을 만듭니다. 하나는 장기 실행 작업을 호출하는 명령이고 다른 하나는 작업 진행률을 주기적으로 보고하는 명령입니다. 첫 번째 명령은 '표준 실행' 명령 유형이고 두 번째 명령은 '조건 대기' 명령 유형이어야 합니다.
+ a| 
+VSM 생성 및 VSM 대기 명령
+
+
+
+ a| 
+쉽게 식별할 수 있도록 condition 명령 이름 앞에 "wait"(대기)를 붙입니다.
+ a| 
+CM 볼륨 이동 대기
+
+
+
+ a| 
+""조건 대기"" 명령에 적절한 대기 간격을 사용하십시오. 지정된 값은 장기 실행 작업이 완료되었는지 확인하기 위해 폴링 명령을 실행하는 간격을 제어합니다.
+ a| 
+"VSM 대기" 명령의 60s 샘플링 간격
+
+
+
+ a| 
+'조건 대기' 명령의 경우 장시간 실행 작업이 완료될 때까지 예상되는 시간에 따라 적절한 시간 제한을 사용하십시오. 네트워크 상의 데이터 전송과 관련된 작업의 경우 예상 시간이 상당히 길어질 수 있습니다.
+ a| 
+VSM 기본 전송은 완료하는 데 며칠이 걸릴 수 있습니다. 따라서 지정된 시간 초과는 6일입니다.
+
+|===
+
+
+== 문자열 표현
+
+명령의 문자열 표현에는 계획 및 실행 중에 워크플로 디자인에 명령의 세부 정보가 표시됩니다. 명령의 문자열 표현에는 명령 매개변수만 사용할 수 있습니다.
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+값이 없는 특성은 사용하지 마십시오. 값이 없는 특성은 NA로 표시됩니다.
+ a| 
+Volname 10.68.66.212 [NA] aggr1/testVol7
+
+
+
+ a| 
+다음 구분 기호를 사용하여 문자열 표현의 다른 항목을 구분합니다. [ ], /:
+ a| 
+'_ArrayName[ArrayIp]_'
+
+
+
+ a| 
+문자열 표현의 모든 값에 의미 있는 레이블을 제공합니다.
+ a| 
+'_Volume name=VolumeName_'
+
+|===
+
+
+== 명령 정의 언어입니다
+
+지원되는 다음 스크립트 언어를 사용하여 명령을 작성할 수 있습니다.
+
+* PowerShell을 사용합니다
+* Perl
+
+
+
+
+== 명령 매개 변수 정의
+
+명령 매개 변수는 이름, 설명, 유형, 매개 변수의 기본값 및 매개 변수가 필수인지 여부에 따라 설명됩니다. 매개 변수 형식은 String, Boolean, Integer, Long, Double 일 수 있습니다. Enum, DateTime, Capacity, Array, Hashtable, 암호 또는 XmlDocument 입니다. 대부분의 형식에 대한 값은 직관적이지만 Array 및 Hashtable 의 값은 다음 표에 설명된 특정 형식이어야 합니다.
+
+[cols="2*"]
+|===
+| 지침 | 예 
+
+
+ a| 
+Array 입력 형식의 값이 쉼표로 구분된 값 목록인지 확인합니다.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Months in which the schedule executes.")]
+[array]$CronMonths
+----
+입력은 0,3,6,9 입니다
+
+
+
+ a| 
+Hashtable 입력 형식의 값이 세미콜론으로 구분된 key=value 쌍의 목록인지 확인합니다.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Volume names and size (in MB)")]
+[hashtable]$VolumeNamesAndSize
+----
+입력은 다음과 같이 전달됩니다. Volume1 = 100; Volume2 = 250; volume3 = 50
+
+|===

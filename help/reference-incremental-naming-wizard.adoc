@@ -1,0 +1,43 @@
+---
+permalink: help/reference-incremental-naming-wizard.html 
+sidebar: sidebar 
+keywords: incremental, naming, wizard, enable, define, value, attribute, search, existing, parameter 
+summary: 증분 이름 지정 마법사를 사용하면 기존 매개 변수 검색을 기반으로 속성 값을 정의할 수 있습니다. 
+---
+= 증분 이름 지정 마법사
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+증분 이름 지정 마법사를 사용하면 기존 매개 변수 검색을 기반으로 속성 값을 정의할 수 있습니다.
+
+* * 기존 <사전 개체> * 검색 기준
++
+사전 개체에 대한 검색 기준을 지정할 수 있는 * 리소스 선택 * 대화 상자를 엽니다.
+
+* * 위의 검색 기준과 일치하는 <사전 개체>가 없으면 <attribute>의 값을 입력합니다 *
++
+사전 개체>를 지정한 검색 기준을 사용하여 찾을 수 없을 때 <attribute>에 대한 값을 지정할 수 있습니다.
+
+* * 위의 검색 기준을 사용하여 <사전 개체>를 찾은 경우 <attribute>에 대한 값을 * 로 설정합니다
++
+사전 개체>를 지정한 검색 기준을 사용하여 찾을 수 없을 때 <attribute>에 대한 값을 지정할 수 있습니다.
+
+* * 위의 검색 기준과 일치하는 <사전 개체>가 없으면 <attribute>의 값을 입력합니다 *
++
+사전 개체>가 지정된 검색 기준을 사용하여 발견된 경우 <attribute>의 값을 설정하는 방법을 선택할 수 있습니다.
+
++
+** * 증분 값 및 접미사 제공 *
++
+증분에 대한 숫자 값을 입력하고 선택적으로 속성 이름의 접미사를 입력할 수 있습니다.
+
+** * 사용자 정의 식 제공 *
++
+특성 값에 대한 사용자 정의 식을 입력할 수 있습니다. MVFLEX Expression Language(MVEL) 구문을 사용하여 값을 지정할 수 있습니다.
+
+
+
+

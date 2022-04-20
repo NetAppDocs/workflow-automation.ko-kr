@@ -1,0 +1,58 @@
+---
+permalink: help/reference-edit-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, cache, query, dialog box, enable, associate, dictionary, entry 
+summary: 캐시 쿼리 편집 대화 상자에서는 사전 항목과 연결된 캐시 쿼리를 편집할 수 있습니다. 
+---
+= 캐시 쿼리 편집 대화 상자
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+캐시 쿼리 편집 대화 상자에서는 사전 항목과 연결된 캐시 쿼리를 편집할 수 있습니다.
+
+* * 사전 항목 *
++
+캐시 쿼리와 연결된 사전 항목을 지정합니다.
+
+* * 엔터티 버전 *
++
+캐시 쿼리의 버전 번호를 major.minor.revision 형식(예: 1.0.0)으로 입력할 수 있습니다.
+
+* * 데이터 소스 유형 *
++
+캐시 쿼리와 연결된 데이터 소스 형식을 지정합니다.
+
+
+
+
+
+== 테이블 구조
+
+사전 항목과 연결된 특성 및 SQL 구문을 표시합니다.
+
+* * SQL 선택 쿼리 *
++
+사전 항목 및 선택한 데이터 공급자 형식과 연결된 SQL 쿼리를 편집할 수 있습니다.
+
+
+
+
+
+== 명령 버튼
+
+* * 테스트 *
++
+SQL SELECT QUERY * 필드에 입력한 SQL 쿼리를 테스트할 수 있습니다.
+
+* * 저장 *
++
+캐시 쿼리를 저장하고 대화 상자를 닫습니다.
+
+* * 취소 *
++
+변경 사항이 있으면 취소하고 대화 상자를 닫습니다.
+
+

@@ -1,0 +1,52 @@
+---
+permalink: workflows/task-create-a-filter.html 
+sidebar: sidebar 
+keywords: create, wfa, filter, search, resources, predefined, suitable, task 
+summary: 작업에 적합한 사전 정의된 WFA 필터가 없는 경우, 리소스를 검색할 수 있는 WFA 필터를 생성할 수 있습니다. 
+---
+= 필터를 만듭니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+작업에 적합한 사전 정의된 WFA 필터가 없는 경우, 리소스를 검색할 수 있는 WFA 필터를 생성할 수 있습니다.
+
+필터를 만들려면 적절한 SQL 구문을 알아야 합니다.
+
+.단계
+. Workflow Design * > * Filters * 를 클릭합니다.
+. 을 클릭합니다 image:../media/new_wfa_icon.gif["새 아이콘"] 를 클릭합니다.
+. 새 필터 * 대화 상자의 * 속성 * 탭에서 * 이름 *, * 사전 유형 * 및 * 설명 * 필드에 필요한 정보를 입력하거나 선택합니다.
+. 쿼리 * 탭에서 필터에 적절한 SQL 쿼리를 입력합니다.
++
+단일 SQL 쿼리를 입력하고 선택적으로 입력 매개 변수를 사용해야 합니다. 입력 매개 변수를 사용하려면 '+${ParameterName}+' 구문을 사용해야 합니다.
+
++
+[listing]
+----
+SELECT
+	array.ip
+FROM
+	storage.array
+WHERE
+	array.name = '${ArrayName}'
+----
+. Refresh * 를 클릭하여 * Input Parameters * 테이블과 * returned Attributes * 목록을 채웁니다.
++
+이 정보는 입력한 SQL 쿼리에서 가져옵니다. 예를 들어, 이전 단계에서 SQL 쿼리 예제를 사용하면 반환된 속성에 IP가 표시되고 ArrayName 이 입력 매개 변수에 표시됩니다. Label * 및 * Description * 열에서 항목을 편집할 수 있습니다.
+
+. * 선택 사항: * 테스트 * 를 클릭하여 필터를 테스트합니다.
++
+.. Test Filter <FilterName>* 대화 상자에서 필요한 테스트 매개 변수를 입력합니다.
+.. 필터를 테스트하기 위해 예약 데이터를 사용하지 않으려면 * Use reservation data in test * 확인란의 선택을 취소합니다.
+.. Test * 를 클릭합니다.
++
+테스트 결과가 표시됩니다.
+
+.. 대화 상자를 닫습니다.
+
+
+. 저장 * 을 클릭합니다.
+

@@ -1,0 +1,36 @@
+---
+permalink: windows-install/task-upgrade-active-state-perl-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, activestate perl 
+summary: 'OnCommand Workflow Automation(WFA)는 Windows에서 ActiveState Perl의 Enterprise 에디션과 함께 사용할 수 있습니다. Windows 서버의 보안 취약점에 대한 수정 사항을 얻기 위해 최신 버전의 ActiveState Perl로 업그레이드할 수 있습니다.' 
+---
+= ActiveState Perl을 업그레이드합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation(WFA)는 Windows에서 ActiveState Perl의 Enterprise 에디션과 함께 사용할 수 있습니다. Windows 서버의 보안 취약점에 대한 수정 사항을 얻기 위해 최신 버전의 ActiveState Perl로 업그레이드할 수 있습니다.
+
+WFA 서버에 Windows 관리자 권한이 있어야 합니다. ActiveState Perl은 "현재 위치" 업그레이드를 지원하지 않습니다.
+
+WFA 5.1은 ActiveState Perl의 Enterprise 에디션을 사용합니다.
+
+ActiveState Perl 5.26.3에서 이후 빌드에 업그레이드할 수 있습니다. ActiveState Perl의 주요 릴리즈로 업그레이드할 수 없습니다.
+
+.단계
+. WFA 호스트 시스템에서 admin 사용자로 로그인합니다.
+. 64비트 ActiveState Enterprise Edition 5.26.3의 최신 버전을 대상 시스템에 다운로드합니다.
+. Windows 서비스 콘솔을 사용하여 다음 WFA 서비스를 중지하십시오.
++
+** WFA 데이터베이스 또는 SQL57입니다
+** WFA 서버
+
+
+. 제어판에서 대상 시스템에서 현재 버전의 ActiveState Perl을 제거합니다.
+. C:\Perl64\site\lib 폴더의 백업을 수행합니다.
+. 대상 컴퓨터에 새 ActiveState Enterprise Edition을 설치합니다.
+. 5단계에서 만든 백업이 있는 ActiveState Enterprise Edition의 \site\lib 폴더를 복원합니다.
+. Windows 서비스 콘솔을 사용하여 WFA 서비스를 다시 시작합니다.
+

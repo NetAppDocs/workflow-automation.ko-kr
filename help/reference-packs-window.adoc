@@ -1,0 +1,131 @@
+---
+permalink: help/reference-packs-window.html 
+sidebar: sidebar 
+keywords: pack, window, display, oncommand, automation, pack, imported, available, server, contain, information, file, workflow, commands, filters, functions, finders, templates 
+summary: 팩 창에는 WFA 서버에서 가져와 사용할 수 있는 OnCommand Workflow Automation WFA 팩이 표시됩니다. 각 팩에는 워크플로우, 명령, 필터, 기능 등과 같은 팩 정보 파일과 WFA 콘텐츠가 포함되어 있습니다. 찾기 및 서식 파일 
+---
+= 팩 창
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+팩 창에는 WFA 서버에서 가져와 사용할 수 있는 OnCommand Workflow Automation WFA 팩이 표시됩니다. 각 팩에는 워크플로우, 명령, 필터, 기능 등과 같은 팩 정보 파일과 WFA 콘텐츠가 포함되어 있습니다. 찾기 및 서식 파일
+
+* 팩 표
+* 도구 모음
+
+
+
+
+== 팩 표
+
+팩 표에는 WFA 서버에서 사용할 수 있는 WFA 팩이 표 형식으로 나열되어 있습니다. 각 열에 사용할 수 있는 필터링 및 정렬 기능을 사용하거나 열 순서를 다시 정렬하여 표 표시를 사용자 지정할 수 있습니다.
+
+* image:../media/filter_icon_wfa.gif["필터 아이콘"] 전체 테이블에 대한 필터링을 설정하거나 해제합니다. 필터링이 비활성화된 경우 아이콘 위에 빨간색 "x"가 나타납니다.
+* 두 번 클릭합니다 image:../media/filter_icon_wfa.gif["필터 아이콘"] 필터링 선택을 지우고 재설정합니다.
+* image:../media/wfa_filter_icon.gif["필터 아이콘"] 각 열 머리글에서 열의 내용을 기준으로 필터링할 수 있습니다. 를 클릭합니다 image:../media/wfa_filter_icon.gif["필터 아이콘"] 열에서 드롭다운 목록 또는 사용 가능한 모든 항목의 특정 항목을 필터링할 수 있습니다.
+* 열 머리글을 클릭하면 정렬 순서가 오름차순과 내림차순으로 전환됩니다. 적용된 정렬 순서를 정렬 화살표(image:../media/wfa_sortarrow_up_icon.gif["정렬 아이콘"] 오름차순 및 의 경우 image:../media/wfa_sortarrow_down_icon.gif["정렬 아이콘"] 내림차순).
+* 열의 위치를 다시 정렬하려면 열을 끌어서 놓아 원하는 순서대로 배치할 수 있습니다. 그러나 이러한 열은 숨기거나 삭제할 수 없습니다.
+* 검색 * 필터 텍스트 상자를 클릭하면 특정 콘텐츠를 검색할 수 있습니다. 또한 지원되는 연산자를 사용하여 해당 열 유형, 알파벳 또는 숫자를 검색할 수 있습니다.
+
+
+팩 테이블에는 다음 열이 있습니다.
+
+* * 인증 *
++
+팩이 사용자가 생성했는지 여부를 나타냅니다(image:../media/community_certification.gif[""]), PS(image:../media/ps_certified_icon_wfa.gif[""]), 커뮤니티(image:../media/community_certification.gif[""]), 사용자 잠금(image:../media/lock_icon_wfa.gif[""]) 또는 NetApp 인증(image:../media/netapp_certified.gif[""])
+
++
+필터 목록에서 필요한 옵션 확인란을 선택하여 팩을 검색할 수 있습니다.
+
+* * 이름 *
++
+팩의 이름을 표시합니다.
+
++
+검색 * 필터 텍스트 상자에 팩 이름을 입력하여 팩을 검색할 수 있습니다.
+
+* * 설명 *
++
+팩에 대한 설명을 표시합니다.
+
++
+검색 * 필터 텍스트 상자에 설명을 입력하여 팩을 검색할 수 있습니다.
+
+* * 엔터티 버전 *
++
+팩의 버전 번호를 major.minor.revision 형식으로 표시합니다. 예: 1.0.0.
+
+* * 마지막 업데이트 날짜: *
++
+팩이 업데이트된 날짜 및 시간을 표시합니다.
+
++
+필터 드롭다운 목록에서 필요한 시간 범주를 선택하여 팩을 검색할 수 있습니다.
+
+* * 업데이트: *
++
+팩을 업데이트한 사용자의 이름을 표시합니다.
+
++
+검색 * 필터 텍스트 상자에 사용자 이름을 입력하여 팩을 검색할 수 있습니다.
+
+* * 세부 정보 *
++
+Storage Automation Store 웹 사이트에 있는 팩의 세부 정보를 표시합니다.
+
+
+
+
+
+== 도구 모음
+
+도구 모음은 열 머리글 위에 있습니다. 도구 모음의 아이콘을 사용하여 다양한 작업을 수행할 수 있습니다. 이러한 작업은 창의 오른쪽 클릭 메뉴에서도 액세스할 수 있습니다.
+
+* *image:../media/new_pack.png[""](신규) *
++
+새 팩을 만들 수 있는 새 팩 대화 상자를 엽니다.
+
+* *image:../media/details_wfa_icon.gif["세부 정보 아이콘"] (편집) *
++
+팩 내용에 대한 자세한 정보를 볼 수 있는 다음 탭이 포함된 팩 내용 대화 상자를 엽니다.
+
++
+** 워크플로우
+** 파인더
+** 필터
+** 명령
+** 기능
+** 템플릿
+** 사전
+** 구성표
+** 캐시 쿼리
+** SQL 데이터 소스 형식
+** 스크립트 데이터 소스 유형입니다
+** 원격 시스템 유형
+** 범주
+
+
+* *image:../media/delete_wfa_icon.gif["삭제 아이콘"] (삭제) *
++
+선택한 팩을 삭제할 수 있는 팩 삭제 확인 대화 상자를 엽니다.
+
+* *image:../media/unlock_wfa_icon.gif["잠금 해제 아이콘"] (잠금 해제) *
++
+선택한 팩의 잠금을 해제할 수 있는 잠금 해제 팩 확인 대화 상자를 엽니다. 이 옵션은 사용자가 잠근 팩에만 활성화됩니다. 그러나 관리자는 다른 사용자가 잠근 팩을 잠금 해제할 수 있습니다.
+
+* *image:../media/export_wfa_icon.gif["내보내기 아이콘"] (내보내기) *
++
+선택한 팩을 내보낼 수 있는 내보내기 대화 상자를 엽니다.
+
+* *image:../media/import_from_server_folder.png[""] (서버 폴더에서 가져오기) *
++
+서버 폴더에서 가져오기 대화 상자를 엽니다. 이 대화 상자에서 서버 시스템의 선택한 폴더 위치에서 팩을 가져올 수 있습니다.
+
+* *image:../media/export_to_server_folder.png[""] (서버 폴더로 내보내기) *
++
+서버 폴더로 내보내기 대화 상자를 엽니다. 이 대화 상자에서 서버 시스템의 선택한 폴더 위치로 팩을 내보낼 수 있습니다.
+
+

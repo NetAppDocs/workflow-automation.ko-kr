@@ -1,0 +1,55 @@
+---
+permalink: help/task-configure-snmp-version-3.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, simple, network, management, protocol, version 3, traps, about, status, operations 
+summary: 'WFA(OnCommand Workflow Automation)를 구성하여 워크플로우 작업의 상태에 대한 SNMP(Simple Network Management Protocol) 버전 3 트랩을 보낼 수도 있습니다.' 
+---
+= SNMP 버전 3을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA(OnCommand Workflow Automation)를 구성하여 워크플로우 작업의 상태에 대한 SNMP(Simple Network Management Protocol) 버전 3 트랩을 보낼 수도 있습니다.
+
+* 이 작업에 대한 정보 *
+
+버전 3은 두 가지 추가 보안 옵션을 제공합니다.
+
+* 버전 3(인증 포함)
++
+트랩은 네트워크를 통해 암호화되지 않은 상태로 전송됩니다. SNMP 트랩 메시지와 동일한 인증 매개 변수로 구성된 SNMP 관리 애플리케이션은 트랩을 수신할 수 있습니다.
+
+* 버전 3(인증 및 암호화 포함)
++
+트랩은 네트워크를 통해 암호화됩니다. 이러한 트랩을 수신하고 해독하려면 SNMP 트랩과 동일한 인증 매개 변수와 암호화 키를 사용하여 SNMP 관리 애플리케이션을 구성해야 합니다.
+
+
+
+.단계
+. 웹 브라우저를 통해 WFA에 admin 사용자로 로그인한 다음 WFA 서버에 액세스합니다.
+. 설정 * 을 클릭하고 * 설정 * 에서 * SNMP * 를 클릭합니다.
+. SNMP 사용 * 확인란을 선택합니다.
+. 버전 * 드롭다운 목록에서 다음 옵션 중 하나를 선택합니다.
++
+** 버전 3
+** 버전 3(인증 포함)
+** 버전 3(인증 및 암호화 포함)
+
+
+. 4단계에서 선택한 특정 SNMP 버전 3 옵션에 해당하는 SNMP 구성 옵션을 선택합니다.
+. IPv4 또는 IPv6 주소 또는 호스트 이름 및 관리 호스트의 포트 번호를 입력합니다. WFA는 SNMP 트랩을 지정된 포트 번호로 보냅니다. 기본 포트 번호는 162입니다.
+. 알림 설정 * 섹션에서 다음 확인란 중 하나 이상을 선택합니다.
++
+** 워크플로 계획이 시작/실패/완료되었습니다
+** 워크플로 실행이 시작되었습니다
+** 워크플로 실행이 성공적으로 완료되었습니다
+** 워크플로 실행에 실패했거나 부분적으로 성공했습니다
+** 승인을 기다리는 워크플로 실행
+** 획득 실패
+
+
+. 테스트 알림 전송 * 을 클릭하여 설정을 확인합니다.
+. 저장 * 을 클릭합니다.
+

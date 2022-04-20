@@ -1,0 +1,62 @@
+---
+permalink: rhel-install/task-configure-autosupport.html 
+sidebar: sidebar 
+keywords: configure, autoSupport 
+summary: 일정, AutoSupport 메시지 내용 및 프록시 서버와 같은 여러 AutoSupport 설정을 구성할 수 있습니다. AutoSupport는 사용자가 선택한 콘텐츠의 주간 로그를 기술 지원 부서에 전송하여 보관 및 문제 분석을 수행합니다. 
+---
+= AutoSupport를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일정, AutoSupport 메시지 내용 및 프록시 서버와 같은 여러 AutoSupport 설정을 구성할 수 있습니다. AutoSupport는 사용자가 선택한 콘텐츠의 주간 로그를 기술 지원 부서에 전송하여 보관 및 문제 분석을 수행합니다.
+
+.단계
+. 웹 브라우저를 통해 admin으로 WFA에 로그인합니다.
+. 설정 * 을 클릭하고 * 설정 * 에서 * AutoSupport * 를 클릭합니다.
+. AutoSupport 사용 * 상자가 선택되어 있는지 확인합니다.
+. 필요한 정보를 입력합니다.
+. 컨텐츠 * 목록에서 다음 중 하나를 선택합니다.
++
+[cols="2*"]
+|===
+| 포함하려는 경우... | 그런 다음 이 옵션을 선택하십시오... 
+
+
+ a| 
+WFA 설치의 사용자, 워크플로우, 명령과 같은 구성 세부 정보만 제공됩니다
+ a| 
+구성 데이터만 전송합니다
+
+
+
+ a| 
+WFA 구성 세부 정보 및 데이터를 스키마와 같은 WFA 캐시 테이블에 저장
+ a| 
+구성 및 캐시 데이터 전송(기본값)
+
+
+
+ a| 
+WFA 구성 세부 정보, WFA 캐시 표의 데이터 및 설치 디렉터리의 데이터
+ a| 
+구성 및 캐시 확장 데이터를 보냅니다
+
+|===
++
+[NOTE]
+====
+WFA 사용자의 암호는 AutoSupport 데이터에 _NOT_포함되어 있습니다.
+
+====
+. AutoSupport 메시지를 다운로드할 수 있는지 테스트합니다.
++
+.. 다운로드 * 를 클릭합니다.
+.. 대화 상자가 열리면 .7z 파일을 저장할 위치를 선택합니다.
+
+
+. 지금 보내기 * 를 클릭하여 지정된 대상으로 AutoSupport 메시지 전송을 테스트합니다.
+. 저장 * 을 클릭합니다.
+
