@@ -31,13 +31,11 @@ file_name 은 CSR 파일의 이름입니다.
 
 . 메시지가 표시되면 암호를 입력합니다(기본값 또는 새 암호).
 +
-changeit는 기본 암호입니다. 기본 암호를 사용하지 않으려면 standalone-full.xml 파일의 SSL 요소 암호 특성을 WFA_install_location\WFA\JBoss\standalone\configuration\location에서 변경해야 합니다.
+기본 암호는 임의로 생성된 암호화된 암호입니다.
 
 +
-[listing]
-----
-<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
-----
+기본 암호를 받아서 해독하려면 기술 자료 문서의 단계를 사용합니다 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["WFA 5.1.1.0.4에서 자체 서명된 인증서를 갱신하는 방법"^]
+
 . CA에 file_name.csr 파일을 보내 서명된 인증서를 얻습니다.
 +
 자세한 내용은 CA 웹 사이트를 참조하십시오.

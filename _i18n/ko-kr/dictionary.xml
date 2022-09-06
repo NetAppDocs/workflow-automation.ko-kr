@@ -1776,7 +1776,6 @@
   <block id="7a8ab8ac2c56e6f34c324ef46934febb" category="paragraph">"keytool-certreq-keystore WFA_install_location\WFA\jboss\standalone\configuration\keystore\WFA.keystore-alias "SSL keystore" -file C:\file_name.csr"</block>
   <block id="1b692d8ce3a9756491906af1588b0dbb" category="paragraph">file_name 은 CSR 파일의 이름입니다.</block>
   <block id="0ba86baa537a49c243693784fe078f3a" category="list-text">메시지가 표시되면 암호를 입력합니다(기본값 또는 새 암호).</block>
-  <block id="5bd63fe363277cc90830a1ce41a120ec" category="paragraph">changeit는 기본 암호입니다. 기본 암호를 사용하지 않으려면 standalone-full.xml 파일의 SSL 요소 암호 특성을 WFA_install_location\WFA\JBoss\standalone\configuration\location에서 변경해야 합니다.</block>
   <block id="fe03521c92b31a8e81464a71fb956de3" category="list-text">CA에 file_name.csr 파일을 보내 서명된 인증서를 얻습니다.</block>
   <block id="b9081db92ef5ba8dd5340d434e22aa46" category="paragraph">자세한 내용은 CA 웹 사이트를 참조하십시오.</block>
   <block id="dd8ea64d9da5f718f0917812d35a5441" category="list-text">CA에서 체인 인증서를 다운로드한 다음 키 저장소로 체인 인증서를 가져옵니다. ' keytool -import -alias " SSL keystore CA certificate " -keystore "WFA_install_location\WFA\jboss\standalone\configuration\keystore\WFA.keystore" -trustcacerts -file C:\chain_cer"</block>
@@ -2268,7 +2267,6 @@
   <block id="cbc2b286f99fc7ff9dffc1d348f4aecc" category="list-text">데이터베이스 키 가져오기:</block>
   <block id="5c4a32f768ee405b0ef150103b7c03a1" category="paragraph">"keytool-keysize 2048-genkey-alias "SSL keystore"-keyalg rsa-keystore"&lt;WFA_install_location&gt;\WFA\jboss\standalone\configuration\keystore\WFA.keystore"-enity xxxx"입니다</block>
   <block id="24eb76b4a609daff4b7d34ec8fea1231" category="paragraph">xxxx는 새 인증서의 유효 기간(일)입니다.</block>
-  <block id="9312759233ae7e3d8807257f39f2c937" category="paragraph">changeit는 기본 암호입니다. 기본 암호를 사용하지 않으려면 standalone-full.xml 파일의 SSL 요소 암호 특성을 &lt;WFA_install_location&gt;\WFA\JBoss\standalone\configuration\ 위치에서 변경해야 합니다</block>
   <block id="49cdce6603c61a9fdaf58048badc131a" category="list-text">인증서에 필요한 세부 정보를 입력합니다.</block>
   <block id="a7bc3b0a6af3ae4d153d1aa15dc13038" category="list-text">표시된 정보를 검토하고 Yes를 입력합니다.</block>
   <block id="58effb4a43109824b15167c9d51ce13d" category="list-text">다음 메시지가 나타나면 * Enter * 를 누릅니다. &lt;SSL keystore&gt;&lt;return if same as keystore password&gt; 키 암호를 입력합니다.</block>
@@ -2743,7 +2741,6 @@
   <block id="9d3b93b64542c3185ef72792923a0566" category="list-text">WFA 서버에서 셸 프롬프트를 열고 디렉터리를 다음 위치로 변경합니다. &lt;OpenJDK_install_location&gt;/bin</block>
   <block id="2e36003b3ed3383918391cfc1756fb42" category="paragraph">"keytool-keysize 2048-genkey-alias "SSL keystore"-keyalg rsa-keystore" WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore"-enity xxxx"입니다</block>
   <block id="4e25be9af98efc24491bc23eb51fe397" category="paragraph">xxxx는 새 인증서의 유효 기간(일)입니다.</block>
-  <block id="1385c2e0aed85120d56290938615b4f1" category="paragraph">changeit는 기본 암호입니다. 기본 암호를 사용하지 않으려면 standalone-full.xml 파일의 SSL 요소 암호 특성을 WFA_install_location/WFA/jboss/standalone/configuration 위치에서 변경해야 합니다</block>
   <block id="fca9c78eaaf4f232ed66e16fe0b0a863" category="list-text">표시된 정보를 검토한 후 Yes를 입력합니다.</block>
   <block id="1e2a60c38cbc5c1f05b368454bd4ec81" category="list-text">WFA 서비스를 다시 시작합니다.</block>
   <block id="6d7d2b1c33f41da438e95176cb2d4066" category="paragraph">'./WFA--start=DB'입니다</block>
@@ -2820,10 +2817,6 @@
   <block id="354bf06ee6e3e07537ff6dbc96cf775a" category="summary">WFA(Workflow Automation)용 기본 SSL 인증서 대신 CA(인증 기관)에서 서명한 SSL 인증서를 사용할 수 있도록 Linux에서 CSR(인증서 서명 요청)을 생성할 수 있습니다.</block>
   <block id="fd185480985b4ef8b6154a1feac6f1de" category="list-text">CSR 파일 생성:</block>
   <block id="a7dfb160996bda6203e920e289688735" category="paragraph">"keytool-certreq-keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore-alias "SSL keystore" -file/root/file_name.csr"</block>
-  <block id="5936dd0758642a5d725f4b55781a3240" category="paragraph">changeit는 기본 암호입니다. 기본 암호를 사용하지 않으려면 standalone-full.xml 파일의 SSL 요소 암호 특성을 WFA_install_location/WFA/jboss/standalone/configuration 위치에서 변경해야 합니다.</block>
-  <block id="df16dddedaadc143538f023e2bf5d825" category="list-text">CA에서 체인 인증서를 다운로드한 다음 체인 인증서를 keystore:'keytool-import-alias" SSL keystore CA certificate" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustacerts -file C:\chain_cer" 로 가져옵니다</block>
-  <block id="8dc114841258ab97b68704f3043286ea" category="paragraph">"keytool-import-alias "SSL keystore" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustacerts -file C:\certificate.cer"</block>
-  <block id="e6a734aff93b795f8c98facc0c4b08d9" category="paragraph">'./WFA--start=DB'./WFA--start=WFA</block>
   <block id="fd573fd5b277bcca66415058d9bf17a6" category="summary">일부 Perl 모듈은 Linux용 Perl 패키지와 함께 기본적으로 포함되어 있지 않습니다.</block>
   <block id="59e7c7af805e16be9a6ba6a0605bf8dc" category="doc">CentOS 및 RHEL에 Perl 모듈을 설치합니다</block>
   <block id="c85496c8dc8808251b4456d7474d3cc8" category="paragraph">WFA 설치 중에 WFA 설치 관리자는 시스템에서 모든 Perl 모듈을 사용할 수 있는지 확인한 다음, 이 요구사항이 충족되면 계속 진행합니다. WFA(OnCommand Workflow Automation)를 설치하기 전에 Perl 모듈을 설치해야 합니다.</block>
@@ -4860,4 +4853,13 @@
   <block id="bdd5a3f80c76cd6be7561a6b8af3bab6" category="sidebar">REST API를 사용하여 WFA 데이터베이스 백업</block>
   <block id="a528b31693a2bb82696535274c613fc7" category="sidebar">온라인 도움말</block>
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">workflow &lt;workflow name&gt;(워크플로 이름&gt;) 창</block>
+  <block id="39c8e45e8c5488974d577e97d7caf377" category="paragraph">기본 암호는 임의로 생성된 암호화된 암호입니다.</block>
+  <block id="79f8c04dcf857d037344f9d9dabdd852" category="inline-link-macro">WFA 5.1.1.0.4에서 자체 서명된 인증서를 갱신하는 방법</block>
+  <block id="87ccc6f892e2d061c66d8db893b6cf53" category="paragraph">기본 암호를 받아서 해독하려면 기술 자료 문서의 단계를 사용합니다 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
+  <block id="9f795dd2a5faa77418e156a57e8b6f58" category="list-text">CA에서 체인 인증서를 다운로드한 다음 체인 인증서를 키 저장소로 가져옵니다.</block>
+  <block id="02247662d3b59cc3126dc9e1b18ac422" category="paragraph">'keytool-import-alias" ssl keystore CA certificate" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustcacerts -file chain_cer</block>
+  <block id="1695f6295e3d5d83711e11691faea1d1" category="paragraph">chain_cert.cer는 CA로부터 받은 체인 인증서 파일입니다. 파일은 X.509 형식이어야 합니다.</block>
+  <block id="f46bbcf0f5db88b0dfbce832f8d83da7" category="paragraph">"keytool-import-alias "SSL keystore" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustcacerts -file certificate.cer</block>
+  <block id="14d1486cc2546eace3658fcaa213829e" category="paragraph">certificate.cer는 CA로부터 수신한 체인 인증서 파일입니다.</block>
+  <block id="d37ffdcd23286306f4a566096ad812cb" category="sidebar">OnCommand Workflow Automation SSL 인증서 Linux를 관리합니다</block>
 </blocks>

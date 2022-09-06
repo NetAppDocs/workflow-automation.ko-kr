@@ -153,6 +153,7 @@ entries:
 - title: OnCommand Workflow Automation를 제거합니다
   url: "/rhel-install/task-uninstall-oncommand-workflow-automation-linux.html"
 - title: OnCommand Workflow Automation SSL 인증서 관리
+  pdf-filename: OnCommand Workflow Automation SSL 인증서 Linux를 관리합니다
   url: "/rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html"
   entries:
   - title: 기본 Workflow Automation SSL 인증서를 교체합니다

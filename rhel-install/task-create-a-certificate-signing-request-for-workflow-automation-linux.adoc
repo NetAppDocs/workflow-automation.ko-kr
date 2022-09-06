@@ -31,30 +31,34 @@ file_name 은 CSR 파일의 이름입니다.
 
 . 메시지가 표시되면 암호를 입력합니다(기본값 또는 새 암호).
 +
-changeit는 기본 암호입니다. 기본 암호를 사용하지 않으려면 standalone-full.xml 파일의 SSL 요소 암호 특성을 WFA_install_location/WFA/jboss/standalone/configuration 위치에서 변경해야 합니다.
+기본 암호는 임의로 생성된 암호화된 암호입니다.
 
 +
-[listing]
-----
-<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
-----
+기본 암호를 받아서 해독하려면 기술 자료 문서의 단계를 사용합니다 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["WFA 5.1.1.0.4에서 자체 서명된 인증서를 갱신하는 방법"^]
+
 . CA에 file_name.csr 파일을 보내 서명된 인증서를 얻습니다.
 +
 자세한 내용은 CA 웹 사이트를 참조하십시오.
 
-. CA에서 체인 인증서를 다운로드한 다음 체인 인증서를 keystore:'keytool-import-alias" SSL keystore CA certificate" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustacerts -file C:\chain_cer" 로 가져옵니다
+. CA에서 체인 인증서를 다운로드한 다음 체인 인증서를 키 저장소로 가져옵니다.
 +
-C:\chain_cert.cer는 CA로부터 받은 체인 인증서 파일입니다. 파일은 X.509 형식이어야 합니다.
+'keytool-import-alias" ssl keystore CA certificate" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustcacerts -file chain_cer
+
++
+chain_cert.cer는 CA로부터 받은 체인 인증서 파일입니다. 파일은 X.509 형식이어야 합니다.
 
 . CA로부터 받은 서명된 인증서를 가져옵니다.
 +
-"keytool-import-alias "SSL keystore" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustacerts -file C:\certificate.cer"
+"keytool-import-alias "SSL keystore" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustcacerts -file certificate.cer
 
 +
-C:\certificate.cer는 CA로부터 받은 체인 인증서 파일입니다.
+certificate.cer는 CA로부터 수신한 체인 인증서 파일입니다.
 
 . WFA 서비스를 시작합니다.
 +
-'./WFA--start=DB'./WFA--start=WFA
+'./WFA--start=DB'입니다
+
++
+'./WFA--start=WFA'
 
 
