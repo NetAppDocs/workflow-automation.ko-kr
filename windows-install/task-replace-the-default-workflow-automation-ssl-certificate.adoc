@@ -42,7 +42,10 @@ xxxx는 새 인증서의 유효 기간(일)입니다.
 기본 암호는 임의로 생성된 암호화된 암호입니다.
 
 +
-기본 암호를 받아서 해독하려면 기술 자료 문서의 단계를 사용합니다 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["WFA 5.1.1.0.4에서 자체 서명된 인증서를 갱신하는 방법"^]
+기본 암호를 받아서 해독하려면 기술 자료 문서의 단계를 따르십시오 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["WFA 5.1.1.0.4에서 자체 서명된 인증서를 갱신하는 방법"^]
+
++
+새 암호를 사용하려면 기술 문서 의 단계를 수행하십시오 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["WFA에서 키 저장소에 대한 새 암호를 업데이트하는 방법"^]
 
 . 인증서에 필요한 세부 정보를 입력합니다.
 . 표시된 정보를 검토하고 Yes를 입력합니다.

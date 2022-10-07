@@ -4855,11 +4855,13 @@
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">workflow &lt;workflow name&gt;(워크플로 이름&gt;) 창</block>
   <block id="39c8e45e8c5488974d577e97d7caf377" category="paragraph">기본 암호는 임의로 생성된 암호화된 암호입니다.</block>
   <block id="79f8c04dcf857d037344f9d9dabdd852" category="inline-link-macro">WFA 5.1.1.0.4에서 자체 서명된 인증서를 갱신하는 방법</block>
-  <block id="87ccc6f892e2d061c66d8db893b6cf53" category="paragraph">기본 암호를 받아서 해독하려면 기술 자료 문서의 단계를 사용합니다 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
   <block id="9f795dd2a5faa77418e156a57e8b6f58" category="list-text">CA에서 체인 인증서를 다운로드한 다음 체인 인증서를 키 저장소로 가져옵니다.</block>
   <block id="02247662d3b59cc3126dc9e1b18ac422" category="paragraph">'keytool-import-alias" ssl keystore CA certificate" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustcacerts -file chain_cer</block>
   <block id="1695f6295e3d5d83711e11691faea1d1" category="paragraph">chain_cert.cer는 CA로부터 받은 체인 인증서 파일입니다. 파일은 X.509 형식이어야 합니다.</block>
   <block id="f46bbcf0f5db88b0dfbce832f8d83da7" category="paragraph">"keytool-import-alias "SSL keystore" -keystore WFA_install_location/WFA/jboss/standalone/configuration/keystore/WFA.keystore" -trustcacerts -file certificate.cer</block>
   <block id="14d1486cc2546eace3658fcaa213829e" category="paragraph">certificate.cer는 CA로부터 수신한 체인 인증서 파일입니다.</block>
   <block id="d37ffdcd23286306f4a566096ad812cb" category="sidebar">OnCommand Workflow Automation SSL 인증서 Linux를 관리합니다</block>
+  <block id="602d16825004ce219753fcf90527ea2b" category="paragraph">기본 암호를 받아서 해독하려면 기술 자료 문서의 단계를 따르십시오 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
+  <block id="f7c31e99f63d1684df59ded2ed730939" category="inline-link-macro">WFA에서 키 저장소에 대한 새 암호를 업데이트하는 방법</block>
+  <block id="6dca537f5982139dea9ab40120845f4f" category="paragraph">새 암호를 사용하려면 기술 문서 의 단계를 수행하십시오 <block ref="f6321aee87e47aef0fd11d8e384d0375" category="inline-link-macro-rx"></block></block>
 </blocks>
