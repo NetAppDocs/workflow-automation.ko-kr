@@ -1,12 +1,13 @@
 ---
 section: help
-title: 온라인 도움말
+title: 관리 및 구성
 entries:
 - title: OnCommand Workflow Automation 개요
   url: "/help/concept-overview-of-oncommand-workflow-automation.html"
 - title: 로컬 사용자를 생성합니다
   url: "/help/task-create-local-users.html"
 - title: OnCommand Workflow Automation 구성
+  pdf-filename: OnCommand Workflow Automation 도움말 구성
   url: "/help/concept-advanced-configuring-oncommand-workflow-automation.html"
   entries:
   - title: 인증 설정을 구성합니다
@@ -14,6 +15,7 @@ entries:
   - title: 이메일 알림을 구성합니다
     url: "/help/task-configure-mail.html"
   - title: SNMP를 구성합니다
+    pdf-filename: SNMP 도움말을 구성합니다
     url: "/help/task-configure-snmp.html"
     entries:
     - title: SNMP 버전 1을 구성합니다

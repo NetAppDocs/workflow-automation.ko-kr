@@ -1,8 +1,9 @@
 ---
 section: windows-install
-title: Windows용 설치 및 설정
+title: Windows 설치 및 설정
 entries:
 - title: OnCommand Workflow Automation 개요
+  pdf-filename: OnCommand Workflow Automation 창 개요
   url: "/windows-install/concept-overview-of-oncommand-workflow-automation.html"
   entries:
   - title: OnCommand Workflow Automation 구축 아키텍처
@@ -12,6 +13,7 @@ entries:
   - title: 알려진 제한 사항 및 향상된 기능
     url: "/windows-install/concept-known-limitations-and-enhancements.html"
 - title: OnCommand Workflow Automation 설치를 위한 시스템 요구 사항
+  pdf-filename: OnCommand Workflow Automation Windows 설치를 위한 시스템 요구 사항
   url: "/windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html"
   entries:
   - title: Workflow Automation에 필요한 포트 수
@@ -19,6 +21,7 @@ entries:
 - title: Workflow Automation 설치를 위한 사전 요구사항
   url: "/windows-install/reference-prerequisites-for-installing-workflow-automation.html"
 - title: 고가용성 관리
+  pdf-filename: 고가용성 창 관리
   url: "/windows-install/concept-managing-high-availability.html"
   entries:
   - title: 고가용성을 위해 MSCS에서 Workflow Automation을 설정합니다
@@ -37,14 +40,17 @@ entries:
   - title: Windows에서 OnCommand Workflow Automation 데이터베이스 및 구성을 백업하고 복원합니다
     url: "/windows-install/task-back-up-and-restore-the-wfa-database-and-configurations-windows.html"
 - title: OnCommand Workflow Automation 설정
+  pdf-filename: OnCommand Workflow Automation 창 설정
   url: "/windows-install/concept-setting-up-oncommand-workflow-automation.html"
   entries:
   - title: OnCommand Workflow Automation에 액세스합니다
     url: "/windows-install/task-access-oncommand-workflow-automation.html"
   - title: OnCommand Workflow Automation 데이터 소스
+    pdf-filename: OnCommand Workflow Automation 데이터 소스 창
     url: "/windows-install/concept-wfa-data-sources.html"
     entries:
     - title: DataFabric Manager에서 데이터베이스 사용자 구성
+      pdf-filename: DataFabric Manager 창에서 데이터베이스 사용자 구성
       url: "/windows-install/reference-configuring-a-database-user-on-datafabric-manager.html"
       entries:
       - title: Windows에서 ocsetup을 실행하여 데이터베이스 사용자를 구성합니다
@@ -62,6 +68,7 @@ entries:
   - title: 대상 시스템의 자격 증명을 구성합니다
     url: "/windows-install/task-configure-the-credentials-of-a-target-system.html"
   - title: OnCommand Workflow Automation 구성
+    pdf-filename: OnCommand Workflow Automation 창을 구성하는 중입니다
     url: "/windows-install/concept-advanced-configuring-oncommand-workflow-automation.html"
     entries:
     - title: AutoSupport를 구성합니다
@@ -73,6 +80,7 @@ entries:
     - title: 이메일 알림을 구성합니다
       url: "/windows-install/task-configure-mail.html"
     - title: SNMP를 구성합니다
+      pdf-filename: SNMP 창을 구성합니다
       url: "/windows-install/task-configure-snmp.html"
       entries:
       - title: SNMP 버전 1을 구성합니다
@@ -106,6 +114,7 @@ entries:
     - title: 업그레이드 중 팩 식별
       url: "/windows-install/reference-pack-identification-during-upgrade.html"
 - title: 타사 제품 업그레이드
+  pdf-filename: 타사 제품 Windows 업그레이드
   url: "/windows-install/concept-upgrading-third-party-products-in-windows.html"
   entries:
   - title: OpenJDK를 업그레이드합니다
@@ -115,6 +124,7 @@ entries:
   - title: ActiveState Perl을 업그레이드합니다
     url: "/windows-install/task-upgrade-active-state-perl-on-windows.html"
 - title: OnCommand Workflow Automation 데이터베이스를 백업하는 중입니다
+  pdf-filename: OnCommand Workflow Automation 데이터베이스 창을 백업하는 중입니다
   url: "/windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html"
   entries:
   - title: 웹 포털에서 WFA 데이터베이스를 백업합니다
@@ -122,6 +132,7 @@ entries:
   - title: PowerShell 스크립트를 사용하여 WFA 데이터베이스를 백업합니다
     url: "/windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html"
   - title: CLI를 사용하여 WFA 데이터베이스 백업
+    pdf-filename: CLI 창을 사용하여 WFA 데이터베이스 백업
     url: "/windows-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html"
     entries:
     - title: CLI를 사용하여 WFA 데이터베이스를 전체 백업(전체)합니다
@@ -136,11 +147,13 @@ entries:
     - title: REST API를 사용하여 WFA 데이터베이스를 정기적으로 백업합니다
       url: "/windows-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html"
 - title: OnCommand Workflow Automation 데이터베이스를 복원하는 중입니다
+  pdf-filename: OnCommand Workflow Automation 데이터베이스 창을 복원하는 중입니다
   url: "/windows-install/concept-restoring-the-wfa-database.html"
   entries:
   - title: WFA 데이터베이스를 복원합니다
     url: "/windows-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html"
   - title: CLI를 사용하여 WFA 데이터베이스를 복원합니다
+    pdf-filename: CLI 창을 사용하여 WFA 데이터베이스를 복원합니다
     url: "/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html"
     entries:
     - title: CLI를 사용하여 WFA 데이터베이스를 전체 상태로 복원합니다
@@ -148,6 +161,7 @@ entries:
     - title: CLI를 사용하여 WFA 데이터베이스를 복원(일반
       url: "/windows-install/task-regular-restore-of-the-oncommand-workflow-automation-database-using-clis-windows.html"
   - title: REST API를 사용하여 WFA 데이터베이스 복원
+    pdf-filename: REST API 창을 사용하여 WFA 데이터베이스 복원
     url: "/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html"
     entries:
     - title: REST API를 사용하여 WFA 데이터베이스를 전체 상태로 복원합니다
@@ -157,6 +171,7 @@ entries:
 - title: 설치 중에 생성한 admin 암호를 재설정합니다
   url: "/windows-install/task-reset-the-admin-password-created-during-installation.html"
 - title: OnCommand Workflow Automation 콘텐츠를 가져옵니다
+  pdf-filename: OnCommand Workflow Automation 콘텐츠 창을 가져옵니다
   url: "/windows-install/task-import-oncommand-workflow-automation-content.html"
   entries:
   - title: OnCommand Workflow Automation 콘텐츠를 가져오는 동안 고려해야 할 사항입니다
@@ -173,6 +188,7 @@ entries:
   - title: Workflow Automation에 대한 인증서 서명 요청을 생성합니다
     url: "/windows-install/task-create-a-certificate-signing-request-for-workflow-automation-windows.html"
 - title: Perl 및 Perl 모듈 관리
+  pdf-filename: Perl 및 Perl 모듈 관리 창
   url: "/windows-install/reference-managing-perl-and-perl-modules.html"
   entries:
   - title: 기본 Perl 배포를 구성합니다
@@ -182,6 +198,7 @@ entries:
   - title: ActivePerl 설치를 복구합니다
     url: "/windows-install/task-repair-the-activeperl-installation.html"
 - title: 설치 및 구성 문제 해결
+  pdf-filename: 설치 및 구성 문제 해결 Windows
   url: "/windows-install/reference-troubleshooting.html"
   entries:
   - title: OnCommand Workflow Automation 로그인 페이지를 열 수 없습니다

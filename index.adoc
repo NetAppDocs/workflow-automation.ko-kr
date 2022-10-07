@@ -3,7 +3,7 @@ layout: astra
 sidebar: sidebar 
 permalink: index.html 
 lead: Welcome to the OnCommand Workflow Automation 5.1 Information Library. 
-summary: OnCommand Workflow Automation, WFA 문서, 5.1.1 
+summary: OnCommand Workflow Automation 5.1 정보 라이브러리에 오신 것을 환영합니다. 
 ---
 = OnCommand Workflow Automation 문서
 :hardbreaks:

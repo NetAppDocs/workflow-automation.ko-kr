@@ -2,10 +2,11 @@
 permalink: help/reference-mvel-enabled-fields-in-wfa.html 
 sidebar: sidebar 
 keywords: field, oncommand, workflow, automation, enable, expression, language, syntax, design 
-summary: 'OnCommand Workflow Automation\(WFA\)의 여러 필드가 MVFLEX Expression Language\(MVEL\)에 대해 활성화됩니다. 워크플로를 디자인하는 동안 이러한 필드에 MVEL 구문을 사용할 수 있습니다.' 
+summary: 'MVFLEX Expression Language(MVEL)에 대해 WFA(OnCommand Workflow Automation)의 여러 필드가 활성화됩니다. 워크플로를 디자인하는 동안 이러한 필드에 MVEL 구문을 사용할 수 있습니다.' 
 ---
 = OnCommand Workflow Automation의 MVEL 사용 가능 필드
 :allow-uri-read: 
+:experimental: 
 :icons: font
 :imagesdir: ../media/
 
@@ -23,8 +24,8 @@ MVFLEX Expression Language(MVEL)에 대해 WFA(OnCommand Workflow Automation)의
  a| 
 워크플로 만들기 또는 편집
  a| 
-* *_Workflow_ * > * 세부 정보 * > * 매개 변수 반환 * > * 매개 변수 값 *
-* *_Workflow_ * > * 세부 정보 * > * 상수 * > * 값 *
+* _MENU: Workflow_[세부 정보 > 매개 변수 반환 > 매개 변수 값]
+* _MENU: Workflow_[세부 정보 > 상수 > 값]
 
 
 
@@ -32,11 +33,11 @@ MVFLEX Expression Language(MVEL)에 대해 WFA(OnCommand Workflow Automation)의
  a| 
 워크플로에서 명령 세부 정보를 만들거나 편집합니다
  a| 
-* * 명령 * > * 매개변수_이름 * 매개변수 * > * 검색 기준 입력 * > * 리소스 선택 * > * 파인더 * > * 매개변수 *
-* * Commands * > * Parameters for_parameter_name_ * > * 검색 조건 입력 * > * Resource Selection * > * Advanced * > * 다음 식이 TRUE * 일 때만 검색 실행
-* 다음 식이 TRUE * 인 경우 * commands * > * Parameters for_parameter_name_ * > * Advanced * > * 를 선택합니다
-* * 명령 * > * 매개변수_이름_ * > * 기타 매개변수 *
-* * 명령 * > *_parameter_name_ * > * 특성 *
+* 메뉴: 명령 [Parameters for_parameter_name_> 검색 조건 입력 > 리소스 선택 > Finder > 매개 변수]
+* 메뉴: 명령 [Parameters for_parameter_name_> 검색 조건 입력 > 리소스 선택 > 고급 > 다음 식이 TRUE인 경우에만 검색 실행]
+* 메뉴: 명령 [Parameters for_parameter_name_>Advanced > if the following expression is true]
+* 메뉴: 명령 [Parameters for_parameter_name_> Other Parameters]
+* 메뉴: 명령 [_PARAMETER_NAME_> 특성]
 
 
 
@@ -44,7 +45,7 @@ MVFLEX Expression Language(MVEL)에 대해 WFA(OnCommand Workflow Automation)의
  a| 
 명령 생성 또는 편집
  a| 
-* * 명령 * > * 명령 정의_명령_이름_ * > * 속성 * > * 문자열 표현 *
+* 메뉴: 명령 [Command Definition_command_name_> 속성 > 문자열 표현]
 
 
 
@@ -52,7 +53,7 @@ MVFLEX Expression Language(MVEL)에 대해 WFA(OnCommand Workflow Automation)의
  a| 
 함수 만들기 또는 편집
  a| 
-* * 함수 * > * function_function_name_ * > * 함수 정의 *
+* 메뉴: 기능 [FUNCTION_FUNCTION_NAME_> 함수 정의]
 
 
 
@@ -60,7 +61,7 @@ MVFLEX Expression Language(MVEL)에 대해 WFA(OnCommand Workflow Automation)의
  a| 
 템플릿 생성 또는 편집
  a| 
-* * 템플릿 * > * 매개변수_이름_ * 에 대한 매개변수 > * 템플릿_템플릿_이름_ * > * 특성 * > * 값 *
+* 메뉴: 템플릿 [Parameters for_parameter_name_>Template_template_name_> Attributes > value]
 
 
 
@@ -68,10 +69,10 @@ MVFLEX Expression Language(MVEL)에 대해 WFA(OnCommand Workflow Automation)의
  a| 
 행 편집
  a| 
-* *_Workflow_ * > * Workflow * > * 행 반복 * > * 반복 * > * 횟수 *
-* *_Workflow_ * > * Workflow * > * 행 반복 * > * 변수 * > * 초기_값 및 표현식의 변수 *
-* * 워크플로 * > * 워크플로 * > * 행 반복 * > * 반복 * > * 그룹의 모든 리소스에 대해 * > * 리소스 검색 기준 * > * 필터링할 매개변수 *
-* *_Workflow_ * > * Workflow * > * 조건 추가 * > * 다음 식이 TRUE * 인 경우
+* _MENU: Workflow_[워크플로 > 행 반복 > 반복 > 횟수]
+* _MENU: Workflow_[Workflow > 행 반복 > 변수 > _initial_value_and_expression_ 변수]
+* _MENU: Workflow_[워크플로 > 행 반복 > 반복 > 그룹의 모든 자원에 대해 > 자원 검색 기준 > 필터링할 매개변수]
+* _MENU: Workflow_[워크플로 > 조건 추가 > 다음 식이 참인 경우]
 
 
 |===

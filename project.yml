@@ -25,13 +25,45 @@ homepage:
     links:
     - title: 릴리즈 노트
       url: reference-releasenotes.html
-  - title: 설치 및 설정
+  - title: Linux 시스템에 설치 및 설정합니다
     links:
-    - title: Linux 시스템에 OnCommand Workflow Automation를 설치합니다
-      url: rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html
+    - title: OnCommand Workflow Automation 설치를 위한 시스템 요구 사항
+      url: rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html
+    - title: 고가용성을 관리합니다
+      url: rhel-install/concept-managing-high-availability.html
+    - title: OnCommand Workflow Automation를 설정합니다
+      url: rhel-install/concept-setting-up-oncommand-workflow-automation.html
+    - title: OnCommand Workflow Automation 데이터베이스를 백업합니다
+      url: rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html
+    - title: OnCommand Workflow Automation 데이터베이스를 복원합니다
+      url: rhel-install/concept-restoring-the-wfa-database.html
+    - title: OnCommand Workflow Automation를 제거합니다
+      url: rhel-install/task-uninstall-oncommand-workflow-automation-linux.html
+    - title: 설치 및 구성 문제 해결
+      url: rhel-install/reference-troubleshooting.html
+  - title: Windows 시스템에 설치 및 설정합니다
+    links:
+    - title: OnCommand Workflow Automation 설치를 위한 시스템 요구 사항
+      url: windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html
     - title: Windows에 OnCommand Workflow Automation를 설치합니다
-      url: windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html
+      url: windows-install/task-install-workflow-automation-on-windows.html
+    - title: OnCommand Workflow Automation를 설정합니다
+      url: windows-install/concept-setting-up-oncommand-workflow-automation.html
+    - title: OnCommand Workflow Automation 데이터베이스를 백업합니다
+      url: windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html
+    - title: OnCommand Workflow Automation 데이터베이스를 복원합니다
+      url: windows-install/concept-restoring-the-wfa-database.html
+    - title: OnCommand Workflow Automation를 제거합니다
+      url: windows-install/task-uninstall-oncommand-workflow-automation.html
+    - title: 설치 및 구성 문제 해결
+      url: windows-install/reference-troubleshooting.html
   - title: 워크플로우 구축 및 관리
     links:
     - title: 워크플로 관리
       url: workflows/concept-managing-workflows.html
+  - title: 추가 정보
+    links:
+    - title: NetApp 커뮤니티
+      url: http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29
+    - title: 상호 운용성 매트릭스
+      url: http://mysupport.netapp.com/matrix/
