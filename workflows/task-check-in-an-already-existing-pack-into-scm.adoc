@@ -13,6 +13,7 @@ summary: 'WFA(OnCommand Workflow Automation)에서 기존 팩을 SCM(소스 제�
 [role="lead"]
 WFA(OnCommand Workflow Automation)에서 기존 팩을 SCM(소스 제어 관리) 서버에 체크 인할 수 있습니다.
 
+.필요한 것
 SCM을 설정해야 하며 관리자 또는 설계자 자격 증명이 있어야 합니다.
 
 .단계

@@ -13,6 +13,7 @@ summary: 'WFA(OnCommand Workflow Automation)를 사용하여 새 워크플로우
 [role="lead"]
 WFA(OnCommand Workflow Automation)를 사용하여 새 워크플로우 팩을 생성한 다음 SCM(소스 제어 관리)에서 확인할 수 있습니다.
 
+.필요한 것
 SCM을 설정해야 하며 관리자 또는 설계자 자격 증명이 있어야 합니다.
 
 .단계
