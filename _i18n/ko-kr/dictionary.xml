@@ -1000,7 +1000,6 @@
   <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">그러면...</block>
   <block id="9778840a0100cb30c982876741b0b5a2" category="paragraph">SQL</block>
   <block id="88381311eb47da741a4d0f73ef520fb1" category="paragraph">드라이버 유형* 목록에서 데이터 원본에 적합한 다음 드라이버 중 하나를 선택합니다.</block>
-  <block id="5e20823f83b63582726b65a7ea629ed8" category="list-text">* Sybase jConnect3 *</block>
   <block id="9985bfec1629ffdbc2501ffe2c6009aa" category="list-text">* MySQL 커넥터/J *</block>
   <block id="21cd4f6fe21a7a1a50297203f1801051" category="list-text">* MySQL Server JDBC 드라이버 3.0*</block>
   <block id="65b0ace1e497208f5d6fed9f4cdd1392" category="list-text">* Oracle JDBC 드라이버 11.2.0.3 *</block>
@@ -1633,12 +1632,7 @@
   <block id="6da6e44dc9987246944fdf9de3d4e794" category="paragraph">Syslog를 클릭합니다</block>
   <block id="2975351d18f6b6cc0f00ab465dbb31ef" category="paragraph">syslog 서버로 로그를 보내는 중입니다</block>
   <block id="886093243084825f398ae29b24861ceb" category="paragraph">다음 표에는 Unified Manager 서버에서 열어야 하는 기본 포트가 나와 있습니다.</block>
-  <block id="06c284d3f757b15c02f47f3ff06dc275" category="paragraph">2638)를 참조하십시오</block>
-  <block id="4e6ac8e997ca8f5896cbc28cad3ede24" category="paragraph">Sybase</block>
-  <block id="97d22c4200c50a78603b99f64abefbd5" category="paragraph">Active IQ Unified Manager 6.0 이전의 데이터 캐싱</block>
   <block id="7fd34732c43ed1c77aa28c7cebea1acf" category="paragraph">Active IQ Unified Manager 6.0 이상의 데이터 캐싱</block>
-  <block id="c2431245e313e6c2fb21537cf8c60e15" category="paragraph">8088, 8488</block>
-  <block id="7b19e159d97af652b6091979fc7173f5" category="paragraph">6.0 이전의 Active IQ Unified Manager에 포함되어 있는 Performance Advisor의 데이터 캐싱</block>
   <block id="42ad4e935313e6d8619faa0c109c4b92" category="paragraph">다음 표에는 VMware vCenter에서 열어야 하는 기본 포트가 나와 있습니다.</block>
   <block id="13f3cf8c531952d72e5847c4183e6910" category="paragraph">443</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="paragraph">HTTPS</block>
@@ -2460,7 +2454,6 @@
   <block id="244a63707430b7a4560069a38420f436" category="paragraph">Set-WfaConfig-Name PasswordPolicy - Enable $false</block>
   <block id="24856dbc0a3b9e55bf33f94ba0bc7792" category="summary">데이터 소스에서 데이터를 가져오려면 WFA(OnCommand Workflow Automation)에서 데이터 소스와의 연결을 설정해야 합니다.</block>
   <block id="fa9021218f4bfd84ad59e7452d519f2d" category="doc">데이터 원본을 설정합니다</block>
-  <block id="63280af4d8cba0858ac1dff86ceeed0c" category="list-text">Active IQ Unified Manager 6.0 이전 버전의 경우, 데이터베이스에 대한 원격 읽기 전용 액세스를 지원하고 구성하려면 Unified Manager 서버에서 최신 버전의 ocsetup 툴을 실행해야 합니다.</block>
   <block id="f03b31ab5e7ee797f31fba5695a8e7a4" category="list-text">Active IQ Unified Manager6.0 이상에서는 통합 관리자 서버에 데이터베이스 사용자 계정을 만들어야 합니다.</block>
   <block id="731d8fd16ef341f5ba2ee8e6445885f1" category="paragraph">자세한 내용은 _OnCommand Unified Manager 온라인 도움말_을 참조하십시오.</block>
   <block id="1aeeceb7211593642d7ca1f8a79dde77" category="list-text">Unified Manager 서버에서 들어오는 연결의 TCP 포트가 열려 있어야 합니다.</block>
@@ -2468,8 +2461,6 @@
   <block id="1475d72dae12d2f3edff1276e81ef17a" category="paragraph">다음은 기본 TCP 포트 번호입니다.</block>
   <block id="7d2578b5ef3fcde7596cf509d8c62bd1" category="cell">TCP 포트 번호입니다</block>
   <block id="b95aa9b32e368a8ea35037d171bb7505" category="cell">Unified Manager 서버 버전입니다</block>
-  <block id="fbb954d1cb26c988d8f75dff9ba7ee7d" category="paragraph">5.x</block>
-  <block id="6ef6d5474ca30598a3bfe534f33c9c81" category="paragraph">Sybase SQL Anywhere 데이터베이스 서버</block>
   <block id="4b482edf238f3e07a3e0c730e500a608" category="paragraph">6.x</block>
   <block id="df55d916b5a005baf61e609993b7a1d3" category="paragraph">MySQL 데이터베이스 서버</block>
   <block id="23628462c384be0f669955210d825d30" category="list-text">Performance Advisor의 경우 GlobalRead 이상의 역할을 가진 Active IQ Unified Manager 사용자 계정을 만들어야 합니다.</block>
@@ -2489,12 +2480,8 @@
   <block id="40e0fad18a1686d6ba45af89fbc4fd5a" category="paragraph">WFA에 Unified Manager 서버 데이터 소스를 추가한 다음 Unified Manager 서버 버전을 업그레이드한 경우, WFA에서 Unified Manager 서버의 업그레이드된 버전을 인식하지 못합니다. 이전 버전의 Unified Manager 서버를 삭제한 다음, 업그레이드된 버전의 Unified Manager 서버를 WFA에 추가해야 합니다.</block>
   <block id="d6904816f2de30b1c0a34644d52e49b3" category="list-text">새 데이터 원본 대화 상자에서 필요한 데이터 원본 유형을 선택하고 데이터 원본 이름과 호스트 이름을 입력합니다.</block>
   <block id="4bf06b7c0419db9c339b3ad9943b84d5" category="list-text">적절한 작업 선택:</block>
-  <block id="9b81833dee31a4fba0f609d1219a5f57" category="paragraph">6.0 이전의 Active IQ Unified Manager 버전</block>
-  <block id="95f0b5290415893233cc34de5758d586" category="paragraph">ocsetup 도구를 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 사용자 이름과 암호를 입력합니다.</block>
   <block id="667785fae0085225c5366c4a23da8190" category="paragraph">Active IQ Unified Manager 6.3 이상</block>
   <block id="f4e2003dab44b20be7ebbdc4d0aca893" category="paragraph">Unified Manager 서버에서 생성한 데이터베이스 사용자 계정의 자격 증명을 입력합니다. 데이터베이스 사용자 계정 만들기에 대한 자세한 내용은 _OnCommand Unified Manager 온라인 도움말_을 참조하십시오.</block>
-  <block id="8e98ef93e911e1cfc94baedd532e1d80" category="paragraph">Performance Advisor for (Active IQ Unified Manager 6.0 이전 버전)</block>
-  <block id="5b7c5e612c4bc4c6daf1f284fc0eaf76" category="paragraph">Active IQ Unified Manager 사용자의 최소 역할이 GlobalRead인 자격 증명을 입력합니다.</block>
   <block id="c4d0dc56b9499d93190e5d1eeb6a770a" category="paragraph">명령줄 인터페이스 또는 ocsetup 도구를 사용하여 만든 Active IQ Unified Manager 데이터베이스 사용자 계정의 자격 증명을 제공해서는 안 됩니다.</block>
   <block id="3e393ea987c85f12dc4d4200230d1e61" category="paragraph">VMware vCenter Server(Windows 전용)</block>
   <block id="35b1154e1618e5e619ad933951972c37" category="paragraph">(Windows만 해당) VMware vCenter Server에서 생성한 사용자의 사용자 이름과 암호를 입력합니다.</block>
@@ -3120,12 +3107,10 @@
   <block id="3b57547caa3754998fa617bd92514f25" category="list-text">* 사용자 이름 *</block>
   <block id="52b05e16a9a17b06bf497ba0b43f97f1" category="paragraph">선택한 데이터 소스 유형에 대해 연결된 사용자 이름이 있는 경우 이를 표시합니다.</block>
   <block id="fad77f4cfa7f6147e14a8144a2223548" category="paragraph">기본 사용자 이름을 재정의하려면 이 데이터 원본에 적절한 사용자 이름을 지정해야 합니다.</block>
-  <block id="01824cdc73f1bb9f3a0db8ad9f278350" category="list-text">6.0 이전 버전의 Unified Manager에서는 ocsetup을 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 사용자 이름을 입력해야 합니다.</block>
   <block id="1be837a80c4ac40aee1c47275a875d4e" category="list-text">Unified Manager 6.0 이상에서는 Unified Manager 서버에서 만든 데이터베이스 사용자 계정의 사용자 이름을 입력해야 합니다.</block>
   <block id="c8b27eb46c2a5c0fb13ef146da5d7275" category="list-text">Performance Advisor의 경우 최소 역할이 GlobalRead인 Active IQ Unified Manager 사용자의 사용자 이름을 입력해야 합니다.</block>
   <block id="c19285b1dc2d9b23f090a9dcd3410350" category="paragraph">선택한 데이터 소스 유형에 대한 암호를 지정할 수 있습니다.</block>
   <block id="762c1006bd5346ccb3d6a361bc396180" category="paragraph">이 데이터 소스의 사용자 이름에 대한 기본 암호를 무시하려면 암호를 지정해야 합니다.</block>
-  <block id="d4a1a1ffb5e2a4b4635dad41af54ad29" category="list-text">6.0 이전 버전의 Unified Manager에서는 ocsetup을 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 암호를 입력해야 합니다.</block>
   <block id="072827f4a25b9a1ce3d7e6ce73b02d67" category="list-text">Unified Manager 6.0 이상에서는 서버에 만든 데이터베이스 사용자 계정의 암호를 입력해야 합니다.</block>
   <block id="ecfba22e42f64033dc9376f578c73ffb" category="list-text">Performance Advisor의 경우 GlobalRead 이상의 역할을 가진 Unified Manager 사용자의 암호를 입력해야 합니다.</block>
   <block id="7a8d3dc7f0e719542e9e706dbca4f3ec" category="list-text">* 데이터베이스 *</block>
@@ -3798,7 +3783,6 @@
   <block id="3ed5cf9138651eebf7029c7ee19828c1" category="paragraph">이러한 매개 변수에 대해 계산되거나 선택된 값을 확인하려는 경우 워크플로에서 필수 반환 매개 변수를 지정할 수 있습니다. 예를 들어 자원 선택 논리를 사용하여 워크플로에서 집계를 선택할 때 워크플로 계획 중에 선택한 집계를 볼 수 있도록 반환 매개 변수로 "집계"를 지정할 수 있습니다.</block>
   <block id="7c0452a44785f9c17bb51b522806f371" category="summary">Cache Queries 창에서는 WFA 사전 항목 및 관련 데이터 소스 유형에 대한 캐시 쿼리를 관리할 수 있습니다.</block>
   <block id="fe934c5c006c32e2f5a1eddc16c8312d" category="doc">캐시 쿼리 창</block>
-  <block id="3d6f64a6ca1bcff688912eefa7f9bbed" category="paragraph">캐시 쿼리는 쿼리에 지정된 테이블에서 필요한 데이터를 검색하는 SQL 쿼리입니다. 캐시 쿼리는 사전 항목과 하나 이상의 데이터 소스 유형에 연결됩니다. 예를 들어 * 볼륨(스토리지) * 에 대한 캐시 쿼리는 Active IQ Unified Manager 5.1 및 5.2 데이터 소스 유형과 연결됩니다. 데이터 소스 Active IQ Unified Manager 6.0의 테이블에서 WFA의 캐시로 볼륨 등의 일부 정보를 검색하려면 캐시 쿼리를 정의합니다.</block>
   <block id="182669ed4820368e35e16bb8ff900501" category="list-text">캐시 쿼리 테이블</block>
   <block id="0f46985dd4907e3a7315a59939693c1a" category="section-title">캐시 쿼리 목록</block>
   <block id="dedb53beee8d0629f134068ea225f74b" category="paragraph">캐시 쿼리 테이블에는 사전 항목과 관련 데이터 원본 형식이 나열됩니다. 각 열에 사용할 수 있는 필터링 및 정렬 기능을 사용하거나 열 순서를 다시 정렬하여 표 표시를 사용자 지정할 수 있습니다.</block>
@@ -3991,9 +3975,7 @@
   <block id="03f7b3e56f9a4a1d0486e4dbd2218749" category="paragraph">기본 포트를 변경하고 데이터 소스에 다른 포트를 지정할 수 있습니다.</block>
   <block id="299023258a447a9925099e3b666f411e" category="paragraph">선택한 데이터 소스 유형과 연결된 구성표를 표시합니다(예: Active IQ Unified Manager-6.0(MySQL)의 경우 _cm_storage_입니다).</block>
   <block id="92a3898c45164517cd39085ac8ca6f75" category="paragraph">이 속성은 수정할 수 없습니다.</block>
-  <block id="94cd2dc12c886407b83df24073c3fbaf" category="list-text">6.0 이전 버전의 Active IQ Unified Manager에서는 ocsetup을 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 사용자 이름을 입력해야 합니다.</block>
   <block id="6994d1382a97ce24d633fe0364fe4baa" category="list-text">Active IQ Unified Manager 6.0 이상에서는 Active IQ Unified Manager 서버에서 만든 데이터베이스 사용자 계정의 사용자 이름을 입력해야 합니다.</block>
-  <block id="9ca1092f012d395fbc5dac7a2b872f58" category="list-text">6.0 이전 버전의 Active IQ Unified Manager에서는 ocsetup을 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 암호를 입력해야 합니다.</block>
   <block id="1993c51f1b9689c14f75481a9d7f5f44" category="list-text">Active IQ Unified Manager 6.0 이상에서는 Active IQ Unified Manager 서버에서 만든 데이터베이스 사용자 계정의 암호를 입력해야 합니다.</block>
   <block id="ff2d9c6d918b6522d94d56fa170d4144" category="list-text">Performance Advisor의 경우 Active IQ Unified Manager 사용자의 암호를 입력해야 하며, 최소 역할은 GlobalRead여야 합니다.</block>
   <block id="fb5864e754f2712674ea29bdc8f4b920" category="list-text">스크립트 기반 데이터 소스 유형: 1440(성능 및 VC)</block>
@@ -4907,4 +4889,6 @@
   <block id="bc5f3059c890d2356e892a982265bfb1" category="sidebar">설치 및 구성 문제 해결 Linux</block>
   <block id="639ca019cb526012d0366b7ba96c7dde" category="section-title">불러온 하위 요소의 버전이 모체 버전에 영향을 주는 방법의 예</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">필요한 것</block>
+  <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">Active IQ Unified Manager 6.0 이상에서는 Unified Manager 서버에 데이터베이스 사용자 계정을 만들어야 합니다.</block>
+  <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">캐시 쿼리는 쿼리에 지정된 테이블에서 필요한 데이터를 검색하는 SQL 쿼리입니다. 캐시 쿼리는 사전 항목 및 하나 이상의 데이터 원본 형식과 연결됩니다. 데이터 소스 OnCommand Unified Manager 6.0의 테이블에서 WFA 캐시로 볼륨 등의 일부 정보를 검색하려면 캐시 쿼리를 정의합니다.</block>
 </blocks>

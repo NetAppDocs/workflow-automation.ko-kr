@@ -15,7 +15,6 @@ summary: '데이터 소스에서 데이터를 가져오려면 WFA(OnCommand Work
 
 * 필요한 것 *
 
-* Active IQ Unified Manager 6.0 이전 버전의 경우, 데이터베이스에 대한 원격 읽기 전용 액세스를 지원하고 구성하려면 Unified Manager 서버에서 최신 버전의 ocsetup 툴을 실행해야 합니다.
 * Active IQ Unified Manager6.0 이상에서는 통합 관리자 서버에 데이터베이스 사용자 계정을 만들어야 합니다.
 +
 자세한 내용은 _OnCommand Unified Manager 온라인 도움말_을 참조하십시오.
@@ -34,16 +33,6 @@ summary: '데이터 소스에서 데이터를 가져오려면 WFA(OnCommand Work
 
 
  a| 
-2638)를 참조하십시오
- a| 
-5.x
- a| 
-Sybase SQL Anywhere 데이터베이스 서버
-
-
-
- a| 
-3306
  a| 
 6.x
  a| 
@@ -107,23 +96,9 @@ WFA에 Unified Manager 서버 데이터 소스를 추가한 다음 Unified Manag
 
 
  a| 
-6.0 이전의 Active IQ Unified Manager 버전
- a| 
-ocsetup 도구를 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 사용자 이름과 암호를 입력합니다.
-
-
-
- a| 
 Active IQ Unified Manager 6.3 이상
  a| 
 Unified Manager 서버에서 생성한 데이터베이스 사용자 계정의 자격 증명을 입력합니다. 데이터베이스 사용자 계정 만들기에 대한 자세한 내용은 _OnCommand Unified Manager 온라인 도움말_을 참조하십시오.
-
-
-
- a| 
-Performance Advisor for (Active IQ Unified Manager 6.0 이전 버전)
- a| 
-Active IQ Unified Manager 사용자의 최소 역할이 GlobalRead인 자격 증명을 입력합니다.
 
 [NOTE]
 ====

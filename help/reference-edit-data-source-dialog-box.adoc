@@ -52,7 +52,6 @@ NOTE: Active IQ Unified Manager 데이터 소스 유형은 IPv6 주소를 지원
 기본 사용자 이름을 재정의하려면 이 데이터 원본에 적절한 사용자 이름을 지정해야 합니다.
 
 +
-** 6.0 이전 버전의 Unified Manager에서는 ocsetup을 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 사용자 이름을 입력해야 합니다.
 ** Unified Manager 6.0 이상에서는 Unified Manager 서버에서 만든 데이터베이스 사용자 계정의 사용자 이름을 입력해야 합니다.
 ** Performance Advisor의 경우 최소 역할이 GlobalRead인 Active IQ Unified Manager 사용자의 사용자 이름을 입력해야 합니다.
 
@@ -65,7 +64,6 @@ NOTE: Active IQ Unified Manager 데이터 소스 유형은 IPv6 주소를 지원
 이 데이터 소스의 사용자 이름에 대한 기본 암호를 무시하려면 암호를 지정해야 합니다.
 
 +
-** 6.0 이전 버전의 Unified Manager에서는 ocsetup을 실행하는 동안 기본 자격 증명을 재정의하는 데 사용한 암호를 입력해야 합니다.
 ** Unified Manager 6.0 이상에서는 서버에 만든 데이터베이스 사용자 계정의 암호를 입력해야 합니다.
 ** Performance Advisor의 경우 GlobalRead 이상의 역할을 가진 Unified Manager 사용자의 암호를 입력해야 합니다.
 

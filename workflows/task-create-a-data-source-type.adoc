@@ -41,7 +41,6 @@ SQL
  a| 
 드라이버 유형* 목록에서 데이터 원본에 적합한 다음 드라이버 중 하나를 선택합니다.
 
-** * Sybase jConnect3 *
 ** * MySQL 커넥터/J *
 ** * MySQL Server JDBC 드라이버 3.0*
 ** * Oracle JDBC 드라이버 11.2.0.3 *
