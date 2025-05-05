@@ -4804,7 +4804,6 @@
   <block id="15e5ef44c219fd76f62b5fee5d9033a6" category="admonition">인증에서 제거 기능은 인증이 * 없음 * 으로 설정된 사전 항목에 대해서만 활성화됩니다</block>
   <block id="8c2e3142ac2ce539c753b2911f29e36d" category="list-text">*<block ref="53d0266f4a9fc0d3f81f95508b3710ac" category="inline-image-macro-rx" type="image"></block> (재고) *</block>
   <block id="d72ed78b7465fa867896267e03d318fe" category="paragraph">테이블 데이터를 볼 수 있는 선택한 사전 항목에 대한 인벤토리 대화 상자를 엽니다.</block>
-  <block id="95026804993f8a9226db7022cae41c9f" category="sidebar">OnCommand Workflow Automation 5.1 문서</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 정보</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">릴리즈 노트</block>
@@ -4891,4 +4890,5 @@
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">필요한 것</block>
   <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">Active IQ Unified Manager 6.0 이상에서는 Unified Manager 서버에 데이터베이스 사용자 계정을 만들어야 합니다.</block>
   <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">캐시 쿼리는 쿼리에 지정된 테이블에서 필요한 데이터를 검색하는 SQL 쿼리입니다. 캐시 쿼리는 사전 항목 및 하나 이상의 데이터 원본 형식과 연결됩니다. 데이터 소스 OnCommand Unified Manager 6.0의 테이블에서 WFA 캐시로 볼륨 등의 일부 정보를 검색하려면 캐시 쿼리를 정의합니다.</block>
+  <block id="0d47320e619045e2de820e0c0e5fbcf0" category="sidebar">OnCommand Workflow Automation 문서</block>
 </blocks>
