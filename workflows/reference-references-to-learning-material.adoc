@@ -45,9 +45,9 @@ http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx[]
 
 
  a| 
-PowerShell 코드 스타일
+PowerShell 학습
  a| 
-http://get-powershell.com/post/2011/04/13/Extra-Points-for-Style-when-writing-PowerShell-Code.aspx[]
+https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.6[]
 
 
 
@@ -111,7 +111,7 @@ https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/microsoft-cl
 
 WFA는 워크플로우 작업을 위해 Perl 명령을 지원합니다. WFA를 설치할 때 필요한 Perl 및 Perl 모듈이 WFA 서버에 설치됩니다.
 
-https://docs.activestate.com/activeperl/5.26/perl/["ActivePerl 사용 설명서"^]
+https://sanweb.lib.msu.edu/DMC/Euglena/Euglena%20Literature%20Metadata/Perl/html/index.html?page=readme.html["ActivePerl 사용 설명서"^]
 
 또한 다음 위치에서 _ActivePerl 사용자 가이드 _ 에 액세스할 수 있습니다: "WFA_install_location\WFA\Perl64\HTML\index.html.
 

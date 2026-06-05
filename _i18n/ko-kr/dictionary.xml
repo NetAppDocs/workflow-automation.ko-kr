@@ -1091,8 +1091,6 @@
   <block id="344fd3d08b8a753bb79336ff586a35bf" category="paragraph"><block ref="344fd3d08b8a753bb79336ff586a35bf" category="inline-link-rx"></block></block>
   <block id="66c9c3348ac5b112ffe4b7b49623cc8d" category="paragraph">_.NET 프레임워크 이름 지침 _</block>
   <block id="91b02b940dd07cc66de00d6a764f898d" category="paragraph"><block ref="91b02b940dd07cc66de00d6a764f898d" category="inline-link-rx"></block></block>
-  <block id="0a5e35cd941b62c63e913a9f92c3687d" category="paragraph">PowerShell 코드 스타일</block>
-  <block id="5d338dfe4d3ddf51bc90dec3ee99b477" category="paragraph"><block ref="5d338dfe4d3ddf51bc90dec3ee99b477" category="inline-link-rx"></block></block>
   <block id="8afa48e351f3a31c1fa8007756fd80a3" category="paragraph">PowerShell 시험 사용/캐치</block>
   <block id="8d1c69b97d5a89835f2b05eabd27ceb4" category="paragraph"><block ref="8d1c69b97d5a89835f2b05eabd27ceb4" category="inline-link-rx"></block></block>
   <block id="8a6937456d987ab411de106bbfe44717" category="paragraph">PowerShell 자동 변수</block>
@@ -1111,7 +1109,6 @@
   <block id="93df2ca84c946db99163b3148e95e9ae" category="paragraph"><block ref="93df2ca84c946db99163b3148e95e9ae" category="inline-link-rx"></block></block>
   <block id="c897da42b0f175bc57bbeacb4bea82b1" category="paragraph">WFA는 워크플로우 작업을 위해 Perl 명령을 지원합니다. WFA를 설치할 때 필요한 Perl 및 Perl 모듈이 WFA 서버에 설치됩니다.</block>
   <block id="b61229c78dccf475da69f2cac6d600c0" category="inline-link">ActivePerl 사용 설명서</block>
-  <block id="2b145b62478784ba1e7fd97785e8a3e8" category="paragraph"><block ref="2b145b62478784ba1e7fd97785e8a3e8" category="inline-link-rx"></block></block>
   <block id="efb2bc95007f6681acbc99549e71a915" category="paragraph">또한 다음 위치에서 _ActivePerl 사용자 가이드 _ 에 액세스할 수 있습니다: "WFA_install_location\WFA\Perl64\HTML\index.html.</block>
   <block id="a840cd16314687a519be4b506df20df5" category="paragraph">'_WFA_INSTALL_LOCATION_'은 WFA 설치 디렉토리이고, 'C:\Program Files\NetApp은 기본 설치 디렉토리입니다. WFA는 워크플로우 작업을 위해 Perl 스크립트를 사용합니다. 다음 표에는 Perl에 대한 학습 자료에 대한 참조가 포함되어 있습니다.</block>
   <block id="6c6471c226957740be8fc6faa4c49add" category="paragraph">최신 Perl: 2014</block>
@@ -4329,10 +4326,6 @@
   <block id="293b4c794aaf1a57b21a0903e0cd77fe" category="paragraph">해당 Active Directory 그룹에 의해 트리거된 워크플로 실행 중에 Active Directory 그룹에 e-메일을 통해 알림을 보낼 시기를 선택할 수 있습니다. 다음 옵션 중 원하는 조합을 선택할 수 있습니다.</block>
   <block id="05e018a0747e487380fd08d1c97915f1" category="list-text">워크플로 실행 실패/부분 성공: 워크플로 실행이 실패하거나 하나 이상의 단계가 실패해도 워크플로가 성공적으로 실행된 경우 사용자에게 알립니다.</block>
   <block id="8eaab5b9163b6be0153cb0eb18796169" category="list-text">새 사용자 * 대화 상자에 필요한 정보를 입력합니다.</block>
-  <block id="7f708cbf579cfb33720a3dee4b01d12a" category="summary">스토리지 자동화 스토어에는 WFA(OnCommand Workflow Automation)와 함께 사용하도록 개발된 NetApp 인증 자동 스토리지 워크플로우 팩이 포함되어 있습니다. 팩을 다운로드한 다음 WFA로 가져와 실행할 수 있습니다.</block>
-  <block id="8d4a01616f98e4ae340eaff4fe4e8ee5" category="doc">스토리지 자동화 스토어 창</block>
-  <block id="0479c8cefca250b39d519545313f1b42" category="inline-link">스토리지 자동화 스토어</block>
-  <block id="0a972f757d015f7e2a7d235f796edff5" category="paragraph">자동화된 워크플로우는 에서 사용할 수 있습니다<block ref="f6a0eb706f83f492c2c35b6ee06cdf08" category="inline-link-rx"></block></block>
   <block id="f27d638870e3d54e35d81e657ed4189e" category="summary">자원 선택 대화 상자를 사용하면 자원을 검색하고 자원을 명령에 매핑할 수 있습니다.</block>
   <block id="70551d07e3318e0f266cd8799a91b66f" category="doc">자원 선택 대화 상자</block>
   <block id="a23494eb8a399b3a23c14c165c65a774" category="list-text">dictionary object&gt; by tab을 선택합니다</block>
@@ -4895,4 +4888,7 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
+  <block id="941fd7ae4cd08576b1633f32f28cc5a7" category="paragraph">PowerShell 학습</block>
+  <block id="6e53aee4223f5f2fcc8de117d4eb8ee1" category="paragraph"><block ref="6e53aee4223f5f2fcc8de117d4eb8ee1" category="inline-link-rx"></block></block>
+  <block id="02d4497b4f8a4d93145ea6baefd3c796" category="paragraph"><block ref="02d4497b4f8a4d93145ea6baefd3c796" category="inline-link-rx"></block></block>
 </blocks>
